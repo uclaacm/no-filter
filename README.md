@@ -1,3 +1,33 @@
+# #nofilter
+
+an *amazing* learning lab built by aman, maya, and nisha
+
+more info coming soon :)
+
+## Development Setup
+
+We'll use a really common Node.js project workflow!
+
+First, let's clone our repository, and install all of our node dependencies:
+
+```
+git clone https://github.com/uclaacm/digression-on-regression.git
+cd cipher-salad
+npm install
+```
+
+To start our app, you just need to run `npm start`!
+
+```
+npm start
+```
+
+And to build our project for production (with CRA's webpack bundling and all that goodness),
+
+```
+npm run build
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
