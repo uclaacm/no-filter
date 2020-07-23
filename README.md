@@ -1,5 +1,8 @@
 # #nofilter
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9a5855ce-f4b3-4757-806a-641070d8973a/deploy-status)](https://app.netlify.com/sites/compassionate-liskov-ffb46e/deploys)
+![Node.js Build](https://github.com/uclaacm/no-filter/workflows/Node.js%20Build/badge.svg)
+
 an *amazing* learning lab built by aman, maya, and nisha
 
 more info coming soon :)
@@ -11,7 +14,7 @@ We'll use a really common Node.js project workflow!
 First, let's clone our repository, and install all of our node dependencies:
 
 ```
-git clone https://github.com/uclaacm/digression-on-regression.git
+git clone https://github.com/uclaacm/no-filter.git
 cd cipher-salad
 npm install
 ```
