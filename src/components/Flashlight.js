@@ -1,5 +1,4 @@
 import React from 'react';
-import koala from '../koala.jpg';
 import './style/Flashlight.css';
 
 
