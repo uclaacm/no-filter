@@ -12,7 +12,7 @@ class Flashlight extends React.Component {
         spotlight.style.opacity = 1;
 
         //show image after flashlight moves on
-        const img = document.getElementById("flashlight-img");
+        const img = document.getElementById("container");
         img.style.filter = "brightness(100%)";
     }
 
@@ -33,7 +33,7 @@ class Flashlight extends React.Component {
         spotlight.style.opacity = 0;
 
         //hide the image after flashlight is moved off
-        const img = document.getElementById("flashlight-img");
+        const img = document.getElementById("container");
         img.style.filter = "brightness(0%)";
         
 
@@ -51,7 +51,7 @@ class Flashlight extends React.Component {
                 </div>
                 <div id="container"
                     onMouseEnter={this.showFlashlight} onMouseMove={this.moveFlashlight} onMouseLeave={this.hideFlashlight}>
-                    <img id="flashlight-img" src={koala} alt="koala"></img>
+                    {/* <img id="flashlight-img" src={koala} alt="koala"></img> */}
                     <div id="spotlight"></div>
                 </div>
             </div>
