@@ -9,6 +9,10 @@ class Flashlight extends React.Component {
     showFlashlight = () => {
         const spotlight = document.getElementById("spotlight");
         spotlight.style.display = "block";
+
+        //show image after flashlight moves on
+        const img = document.getElementById("flashlight-img");
+        img.style.filter = "brightness(100%)";
     }
 
     moveFlashlight = e => {
@@ -29,6 +33,11 @@ class Flashlight extends React.Component {
         const spotlight = document.getElementById("spotlight");
         spotlight.style.display = "none";
 
+        //hide the image after flashlight is moved off
+        const img = document.getElementById("flashlight-img");
+        img.style.filter = "brightness(0%)";
+        
+
     }
         
 
@@ -43,10 +52,8 @@ class Flashlight extends React.Component {
                 </div>
                 <div style={styles.container} id="container"
                     onMouseEnter={this.showFlashlight} onMouseMove={this.moveFlashlight} onMouseLeave={this.hideFlashlight}>
+                    <img id="flashlight-img" src={koala} alt="koala" style={styles.img} ></img>
                     <div id="spotlight" style={styles.flashlight}></div>
-                    {/* <div id="onTop" style={styles.cover} onMouseMove={this.hoverMouse}></div> */}
-                    <img id="flashlight-img" src={koala} alt="koala" style={styles.img} 
-                        ></img>
                 </div>
                 
             </div>
@@ -59,30 +66,24 @@ const styles = {
     container: {
         marginLeft: '100px', /*this is just for an offset*/
         position: 'relative', 
-        width: 'min-content', 
         overflow: 'hidden',
+        maxWidth: 'min-content',
+        maxHeight: 'min-content',
     },
     img: {
         width: '50vw',
-        zIndex: '1',
-    },
-    cover: {
-        width: '50vw',
-        height: '50vw',
-        background: 'black',
-        position: 'absolute',
-        zIndex: '2',
+        filter: 'brightness(0%)',
     },
     flashlight: {
         display: 'none', /*so it is not shown until mouseover*/
         borderRadius: '100%',
-        background: 'white',
-        mixBlendMode: 'difference',
+        content: "",
         position: 'absolute',
         width: '10vw',
         height: '10vw',
-        zIndex: '3',
-        transform: 'translate(-50%, -50%)',
+        zIndex: '1',
+        transform: 'translate(-50%, -50%)', /*center on mouse*/
+        border: 'solid black 50vw',
     }
 }
 
