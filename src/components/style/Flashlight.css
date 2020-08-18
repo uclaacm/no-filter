@@ -1,0 +1,26 @@
+
+#container {
+    margin-left: 100px; /*this is just for an offset*/
+    position: relative;
+    overflow: hidden;
+    max-width: min-content;
+    max-height: min-content;
+    display: inline-block;
+}
+#flashlight-img {
+    width: 50vw;
+    height: 100%;
+    filter: brightness(0%);
+}
+#spotlight {
+    /*display: 'none', so it is not shown until mouseover*/
+    opacity: 0; /*so that it is not shown until mouseover*/
+    border-radius: 100%;
+    content: "";
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    z-index: 1;
+    transform: translate(-50%, -50%); /*center on mouse*/
+    border: solid black 70vw;
+}
