@@ -1,26 +1,17 @@
 
 #container {
-    margin-left: 100px; /*this is just for an offset*/
+    
     position: relative;
     overflow: hidden;
     filter: brightness(0%);
-    /* max-width: min-content;
-    max-height: min-content;
-    display: inline-block; */
-    background-image: url('../../koala.jpg');
+    background-image: url('../../img/koala.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 50vw;
     height: 30vw;
     
 }
-/* #flashlight-img {
-    width: 50vw;
-    height: 100%;
-    filter: brightness(0%);
-} */
 #spotlight {
-    /*display: 'none', so it is not shown until mouseover*/
     opacity: 0; /*so that it is not shown until mouseover*/
     border-radius: 100%;
     content: "";
