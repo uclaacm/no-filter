@@ -1,19 +1,17 @@
 
-
-.blue { /*blue divs*/
-  background-color: #1EBDF4;
+.section {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   padding: 1em;
 }
 
+.blue { /*blue divs*/
+  background-color: #1EBDF4;
+}
+
 .grey { /*grey divs*/
-  background-color: #d3d3d3;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  padding: 1em;
+  background-color: #E5E4E4;
 }
 
 .card {
@@ -58,11 +56,22 @@ em {
   font-weight: bolder;
 }
 
+#flashlight-holder {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+#flamingo-holder {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+}
+
 #flamingo {
-  width: 30%;
+  width: 100%;
+  height: auto;
 }
 
 #side-text {
-  width: 60%;
-  align-self: center;
+  margin-left: 2em;
 }

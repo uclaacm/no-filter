@@ -1,4 +1,5 @@
 import React from 'react';
+import koala from '../img/koala.jpg';
 import './style/Flashlight.css';
 
 
@@ -37,12 +38,10 @@ class Flashlight extends React.Component {
         
 
     }
-        
-
 
     render () {
         return (
-            <div id="container"
+            <div id="container" style={backgroundStyles}
                 onMouseEnter={this.showFlashlight} onMouseMove={this.moveFlashlight} onMouseLeave={this.hideFlashlight}>
                 {/* <img id="flashlight-img" src={koala} alt="koala"></img> */}
                 <div id="spotlight"></div>
@@ -51,5 +50,9 @@ class Flashlight extends React.Component {
     }
 
 }
+
+const backgroundStyles = {
+    backgroundImage: `url(${koala})`,
+};
 
 export default Flashlight;

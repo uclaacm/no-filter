@@ -1,14 +1,12 @@
-
 #container {
     
     position: relative;
     overflow: hidden;
     filter: brightness(0%);
-    background-image: url('../../img/koala.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 50vw;
-    height: 30vw;
+    width: 100%;
+    height: 40vw; /*estimated proportions because background image messes things up :( */
     
 }
 #spotlight {
