@@ -16,7 +16,7 @@ function App() {
       </section>
       <section class="grey section">
         <div class="card row" id="flashlight-holder">
-          <p style={{alignSelf: 'center'}}><em>Hover your mouse/finger over the image.</em></p>
+          <p style={{alignSelf: 'center', marginRight: '1em',}}><em>Hover your mouse/finger over the image.</em></p>
           <Flashlight />
         </div>
       </section>
