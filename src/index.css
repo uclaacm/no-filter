@@ -11,3 +11,50 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.topnav{
+  height: 60px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color:#1EBDF4;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background-color: white;
+}
+
+.topnav a{
+  list-style-type: none;
+  font-family: 'Poppins','sans-serif';
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+#ACM:hover {
+  padding-left: 1px;
+  padding-right: 3px;
+  background-color: #ddd;
+  border-radius: 7px;
+}
+
+#ACM{
+    margin-right: 20px;
+    float: right;
+}
+
+#webtag{
+  float: left;
+}
+
+#logo{
+    width: 30px;
+    height: 30px;
+    vertical-align: top;
+}
+
