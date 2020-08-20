@@ -4,16 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import logo from './ai.png';
-import { Helmet } from 'react-helmet';
 
 class Navbar extends React.Component {
   
   render() {
     return (
         <div className = "navbar">
-          <Helmet>
-          <title>{ TITLE }</title>
-          </Helmet>
           <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet"/>
           <a name="top"></a>
           <div className="topnav">
