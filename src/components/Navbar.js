@@ -11,7 +11,7 @@ class Navbar extends React.Component {
             <a name="top"></a>
             <div className="topnav">
               <a id="webtag" href="#top">Digging Deeper Into CNNs</a>
-              <a id="ACM" target="_blank" href="https://uclaacmai.github.io/">
+              <a id="ACM" target="_blank" rel="noopener noreferrer" href="https://uclaacmai.github.io/">
                 <img id="logo" src={logo} alt="ACM AI Logo" />
               ACM AI
                </a>
