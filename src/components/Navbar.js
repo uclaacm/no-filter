@@ -9,7 +9,7 @@ class Navbar extends React.Component {
           <div className = "navbar">
             <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet"/>
             <div className="topnav">
-              <a id="webtag">Digging Deeper Into CNNs</a>
+              <p id="webtag">Digging Deeper Into CNNs</p>
               <a id="ACM" target="_blank" rel="noopener noreferrer" href="https://uclaacmai.github.io/">
                 <img id="logo" src={logo} alt="ACM AI Logo" />
               ACM AI
