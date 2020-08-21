@@ -7,10 +7,8 @@ import Navbar from './components/Navbar.js';
 
 function App() {
   return (
-    <div>
-    <Navbar />
-    </div>
     <div className="App">
+    <Navbar />
       <section class="blue section">
         <div class="card">
           <h1>Shining a Flashlight on CNNs</h1>
