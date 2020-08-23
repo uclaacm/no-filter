@@ -3,17 +3,39 @@ import './App.css';
 import Flashlight from './components/Flashlight.js';
 import flamingo from './img/flamingo.jpg';
 import Navbar from './components/Navbar.js';
+import clipart from './img/people-at-computer.jpg';
 
 
 function App() {
   return (
     <div className="App">
     <Navbar />
+    <section class="blue section">
+      <div class="toc-panel">
+        <div class="mini-card">
+          <h2>
+            Today, we’ll be looking at Convolutional Neural Networks.
+            We’ll aim to briefly answer the following three questions:
+            <ol>
+              <li> What are CNNs? </li>
+              <li> How do they work? </li>
+              <li> What are they used for? </li>
+            </ol>
+          </h2>
+        </div>
+        <div>
+        </div>
+        <div class="clipart-container">
+        <img id="clipart" src={clipart} alt="People working at a computer." />
+        </div>
+      </div>
+
+    </section>
       <section class="blue section">
         <div class="card">
           <h1>Shining a Flashlight on CNNs</h1>
           <h2>Can you figure out what's in the image below using the flashlight?</h2>
-          
+
         </div>
       </section>
       <section class="grey section">
@@ -25,7 +47,7 @@ function App() {
       <section class="blue section">
         <div class="card">
           <h2>If you guessed a koala: congrats, you're (basically) a CNN!</h2>
-          <p>Now take a moment to think about how you actually identified the koala. First, you probably looked at each piece—edges, 
+          <p>Now take a moment to think about how you actually identified the koala. First, you probably looked at each piece—edges,
             the eyes, the nose, etc—individually.
           </p>
           <p>
