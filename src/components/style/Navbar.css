@@ -2,6 +2,14 @@ body{
     margin: 0;
   }
   
+@font-face {
+  font-family: 'poppinslight';
+  src: url('poppinsLight/poppins-light-webfont.woff2') format('woff2'),
+       url('poppinsLight/poppins-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
   .topnav{
     height: 60px;
     border-bottom-style: solid;
@@ -12,23 +20,13 @@ body{
     top: 0;
     background:rgba(255,255,255,1);
     z-index: 1;
-  }
-  
-.topnav p{
-    list-style-type: none;
-    font-family: 'Poppins','sans-serif';
-    margin-top: 15px;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 20px;
-    text-decoration: none;
-    color: black;
+    display: flex;
+    justify-content: space-between;
   }
 
   .topnav a{
     list-style-type: none;
-    font-family: 'Poppins','sans-serif';
+    font-family: 'poppinslight';
     margin-top: 15px;
     margin-bottom: 10px;
     margin-left: 20px;
@@ -36,18 +34,23 @@ body{
     font-size: 20px;
     text-decoration: none;
     color: black;
+    font-weight: 00;
   }
   
   #ACM:hover {
     padding-left: 1px;
-    padding-right: 3px;
-    background-color: #ddd;
+    padding-right: 4px;
+    padding-top: 2px;
+    background-color: rgba(0,0,0,0.07);
     border-radius: 7px;
   }
   
   #ACM{
       margin-right: 20px;
       float: right;
+      padding-left: 1px;
+      padding-right: 4px;
+      padding-top: 2px;
   }
   
   #webtag{
