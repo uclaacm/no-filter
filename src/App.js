@@ -29,6 +29,11 @@ function App() {
         <img id="clipart" src={clipart} alt="People working at a computer." />
         </div>
       </div>
+      </section>
+      <section class="grey section">
+        <div class="card">
+        <h2>Some sort of high-level description of CNNs</h2>
+        </div>
 
     </section>
       <section class="blue section">
