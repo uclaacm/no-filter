@@ -2,11 +2,13 @@ import React from 'react';
 import './App.css';
 import Flashlight from './components/Flashlight.js';
 import flamingo from './img/flamingo.jpg';
+import Navbar from './components/Navbar.js';
 
 
 function App() {
   return (
     <div className="App">
+    <Navbar />
       <section class="blue section">
         <div class="card">
           <h1>Shining a Flashlight on CNNs</h1>
