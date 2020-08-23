@@ -1,15 +1,3 @@
-body{
-    margin: 0;
-  }
-  
-@font-face {
-  font-family: 'poppinslight';
-  src: url('poppinsLight/poppins-light-webfont.woff2') format('woff2'),
-       url('poppinsLight/poppins-light-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
   .topnav{
     height: 60px;
     border-bottom-style: solid;
@@ -22,6 +10,7 @@ body{
     z-index: 1;
     display: flex;
     justify-content: space-between;
+    flex-grow: 1;
   }
 
   .topnav a{
@@ -34,27 +23,18 @@ body{
     font-size: 20px;
     text-decoration: none;
     color: black;
-    font-weight: 00;
   }
   
   #ACM:hover {
-    padding-left: 1px;
-    padding-right: 4px;
-    padding-top: 2px;
     background-color: rgba(0,0,0,0.07);
     border-radius: 7px;
   }
   
   #ACM{
       margin-right: 20px;
-      float: right;
       padding-left: 1px;
       padding-right: 4px;
       padding-top: 2px;
-  }
-  
-  #webtag{
-    float: left;
   }
   
   #logo{
