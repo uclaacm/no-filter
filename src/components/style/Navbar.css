@@ -15,7 +15,7 @@
 
   .topnav a{
     list-style-type: none;
-    font-family: 'poppinslight';
+    font-family: 'poppinsmedium';
     margin-top: 15px;
     margin-bottom: 10px;
     margin-left: 20px;
@@ -24,22 +24,21 @@
     text-decoration: none;
     color: black;
   }
-  
+
   #ACM:hover {
     background-color: rgba(0,0,0,0.07);
     border-radius: 7px;
   }
-  
+
   #ACM{
       margin-right: 20px;
       padding-left: 1px;
       padding-right: 4px;
       padding-top: 2px;
   }
-  
+
   #logo{
       width: 30px;
       height: 30px;
       vertical-align: top;
   }
-  

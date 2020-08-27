@@ -15,6 +15,14 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'poppinsmedium';
+  src: url('components/style/poppinsMedium/poppins-medium-webfont.woff2') format('woff2'),
+       url('components/style/poppinsMedium/poppins-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
