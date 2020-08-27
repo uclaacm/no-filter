@@ -1,0 +1,25 @@
+
+#filters-holder * {
+    margin: 1em;
+}
+
+#filters-holder img {
+    flex: 100%;
+}
+
+#form {
+    width: max-content;
+    height: max-content;
+}
+
+#img-description {
+    display: inline-block;
+}
+
+/* @media (max-width: 1400px) {
+    #filters-holder {
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+    }
+} */
