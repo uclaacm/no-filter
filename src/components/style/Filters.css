@@ -9,12 +9,17 @@
     height: max-content;
 }
 
-#form * {
+#form>* {
     margin: 1em;
 }
 
+#form select {
+    margin-left: 1em;
+}
+
 #img-description {
-    max-width: 80%;
+    /* max-width: 80%; */
+    margin: 1em;
     display: inline-block;
 }
 

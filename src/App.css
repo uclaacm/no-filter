@@ -121,7 +121,7 @@ em {
   color: black;
   padding: 0.25em;
   text-decoration: none;
-  width: max-content;
+  max-width: max-content;
 
 }
 

@@ -88,8 +88,8 @@ class Filters extends React.Component {
         <section className="section blue filters-holder">
             
             <img src={amsterdamRegular} alt="black and white amsterdam" width="500px"></img>
-            
-            <form className="card" id="form">
+            <div className="card"  id="form">
+            <form>
                 <label>
                     Choose a filter:
                     <select value={this.state.value} onChange={this.handleChange}>
@@ -105,6 +105,9 @@ class Filters extends React.Component {
                     </select>
                 </label>
             </form>
+
+            </div>
+            
             
             <img id="filter-applied" src={this.state.src} alt="amsterdam with filter applied" width="500px"></img>
             <div className="card" id="img-description">
