@@ -13,6 +13,24 @@
     margin: 1em;
 }
 
+.kernel-matrix{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    border: 0.5px rgba(0, 0, 0, 0.5) solid;
+}
+
+.kernel-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.kernel-row>* {
+    border: 0.5px rgba(0, 0, 0, 0.5) solid;
+    padding: 25% 0px;
+    font-size: 16px;
+    text-align: center;
+}
+
 #form select {
     margin-left: 1em;
 }
@@ -35,4 +53,18 @@
     .filters-holder img {
         width: 80%;
     }
+}
+
+.small-stuff {
+    font-size: 14px;
+}
+
+.small-stuff a {
+    color: #1EBDF4;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.small-stuff a:hover {
+    text-decoration: underline;
 }

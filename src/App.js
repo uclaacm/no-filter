@@ -97,7 +97,7 @@ function App() {
             Think about the koala!
           </p>
           <p>
-            In this example, check out how filter values correspond to the image output. What patterns do you see?
+            In this example, select different filters to see how their values correspond to the image output. What patterns do you see?
           </p>
         </div>
       </section>

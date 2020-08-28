@@ -115,6 +115,7 @@ em {
 }
 
 .link-to-slides {
+  display: flex;
   border: 2px #1EBDF4 solid;
   border-radius: 7px;
   font-size: 16px;
