@@ -113,3 +113,18 @@ em {
   max-width: 400px;
   min-width: 250px;
 }
+
+.link-to-slides {
+  border: 2px #1EBDF4 solid;
+  border-radius: 7px;
+  font-size: 16px;
+  color: black;
+  padding: 0.25em;
+  text-decoration: none;
+  width: max-content;
+
+}
+
+.link-to-slides:hover {
+  background-color: rgba(0,0,0,0.07);
+}

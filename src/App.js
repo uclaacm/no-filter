@@ -86,9 +86,23 @@ function App() {
       </section>
       <section className="grey section">
         <div className="card">
-          <p>So CNNs are different from fully-connected neural networks because CNNs use filters to analyze
-             an image one feature at a time.</p>
-             <h2>But how do filters actually work?</h2>
+          <p>So CNNs are different from fully-connected neural networks because <em>CNNs use filters to analyze
+             an image one feature at a time.</em></p>
+          {/* NEED TO ADD LINK */}
+          <a className="link-to-slides" href="https://www.placeholder.com" target="_blank" rel="noopener noreferrer">Before we move on, check out these slides to learn more about how filters work.</a>
+          <h2>But what do filters look at?</h2>
+        </div>
+      </section>
+      <section className="blue section">
+        <div className="card">
+          <h2>That's a good question!</h2>
+          <p>Filters look at whatever they want to see, by identifying patterns and <em>features</em> through gradient descent. We'll see what an actual CNN looks at in a bit.
+            Usually, however, filters check out things like edges and colors first, then more complicated features like textures and faces.
+            Think about the koala!
+          </p>
+          <p>
+            In this example, check out how filter values correspond to the image output. What patterns do you see?
+          </p>
         </div>
       </section>
       <Filters />
