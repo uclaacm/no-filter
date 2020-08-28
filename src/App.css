@@ -85,6 +85,13 @@ em {
   grid-template-columns: 30% 70%;
 }
 
+#koala-reveal-img {
+  width: 40%;
+  border-radius: 15px;
+  align-self: center;
+  margin-bottom: 1em;
+}
+
 #flamingo-holder {
   display: grid;
   grid-template-columns: 40% 60%;
@@ -94,6 +101,7 @@ em {
 #flamingo {
   width: 100%;
   height: auto;
+  border-radius: 15px;
 }
 
 #side-text {

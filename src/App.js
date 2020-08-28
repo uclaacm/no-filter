@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Flashlight from './components/Flashlight.js';
+import koala from './img/koala2.jpg';
 import flamingo from './img/flamingo.jpg';
 import Navbar from './components/Navbar.js';
 import clipart from './img/people-at-computer.jpg';
@@ -50,7 +51,9 @@ function App() {
         </div>
       </section>
       <section className="blue section">
+        
         <div className="card">
+          <img src={koala} alt="koala in a forest" id="koala-reveal-img"></img>
           <h2>If you guessed a koala: congrats, you're (basically) a CNN!</h2>
           <p>Now take a moment to think about how you actually identified the koala. First, you probably looked at each piece—edges,
             the eyes, the nose, etc—individually.
