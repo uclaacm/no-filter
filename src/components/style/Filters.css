@@ -1,25 +1,32 @@
 
-#filters-holder * {
+#filters-holder img {
     margin: 1em;
 }
 
-#filters-holder img {
-    flex: 100%;
-}
-
 #form {
+    margin: 1em;
     width: max-content;
     height: max-content;
 }
 
-#img-description {
-    display: inline-block;
+#form * {
+    margin: 1em;
 }
 
-/* @media (max-width: 1400px) {
+#img-description {
+    max-width: 80%;
+}
+
+@media (max-width: 1435px) {
     #filters-holder {
-        background-color: black;
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
-} */
+}
+
+@media(max-width: 600px) {
+    #filters-holder img {
+        width: 80%;
+    }
+}

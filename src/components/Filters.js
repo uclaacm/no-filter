@@ -28,38 +28,39 @@ class Filters extends React.Component {
         switch (val) {
             case 'identity':
                 filterImage.src = amsterdamRegular;
+                description.innerHTML = "What do you think the identity filter does?";
                 break;
             case 'blur':
                 filterImage.src = amsterdamBlur;
-                description.innerHTML = "<em>blur</em>hello"
+                description.innerHTML = "We can use filters to remove the differences between pixels to <em>blur</em> an image.";
                 break;
             case 'bottom sobel':
                 filterImage.src = amsterdamBottomSobel;
-                description.innerHTML = "sob"
+                description.innerHTML = "The <em>sobel</em> filter detects edges in an image.";
                 break;
             case 'emboss':
                 filterImage.src = amsterdamEmboss;
-                description.innerHTML = "boss"
+                description.innerHTML = "The <em>emboss</em> filter emphasizes the difference between pixels.";
                 break;
             case 'left sobel':
                 filterImage.src = amsterdamLeftSobel;
-                description.innerHTML = "yeah boi"
+                description.innerHTML = "The <em>sobel</em> filter detects edges in an image.";
                 break;
             case 'outline':
                 filterImage.src = amsterdamOutline;
-                description.innerHTML = "hello";
+                description.innerHTML = "The <em>outline</em> filter emphasizes <em>large</em> differences between pixels to detect edges.";
                 break;
             case 'right sobel':
                 filterImage.src = amsterdamRightSobel;
-                description.innerHTML = "good Bye"
+                description.innerHTML = "The <em>sobel</em> filter detects edges in an image.";
                 break;
             case 'sharpen':
                 filterImage.src = amsterdamSharpen;
-                description.innerHTML = "this is a <em>lot</em> of code"
+                description.innerHTML = "The <em>sharpen</em> filter emphasizes small differences between adjacent pixels.";
                 break;
             case 'top sobel':
                 filterImage.src = amsterdamTopSobel;
-                description.innerHTML = "yes"
+                description.innerHTML = "The <em>sobel</em> filter detects edges in an image.";
                 break;
             default:
                 break;
@@ -77,7 +78,9 @@ class Filters extends React.Component {
     render() {
     return (
         <section className="section blue" id="filters-holder">
+            
             <img src={amsterdamRegular} alt="black and white amsterdam" width="500px"></img>
+            
             <form className="card" id="form">
                 <label>
                     Choose a filter:
@@ -94,8 +97,10 @@ class Filters extends React.Component {
                     </select>
                 </label>
             </form>
+            
             <img id="filter-applied" src={amsterdamRegular} alt="amsterdam with filter applied" width="500px"></img>
-            <p className="card" id="img-description">identity</p>
+            
+            <p className="card" id="img-description">What do you think the identity filter does?</p>
         </section>
     );
     }
