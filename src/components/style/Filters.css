@@ -1,5 +1,5 @@
 
-#filters-holder img {
+.filters-holder img {
     margin: 1em;
 }
 
@@ -15,10 +15,11 @@
 
 #img-description {
     max-width: 80%;
+    display: inline-block;
 }
 
 @media (max-width: 1435px) {
-    #filters-holder {
+    .filters-holder {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -26,7 +27,7 @@
 }
 
 @media(max-width: 600px) {
-    #filters-holder img {
+    .filters-holder img {
         width: 80%;
     }
 }
