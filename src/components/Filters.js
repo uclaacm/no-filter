@@ -98,48 +98,47 @@ class Filters extends React.Component {
     
     render() {
     return (
-        <section className="section blue filters-holder">
-            
-            <img src={amsterdamRegular} alt="black and white amsterdam" width="500px"></img>
-            <div className="card"  id="form">
-                <div className="kernel-matrix">
-                    <div className="kernel-row">
-                        <div>{this.state.filter[0]}</div>
-                        <div>{this.state.filter[1]}</div>
-                        <div>{this.state.filter[2]}</div>
+        <section className="section blue">
+            <div className="filters-holder">
+                <img src={amsterdamRegular} alt="black and white amsterdam" width="500px"></img>
+                <div className="card"  id="form">
+                    <div className="kernel-matrix">
+                        <div className="kernel-row">
+                            <div>{this.state.filter[0]}</div>
+                            <div>{this.state.filter[1]}</div>
+                            <div>{this.state.filter[2]}</div>
+                        </div>
+                        <div className="kernel-row">
+                            <div>{this.state.filter[3]}</div>
+                            <div>{this.state.filter[4]}</div>
+                            <div>{this.state.filter[5]}</div>
+                        </div>
+                        <div className="kernel-row">
+                            <div>{this.state.filter[6]}</div>
+                            <div>{this.state.filter[7]}</div>
+                            <div>{this.state.filter[8]}</div>
+                        </div>
                     </div>
-                    <div className="kernel-row">
-                        <div>{this.state.filter[3]}</div>
-                        <div>{this.state.filter[4]}</div>
-                        <div>{this.state.filter[5]}</div>
-                    </div>
-                    <div className="kernel-row">
-                        <div>{this.state.filter[6]}</div>
-                        <div>{this.state.filter[7]}</div>
-                        <div>{this.state.filter[8]}</div>
-                    </div>
-                </div>
-                <form>
-                    <label>
-                        Choose a filter:
-                        <select value={this.state.value} onChange={this.handleChange}>
-                            <option selected value="identity">Identity</option>
-                            <option value="blur">Blur</option>
-                            <option value="bottom sobel">Bottom sobel</option>
-                            <option value="emboss">Emboss</option>
-                            <option value="left sobel">Left sobel</option>
-                            <option value="outline">Outline</option>
-                            <option value="right sobel">Right sobel</option>
-                            <option value="sharpen">Sharpen</option>
-                            <option value="top sobel">Top sobel</option>
-                        </select>
-                    </label>
-                </form>
+                    <form>
+                        <label>
+                            Choose a filter:
+                            <select value={this.state.value} onChange={this.handleChange}>
+                                <option selected value="identity">Identity</option>
+                                <option value="blur">Blur</option>
+                                <option value="bottom sobel">Bottom sobel</option>
+                                <option value="emboss">Emboss</option>
+                                <option value="left sobel">Left sobel</option>
+                                <option value="outline">Outline</option>
+                                <option value="right sobel">Right sobel</option>
+                                <option value="sharpen">Sharpen</option>
+                                <option value="top sobel">Top sobel</option>
+                            </select>
+                        </label>
+                    </form>
 
+                </div>
+                <img id="filter-applied" src={this.state.src} alt="amsterdam with filter applied" width="500px"></img>
             </div>
-            
-            
-            <img id="filter-applied" src={this.state.src} alt="amsterdam with filter applied" width="500px"></img>
             <div className="card" id="img-description">
                 <p>{this.state.paragraph}</p>
                 <p class="small-stuff">Thank you to <a href="https://setosa.io/ev/image-kernels/" target="_blank" rel="noopener noreferrer">Explained Visually</a> for this example!</p>

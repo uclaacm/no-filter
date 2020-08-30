@@ -1,4 +1,9 @@
 
+.filters-holder>* {
+    display: inline-block;
+    vertical-align: top;
+}
+
 .filters-holder img {
     margin: 1em;
 }
@@ -43,9 +48,16 @@
 
 @media (max-width: 1435px) {
     .filters-holder {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: block;
+    }
+    .filters-holder>* {
+        display: block;
+    }
+    .filters-holder img {
+        margin: 1em auto;
+    }
+    #form {
+        margin: 1em auto;
     }
 }
 
