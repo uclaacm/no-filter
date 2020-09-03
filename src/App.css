@@ -11,7 +11,7 @@
 }
 
 .grey { /*grey divs*/
-  background-color: #E5E4E4;
+  background-color: #EBF9FE;
 }
 
 .card {
@@ -85,6 +85,13 @@ em {
   grid-template-columns: 30% 70%;
 }
 
+#koala-reveal-img {
+  width: 40%;
+  border-radius: 15px;
+  align-self: center;
+  margin-bottom: 1em;
+}
+
 #flamingo-holder {
   display: grid;
   grid-template-columns: 40% 60%;
@@ -94,6 +101,7 @@ em {
 #flamingo {
   width: 100%;
   height: auto;
+  border-radius: 15px;
 }
 
 #side-text {
@@ -104,4 +112,20 @@ em {
   width: 100%;
   max-width: 400px;
   min-width: 250px;
+}
+
+.link-to-slides {
+  display: flex;
+  border: 2px #1EBDF4 solid;
+  border-radius: 7px;
+  font-size: 16px;
+  color: black;
+  padding: 0.5em;
+  text-decoration: none;
+  max-width: max-content;
+
+}
+
+.link-to-slides:hover {
+  background-color: rgba(0,0,0,0.07);
 }
