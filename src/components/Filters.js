@@ -31,7 +31,8 @@ class Filters extends React.Component {
         let src = null;
         let paragraph = null;
         let filter = [];
-        let sobel = <>The <em>sobel</em> filter detects edges in an image. How does this compare to the other sobel filters?</>;
+        let sob = "";
+        let sobel = <>The <em>sobel</em> filter detects edges in an image by looking at light-to-dark or dark-to-light pixel differences. How does this sobel filter compare to the other sobel filters?</>;
         switch (val) {
             case 'identity':
                 src = amsterdamRegular;
@@ -50,7 +51,7 @@ class Filters extends React.Component {
                 break;
             case 'emboss':
                 src = amsterdamEmboss;
-                paragraph = <>The <em>emboss</em> filter emphasizes the difference between pixels.</>;
+                paragraph = <>The <em>emboss</em> filter emphasizes the difference between pixels. If you look closely, it's actually a sobel filter on a diagonal!</>;
                 filter = [-2, -1, 0, -1, 1, 1, 0, 1, 2];
                 break;
             case 'left sobel':

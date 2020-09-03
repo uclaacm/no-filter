@@ -91,13 +91,14 @@ function App() {
       </section>
       <section className="grey section">
         <div className="card">
-          <h1>But what do filters look at?</h1>
-          <p>Filters look at whatever they want to see, by identifying patterns and <em>features</em> through gradient descent. We'll see what an actual CNN looks at in a bit.
-            Usually, though, filters check out things like edges and colors first, and eventually more complicated features like textures and faces.
-            Think about the koala!
+          <h1>How do CNNs use filters to analyze images?</h1>
+          <p>
+            Filters can be used to modify the value of each pixel in an image.
+            This is how Instagram or Snapchat filters work! We'll see what actual CNNs look at in a bit. For now, however, check out how we can use filters and their values to manipulate images
+            and make features easier to see.
           </p>
           <p>
-            In this example, select different filters to see how their values correspond to the image output. What patterns do you see?
+            <em>In this example, select different filters to see how their values correspond to the image output. What patterns do you see?</em>
           </p>
         </div>
       </section>
