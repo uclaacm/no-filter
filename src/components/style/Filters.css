@@ -1,7 +1,7 @@
-
-.filters-holder>* {
-    display: inline-block;
-    vertical-align: top;
+.flexy {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 .filters-holder img {
@@ -46,20 +46,6 @@
     display: inline-block;
 }
 
-@media (max-width: 1435px) {
-    .filters-holder {
-        display: block;
-    }
-    .filters-holder>* {
-        display: block;
-    }
-    .filters-holder img {
-        margin: 1em auto;
-    }
-    #form {
-        margin: 1em auto;
-    }
-}
 
 @media(max-width: 600px) {
     .filters-holder img {
