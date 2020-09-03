@@ -123,7 +123,7 @@ class Filters extends React.Component {
                         <label>
                             Choose a filter:
                             <select value={this.state.value} onChange={this.handleChange}>
-                                <option selected value="identity">Identity</option>
+                                <option value="identity">Identity</option>
                                 <option value="blur">Blur</option>
                                 <option value="bottom sobel">Bottom sobel</option>
                                 <option value="emboss">Emboss</option>
@@ -141,7 +141,7 @@ class Filters extends React.Component {
             </div>
             <div className="card" id="img-description">
                 <p>{this.state.paragraph}</p>
-                <p class="small-stuff">Thank you to <a href="https://setosa.io/ev/image-kernels/" target="_blank" rel="noopener noreferrer">Explained Visually</a> for this example!</p>
+                <p className="small-stuff">Thank you to <a href="https://setosa.io/ev/image-kernels/" target="_blank" rel="noopener noreferrer">Explained Visually</a> for this example!</p>
             </div>
         </section>
     );
