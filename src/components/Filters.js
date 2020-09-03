@@ -31,7 +31,6 @@ class Filters extends React.Component {
         let src = null;
         let paragraph = null;
         let filter = [];
-        let sob = "";
         let sobel = <>The <em>sobel</em> filter detects edges in an image by looking at light-to-dark or dark-to-light pixel differences. How does this sobel filter compare to the other sobel filters?</>;
         switch (val) {
             case 'identity':
