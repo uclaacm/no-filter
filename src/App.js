@@ -6,9 +6,8 @@ import flamingo from './img/flamingo.jpg';
 import Navbar from './components/Navbar.js';
 import clipart from './img/people-at-computer.jpg';
 import Filters from './components/Filters.js';
-import size from './img/size.png';
 import depth from './img/depth.png';
-
+import FilterSizes from './components/FilterSizes.js';
 
 function App() {
   return (
@@ -105,6 +104,11 @@ function App() {
         </div>
       </section>
       <Filters />
+      <section className="grey section">
+        <div className="card">
+          <h1>Aman's stuff goes here</h1>
+        </div>
+      </section>
       <section className="blue section">
         <div className="card grid-holder">
           <img src={depth} alt="Pixel matrices with depth of 3" className="grid-img"/>
@@ -117,11 +121,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className = "grey section">
-        <div className="card">
-          <img src={size} alt="Filters and layers of a CNN" id="size-img"/>
-        </div>
-      </section>
+      <FilterSizes />
     </div>
   );
 }
