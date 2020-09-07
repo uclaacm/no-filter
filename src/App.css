@@ -67,17 +67,20 @@ h1 {
 h2 {
   font-size: 20px;
   color: #1c1a19;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 p {
   font-size: 18px;
   line-height: 1.5;
   color: #1c1a19;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 em {
   font-style: normal;
   font-weight: bolder;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 #flashlight-holder {
@@ -92,19 +95,19 @@ em {
   margin-bottom: 1em;
 }
 
-#flamingo-holder {
+.grid-holder {
   display: grid;
   grid-template-columns: 40% 60%;
   align-items: center;
 }
 
-#flamingo {
+.grid-img {
   width: 100%;
   height: auto;
   border-radius: 15px;
 }
 
-#side-text {
+.side-text {
   margin-left: 2em;
 }
 #clipart {
@@ -128,4 +131,9 @@ em {
 
 .link-to-slides:hover {
   background-color: rgba(0,0,0,0.07);
+}
+
+#size-img {
+  width: 100%;
+  height: auto;
 }

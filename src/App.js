@@ -6,6 +6,8 @@ import flamingo from './img/flamingo.jpg';
 import Navbar from './components/Navbar.js';
 import clipart from './img/people-at-computer.jpg';
 import Filters from './components/Filters.js';
+import size from './img/size.png';
+import depth from './img/depth.png';
 
 
 function App() {
@@ -72,9 +74,9 @@ function App() {
         </div>
       </section>
       <section className="blue section">
-        <div className="card" id="flamingo-holder">
-          <img src={flamingo} id="flamingo" alt="flamingo"></img>
-          <div id="side-text">
+        <div className="card grid-holder">
+          <img src={flamingo} className="grid-img" alt="flamingo"></img>
+          <div className="side-text">
             <p>You probably recognized this picture as a flamingo instantly.
               You didn't look at the picture as legs, wings, and a beak, but rather looked at the image as a whole.
             </p>
@@ -103,6 +105,23 @@ function App() {
         </div>
       </section>
       <Filters />
+      <section className="blue section">
+        <div className="card grid-holder">
+          <img src={depth} alt="Pixel matrices with depth of 3" className="grid-img"/>
+          <div className="side-text">
+            <p>In order to apply our filter to each channel of an <em>RGB</em> (<em>R</em>ed, <em>G</em>reen, <em>B</em>lue),
+            we need our filter to be 3-dimensional as well&mdash;that is, our filter should have length, width, and depth.
+            </p>
+            <p>This is the <em>size</em> of our filter. In CNNs analyzing RGB images, 3 x 3 x 3 filters are some of the most commonly-used filters,
+            along with 5 x 5 x 3 filters.</p>
+          </div>
+        </div>
+      </section>
+      <section className = "grey section">
+        <div className="card">
+          <img src={size} alt="Filters and layers of a CNN" id="size-img"/>
+        </div>
+      </section>
     </div>
   );
 }
