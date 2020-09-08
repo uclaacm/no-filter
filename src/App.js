@@ -68,7 +68,8 @@ function App() {
       <section className="grey section">
         <div className="card">
           <p>Believe it or not, CNNs work the same way! A <em>filter</em> will focus on one tiny area of an
-           image at a time, analyzing the picture <em>piece by piece</em>.</p>
+           image at a time, analyzing the picture piece by piece.
+           This process is called <em>convolving</em>.</p>
            <p><em>Fully-connected neural networks</em> are very different. When you look at the picture below, what do you see?</p>
         </div>
       </section>
