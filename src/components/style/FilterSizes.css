@@ -1,0 +1,39 @@
+.popup-container {
+    position: relative;
+    z-index: 1;
+}
+
+.popup {
+    z-index: 2;
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+
+#one {
+    top: 20px;
+    left: 20px;
+}
+
+#two {
+    top: 60px;
+    left: 60px;
+}
+
+#three {
+    top: 80px;
+    left: 80px;
+}
+
+#four {
+    top: 100px;
+    left: 100px;
+}
+
+#size-img {
+    z-index: 1;
+    width: 100%;
+    height: auto;
+}
