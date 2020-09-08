@@ -6,30 +6,55 @@
 .popup {
     z-index: 2;
     content: "";
-    background-color: black;
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 25%;
+    height: 100%;
+    opacity: 0.5;
 }
 
+
+
 #one {
-    top: 20px;
-    left: 20px;
+    background-color: black;
+    width: 30%;
 }
 
 #two {
-    top: 60px;
-    left: 60px;
+    background-color: red;
+    width: 4%;
+    left: 30%;
+    top: 40%;
+    height: 20%;
 }
 
 #three {
-    top: 80px;
-    left: 80px;
+    background-color: green;
+    left: 35%;
+    width: 16%;
+}
+
+#filler-one {
+    background-color: black;
+    left: 51%;
+    width: 5%;
 }
 
 #four {
-    top: 100px;
-    left: 100px;
+    background-color: blue;
+    left: 56%;
+    width: 19%;
+}
+
+#filler-two {
+    background-color: black;
+    left: 75%;
+    width: 5%;
+}
+
+#five {
+    background-color: purple;
+    right: 0%;
+    width: 20%;
 }
 
 #size-img {

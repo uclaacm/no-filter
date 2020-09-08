@@ -13,7 +13,10 @@ class FilterSizes extends React.Component {
                     <div className="popup" id="one"></div>
                     <div className="popup" id="two"></div>
                     <div className="popup" id="three"></div>
+                    <div className="popup filler" id="filler-one"></div>
                     <div className="popup" id="four"></div>
+                    <div className="popup filler" id="filler-two"></div>
+                    <div className="popup" id="five"></div>
                     <img src={size} alt="Filters and layers of a CNN" id="size-img"/>
                 </div>
             </div>

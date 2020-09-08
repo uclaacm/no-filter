@@ -113,7 +113,7 @@ function App() {
         <div className="card grid-holder">
           <img src={depth} alt="Pixel matrices with depth of 3" className="grid-img"/>
           <div className="side-text">
-            <p>In order to apply our filter to each channel of an <em>RGB</em> (<em>R</em>ed, <em>G</em>reen, <em>B</em>lue),
+            <p>In order to apply our filter to each channel of an <em>RGB</em> (<em>R</em>ed, <em>G</em>reen, <em>B</em>lue) image,
             we need our filter to be 3-dimensional as well&mdash;that is, our filter should have length, width, and depth.
             </p>
             <p>This is the <em>size</em> of our filter. In CNNs analyzing RGB images, 3 x 3 x 3 filters are some of the most commonly-used filters,
