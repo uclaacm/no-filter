@@ -1,6 +1,7 @@
 .popup-container {
     position: relative;
     z-index: auto;
+    display: flex;
 }
 
 .popup {
@@ -10,7 +11,7 @@
     width: 25%;
     height: 100%;
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 0.5s;
     background-color: white;
 }
 
@@ -57,19 +58,37 @@
 }
 
 .popup-text-container {
-    z-index: 3;
+    z-index: auto;
     position: absolute;
     display: flex;
-    flex-direction: row wrap;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     height: 100%;
-    transition: opacity 1s, z-index 1s;
+    transition: opacity 0.5s, z-index 0.5s;
     opacity: 0;
+    top: 0;
+    padding: 1em;
 
 }
+
+#input {
+    left: 30%;
+}
+
 #convolve {
-    padding: 1em;
-    top: 0;
     left: 34%;
 }
 
+#filters {
+    left: 51%;
+}
+
+#output-separate {
+    left: 0%;
+    width: 54%;
+}
+
+#output-together {
+    left: 0%;
+    width: 75%;
+}
