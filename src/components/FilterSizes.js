@@ -86,7 +86,7 @@ class FilterSizes extends React.Component {
                     </div>
                     <div className="popup-text-container" id="output-separate">
                         <p>
-                            Our 3 x 3 x 3 filters can only move along each row of the input image four times until it hits the right side (try working it out yourself!).
+                            Our 3 x 3 filters can only move along each row of the input image four times until it hits the right side (try working it out yourself!).
                             Similarly, it can only move down a row four times until it hits the bottom, giving our output (also known as a <em>feature map</em>) a size of 4 x 4.
 
                         </p>
