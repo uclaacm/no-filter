@@ -35,7 +35,7 @@ class Flashlight extends React.Component {
         //hide the image after flashlight is moved off
         const img = document.getElementById("container");
         img.style.filter = "brightness(0%)";
-        
+
 
     }
 

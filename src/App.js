@@ -4,10 +4,10 @@ import Flashlight from './components/Flashlight.js';
 import koala from './img/koala2.jpg';
 import flamingo from './img/flamingo.jpg';
 import Navbar from './components/Navbar.js';
-import clipart from './img/people-at-computer.jpg';
+import clipart from './img/people.png';
 import Filters from './components/Filters.js';
-
-
+import visualizer from './img/cnn-vis.png';
+import Magnifier from "react-magnifier";
 function App() {
   return (
     <div className="App">
@@ -27,8 +27,10 @@ function App() {
         </div>
         <div>
         </div>
-        <div className="clipart-container">
-        <img id="clipart" src={clipart} alt="People working at a computer." />
+        <div className="mini-card">
+          <div className="clipart-container">
+          <img id="clipart" src={clipart} alt="People working at a computer." />
+          </div>
         </div>
       </div>
       </section>
@@ -51,7 +53,6 @@ function App() {
         </div>
       </section>
       <section className="blue section">
-        
         <div className="card">
           <img src={koala} alt="koala in a forest" id="koala-reveal-img"></img>
           <h2>If you guessed a koala: congrats, you're (basically) a CNN!</h2>
@@ -103,6 +104,19 @@ function App() {
         </div>
       </section>
       <Filters />
+      <section className="grey section">
+        <div className="card">
+          <h1>What do CNNs look like?</h1>
+          <p>
+            Now that we know how to apply filters, let's take a look at how one layer of a CNN might use two feature-detecting filters to create feature maps.
+          </p>
+        </div>
+      </section>
+      <section className="blue section">
+      <div className="card">
+       <Magnifier src={visualizer} id="cnn-vis" mgShape="square" mgWidth={100} mgHeight={100} zoomFactor="1.5" mgShowOverflow="false" alt="two filters applied to one layer of a CNN"/>
+       </div>
+       </section>
     </div>
   );
 }
