@@ -8,7 +8,7 @@ class FilterSizes extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            text: <></>,
+            text: false,
         };
     }
 
@@ -54,7 +54,9 @@ class FilterSizes extends React.Component {
                     <img src={size} alt="Filters and layers of a CNN" id="size-img"/>
                     {buttons}
                 </div>
-                <div class="speech-bubble">{this.state.text}</div>
+                {this.state.text && 
+                    <div class="speech-bubble">{this.state.text}</div>
+                }
             </div>
         </section>
         );

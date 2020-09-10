@@ -37,7 +37,7 @@
     flex-direction: column;
     width: stretch;
     margin-top: 0.5em;
-    min-height: 3em;
+    min-height: 2.5em;
 }
 
 .speech-bubble>p{
