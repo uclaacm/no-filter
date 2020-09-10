@@ -49,7 +49,7 @@ class FilterSizes extends React.Component {
         return (
         <section className = "grey section">
             <div className="card">
-                <h2>hover to see what's up</h2>
+                <h2>click to see what's up</h2>
                 <div className="more-filters-container">
                     <img src={size} alt="Filters and layers of a CNN" id="size-img"/>
                     {buttons}
