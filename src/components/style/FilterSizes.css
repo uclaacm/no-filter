@@ -1,26 +1,25 @@
-.popup-container {
+.more-filters-container {
     position: relative;
     z-index: auto;
     display: flex;
+    flex-flow: row wrap;
 }
 
 #size-img {
-    z-index: 1;
     width: 100%;
     height: auto;
 }
 
-
-
 .button {
     content: "";
-    width: 1em;
-    height: 1em;
+    width: 2vw;
+    height: 2vw;
     border-radius: 100%;
     background-color: #EBF9FE;
     border: #1EBDF4 2px solid;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
+    translate: -50%, -50%;
 }
 
 .button:hover {
@@ -30,20 +29,15 @@
 }
 
 .speech-bubble {
-    position: absolute;
-    z-index: 3;
     background-color: #EBF9FE;
     border: #1EBDF4 2px solid;
     border-radius: 15px;
     padding: 1em;
     display: flex;
     flex-direction: column;
-    animation: fadeIn 1s ease;
-}
-
-@keyframes fadeIn {
-    from{opacity: 0}
-    to{opacity: 1}
+    width: stretch;
+    margin-top: 0.5em;
+    min-height: 3em;
 }
 
 .speech-bubble>p{
