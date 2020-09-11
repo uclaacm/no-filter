@@ -9,11 +9,14 @@ class FilterSizes extends React.Component {
         super(props);
         this.state = {
             text: false,
+            clicked: [false, false, false, false, false],
         };
     }
 
-    changeText = text => {
-        this.setState({text: text});
+    changeText = (text, key) => {
+        let arr = [false, false, false, false, false];
+        arr[key] = true;
+        this.setState({text: text, clicked: arr});
     }
     
     render () {
@@ -41,8 +44,15 @@ class FilterSizes extends React.Component {
             </p> </>, "78%", "87.5%"]
         ];
         
-        const buttons = params.map(val => {
-            return <div class="button" style={{top: val[1], left: val[2]}} onClick={() => this.changeText(val[0])}></div>
+        const buttons = params.map((val, index) => {
+            let className = "button";
+            className += this.state.clicked[index] ? " clicked" : "";
+            return <div className={className}
+                    /*change color based on whether or not it's clicked */
+                    style={{top: val[1], left: val[2]}} 
+                    onClick={() => this.changeText(val[0], index)} 
+                    key={index}>
+                </div>
         });
 
 
@@ -55,7 +65,7 @@ class FilterSizes extends React.Component {
                     {buttons}
                 </div>
                 {this.state.text && 
-                    <div class="speech-bubble">{this.state.text}</div>
+                    <div className="speech-bubble">{this.state.text}</div>
                 }
             </div>
         </section>
