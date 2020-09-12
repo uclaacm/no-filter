@@ -21,8 +21,8 @@ class FilterSizes extends React.Component {
     
     render () {
         let params = [ //text, style.top, style.left
-            [<><p>Notice how our input, a 6 x 6 RGB image, is split into three 6 x 6 layers.</p></>, "90%", "12%"],
-            [<><p>This is the symbol for convolution. The filters <em>convolve</em> over the image.</p></>, "54%", "30.75%"],
+            [<p>Notice how our input, a 6 x 6 RGB image, is split into three 6 x 6 layers.</p>, "90%", "12%"],
+            [<p>This is the symbol for convolution. The filters <em>convolve</em> over the image.</p>, "54%", "30.75%"],
             [<><p>
                 Filter 1 and Filter 2 both have three layers. The first layer of each filter
                 convolves over the first layer of the input image, the second layer of each filter convolves over the
@@ -45,14 +45,12 @@ class FilterSizes extends React.Component {
         ];
         
         const buttons = params.map((val, index) => {
-            let className = "button";
-            className += this.state.clicked[index] ? " clicked" : "";
-            return <div className={className}
-                    /*change color based on whether or not it's clicked */
+            let className = this.state.clicked[index] ? " clicked" : "";
+            return <button className={`button${className}`}
                     style={{top: val[1], left: val[2]}} 
                     onClick={() => this.changeText(val[0], index)} 
                     key={index}>
-                </div>
+                </button>
         });
 
 

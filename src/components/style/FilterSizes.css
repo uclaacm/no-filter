@@ -1,3 +1,4 @@
+
 .more-filters-container {
     position: relative;
     z-index: auto;
@@ -12,8 +13,8 @@
 
 .button {
     content: "";
-    width: 2vw;
-    height: 2vw;
+    width: 1.5em;
+    height: 1.5em;
     border-radius: 100%;
     background-color: #EBF9FE;
     border: #1EBDF4 2px solid;
@@ -21,11 +22,15 @@
     position: absolute;
     z-index: 1;
     translate: -50%, -50%;
-    
 }
 
 .button:hover {
     background-color: #1EBDF4;
+    cursor: pointer;
+}
+
+.button:focus {
+    outline: none;
 }
 
 .clicked {
@@ -37,9 +42,6 @@
     border: #1EBDF4 2px solid;
     border-radius: 15px;
     padding: 1em;
-    display: flex;
-    flex-direction: column;
-    width: stretch;
     margin-top: 0.5em;
     min-height: 2.5em;
     /* animation: fadeIn 2s ease; */
