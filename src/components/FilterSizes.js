@@ -21,8 +21,8 @@ class FilterSizes extends React.Component {
     
     render () {
         let params = [ //text, style.top, style.left
-            [<p>Notice how our input, a 6 x 6 RGB image, is split into three 6 x 6 layers.</p>, "90%", "12%"],
-            [<p>This is the symbol for convolution. The filters <em>convolve</em> over the image.</p>, "54%", "30.75%"],
+            [<p>Notice how our input, a 6 x 6 RGB image, is split into three 6 x 6 layers.</p>, "90%", "19%"],
+            [<p>This is the symbol for convolution. The filters <em>convolve</em> over the image.</p>, "54%", "34.75%"],
             [<><p>
                 Filter 1 and Filter 2 both have three layers. The first layer of each filter
                 convolves over the first layer of the input image, the second layer of each filter convolves over the
@@ -35,13 +35,13 @@ class FilterSizes extends React.Component {
             </p>
             <p>If we use filters of bigger sizes, our output matrix will be smaller, and will capture less information.
                 As a result, we should be careful when choosing our filter size.
-            </p></>, "47%", "63.5%"], 
+            </p></>, "47%", "61.5%"], 
             [<><p>
                 Each filter produced an output of size 4 x 4 x 1. We then stack the result of each filter convolution, to produce an output of size 4 x 4 x 2.
             </p>
             <p>
                 This output now acts as the input to the next layer of our CNN!
-            </p> </>, "78%", "87.5%"]
+            </p> </>, "78%", "81%"]
         ];
         
         const buttons = params.map((val, index) => {
@@ -53,6 +53,8 @@ class FilterSizes extends React.Component {
                 </button>
         });
 
+        console.log("change");
+
 
         return (
         <section className = "grey section">
@@ -62,7 +64,7 @@ class FilterSizes extends React.Component {
                     <img src={size} alt="Filters and layers of a CNN" id="size-img"/>
                     {buttons}
                 </div>
-                {this.state.text && 
+                {this.state.text &&
                     <div className="speech-bubble">{this.state.text}</div>
                 }
             </div>
