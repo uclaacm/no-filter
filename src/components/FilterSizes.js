@@ -52,10 +52,6 @@ class FilterSizes extends React.Component {
                     key={index}>
                 </button>
         });
-
-        console.log("change");
-
-
         return (
         <section className = "grey section">
             <div className="card">
