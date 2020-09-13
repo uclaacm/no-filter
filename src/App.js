@@ -36,7 +36,16 @@ function App() {
       </section>
       <section className="grey section">
         <div className="card">
-        <h2>Some sort of high-level description of CNNs</h2>
+        <h1>First, Neural Networks</h1>
+        <p>Maybe you know about neural networks.
+        They’re a type of classification method that uses lots of math to produce an output.
+        Neural networks can do many things: classify images, voice recognition, and more.
+        </p>
+        <a className="link-to-slides" href="https://docs.google.com/presentation/d/1GpQkI9bcFbWteC0yxY-zg7Tt_fP-2CyG8EAWbfcL7ws/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Learn more about neural networks here!</a>
+        <p>
+        <em>Convolutional Neural Networks</em>, or CNNs, are a type of neural network.
+        CNNs “revolve” around an image, analyzing it piece by piece. In this learning lab, we'll learn about how that works.
+        </p>
         </div>
     </section>
       <section className="blue section">
@@ -60,7 +69,7 @@ function App() {
             the eyes, the nose, etc—individually.
           </p>
           <p>
-            Then, you probably put these <em>features</em> together to form bigger structures like the face and the body.
+            Then, you put these <em>features</em> together to form bigger structures like the face and the body.
           </p>
           <p>Finally, you were able to combine the larger components to form an answer: koala.</p>
         </div>
