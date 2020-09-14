@@ -42,31 +42,31 @@ export default class AutoPlayMethods extends Component {
       <div className = "main">
         <Slider ref={slider => (this.slider = slider)} {...settings}>
           <div className = "frames">
-            <img src = {f1} className="frame"></img>
+            <img src = {f1} className="frame" alt="first frame of filter calculation animation"></img>
           </div>
           <div className = "frames">
-            <img src = {f2} className="frame"></img>
+            <img src = {f2} className="frame" alt="second frame of filter calculation animation"></img>
           </div>
           <div className = "frames">
-            <img src = {f3} className="frame"></img>
+            <img src = {f3} className="frame" alt="third frame of filter calculation animation"></img>
           </div>
           <div className = "frames">
-            <img src = {f4} className="frame"></img>
+            <img src = {f4} className="frame" alt="fourth frame of filter calculation animation"></img>
           </div>
           <div className = "frames">
-            <img src = {f5} className="frame"></img>
+            <img src = {f5} className="frame" alt="fifth frame of filter calculation animation"></img>
           </div>
           <div className = "frames">
-            <img src = {f6} className="frame"></img>
+            <img src = {f6} className="frame" alt="sixth frame of filter calculation animation"></img>
           </div>
           <div className = "frames">
-            <img src = {f7} className="frame"></img>
+            <img src = {f7} className="frame" alt="seventh frame of filter calculation animation"></img>
           </div>
           <div className = "frames">
-            <img src = {f8} className="frame"></img>
+            <img src = {f8} className="frame" alt="eighth frame of filter calculation animation"></img>
           </div>
           <div className = "frames">
-            <img src = {f9} className="frame"></img>
+            <img src = {f9} className="frame" alt="ninth and last frame of filter calculation animation"></img>
           </div>
         </Slider>
         <div style={{ textAlign: "center" }}>
