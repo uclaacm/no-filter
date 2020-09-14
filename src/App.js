@@ -6,7 +6,8 @@ import flamingo from './img/flamingo.jpg';
 import Navbar from './components/Navbar.js';
 import clipart from './img/people-at-computer.jpg';
 import Filters from './components/Filters.js';
-
+import depth from './img/depth.png';
+import FilterSizes from './components/FilterSizes.js';
 
 function App() {
   return (
@@ -67,14 +68,15 @@ function App() {
       <section className="grey section">
         <div className="card">
           <p>Believe it or not, CNNs work the same way! A <em>filter</em> will focus on one tiny area of an
-           image at a time, analyzing the picture <em>piece by piece</em>.</p>
+           image at a time, analyzing the picture piece by piece.
+           This process is called <em>convolving</em>.</p>
            <p><em>Fully-connected neural networks</em> are very different. When you look at the picture below, what do you see?</p>
         </div>
       </section>
       <section className="blue section">
-        <div className="card" id="flamingo-holder">
-          <img src={flamingo} id="flamingo" alt="flamingo"></img>
-          <div id="side-text">
+        <div className="card grid-holder">
+          <img src={flamingo} className="grid-img" alt="flamingo"></img>
+          <div className="side-text">
             <p>You probably recognized this picture as a flamingo instantly.
               You didn't look at the picture as legs, wings, and a beak, but rather looked at the image as a whole.
             </p>
@@ -103,6 +105,24 @@ function App() {
         </div>
       </section>
       <Filters />
+      <section className="grey section">
+        <div className="card">
+          <h1>Aman's stuff goes here</h1>
+        </div>
+      </section>
+      <section className="blue section">
+        <div className="card grid-holder">
+          <img src={depth} alt="Pixel matrices with depth of 3" className="grid-img"/>
+          <div className="side-text">
+            <p>In order to apply our filter to each channel of an <em>RGB</em> (<em>R</em>ed, <em>G</em>reen, <em>B</em>lue) image,
+            we need our filter to be 3-dimensional as well&mdash;that is, our filter should have length, width, and depth.
+            </p>
+            <p>This is the <em>size</em> of our filter. In CNNs analyzing RGB images, 3 x 3 x 3 filters are some of the most commonly-used filters,
+            along with 5 x 5 x 3 filters.</p>
+          </div>
+        </div>
+      </section>
+      <FilterSizes />
     </div>
   );
 }
