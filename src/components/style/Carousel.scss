@@ -26,9 +26,17 @@
         }
     }
     background: none;
-    border: none;
+    border: 1px solid white;
     outline: none;
     transition: 0.4s;
+}
+
+.cbutton:focus{
+    .cicon{
+        color: red;
+    }
+    border-color: black;
+    border: 1px solid;
 }
 
 .main{
