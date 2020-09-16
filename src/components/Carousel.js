@@ -1,5 +1,4 @@
-/* eslint-disable */
-alert('Redundant alt attribute. Screen-readers already announce img tags as an image. You don’t need to use the words image, photo, or picture (or any specified custom words) in the alt prop jsx-a11y/img-redundant-alt');
+/* eslint-disable jsx-a11y/img-redundant-alt */
 
 import React, { Component } from "react";
 import Slider from "react-slick";
