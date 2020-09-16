@@ -8,6 +8,7 @@ import clipart from './img/people-at-computer.jpg';
 import Filters from './components/Filters.js';
 import depth from './img/depth.png';
 import FilterSizes from './components/FilterSizes.js';
+import Carousel from './components/Carousel.js';
 
 function App() {
   return (
@@ -107,10 +108,21 @@ function App() {
       <Filters />
       <section className="grey section">
         <div className="card">
-          <h1>Aman's stuff goes here</h1>
+          <h2 style={{textAlign:"center"}}>Look at the animation below to learn how each element of the feature pool is calculated</h2>
+        <Carousel/>
         </div>
       </section>
       <section className="blue section">
+        <div className="card">
+          <p>
+          The animation abvove shows the effects of a filter on an image in greyscale. A greyscale image has a depth of 1 since we just need to store the black/white information of each pixel. 
+          A majority of the images taken today are in color. 
+          These images have multiple matrices stacked on top of each other with each matrix containing pixel values for a specific color. 
+          In an RGB image, for example, there are 3 matrices stacked on top of each other. <b>Thus, we say that an RGB image has a depth of 3.</b> The topmost layer contains the red intensity values of each pixel, followed by the middle matrix that stores information of the blue intensities of each pixel and finally, the last layer that stores information about the green intensities of each pixel.
+          </p>
+        </div>
+      </section>
+      <section className="grey section">
         <div className="card grid-holder">
           <img src={depth} alt="Pixel matrices with depth of 3" className="grid-img"/>
           <div className="side-text">
