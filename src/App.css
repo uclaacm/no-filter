@@ -142,3 +142,9 @@ em {
 .link-to-slides:hover {
   background-color: rgba(0,0,0,0.07);
 }
+#cnn-vis {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  min-width: 400px;
+}

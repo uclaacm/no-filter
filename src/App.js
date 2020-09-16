@@ -121,6 +121,7 @@ function App() {
           <h1>Aman's stuff goes here</h1>
         </div>
       </section>
+
       <section className="blue section">
         <div className="card grid-holder">
           <img src={depth} alt="Pixel matrices with depth of 3" className="grid-img"/>
@@ -134,6 +135,25 @@ function App() {
         </div>
       </section>
       <FilterSizes />
+      <section className="blue section">
+        <div className="card">
+          <h1>placeholder bc the colors are changing</h1>
+        </div>
+      </section>
+      <section className="grey section">
+        <div className="card">
+          <h1>What do CNNs look like?</h1>
+          <p>
+            Now that we know how to apply filters, let's take a look at how one layer of a CNN might use two feature-detecting filters to create feature maps.
+          </p>
+        </div>
+      </section>
+      <section className="blue section">
+      <div className="card">
+       <Magnifier src={visualizer} id="cnn-vis" mgShape="square" mgWidth={100} mgHeight={100} zoomFactor="1.5" mgShowOverflow="false" alt="two filters applied to one layer of a CNN"/>
+       </div>
+       </section>
+
     </div>
   );
 }
