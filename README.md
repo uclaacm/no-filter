@@ -15,7 +15,7 @@ First, let's clone our repository, and install all of our node dependencies:
 
 ```
 git clone https://github.com/uclaacm/no-filter.git
-cd cipher-salad
+cd no-filter
 npm install
 ```
 
