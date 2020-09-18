@@ -119,7 +119,7 @@ function App() {
       <Filters />
       <section className="grey section">
         <div className="card">
-          <h2 style={{textAlign:"center"}}>Look at the animation below to learn how each element of the feature pool is calculated</h2>
+          <h2 style={{textAlign:"center"}}>Look at the animation below to learn how a filter (shown as the red matrix) works on images to calculate each element of the feature map</h2>
         <Carousel/>
         </div>
       </section>
@@ -127,10 +127,10 @@ function App() {
       <section className="blue section">
         <div className="card">
           <p>
-          The animation abvove shows the effects of a filter on an image in greyscale. A greyscale image has a depth of 1 since we just need to store the black/white information of each pixel. 
+          The animation abvove shows the effects of a filter on an image in <b>grayscale</b>. A grayscale image has a depth of 1 since it just stores the black/white intensity information of each pixel. 
           A majority of the images taken today are in color. 
           These images have multiple matrices stacked on top of each other with each matrix containing pixel values for a specific color. 
-          In an RGB image, for example, there are 3 matrices stacked on top of each other. <b>Thus, we say that an RGB image has a depth of 3.</b> The topmost layer contains the red intensity values of each pixel, followed by the middle matrix that stores information of the blue intensities of each pixel and finally, the last layer that stores information about the green intensities of each pixel.
+          In an RGB image, for example, there are 3 matrices stacked on top of each other. <b>Thus, we say that an RGB image has a depth of 3.</b> The topmost layer contains the red intensity values of each pixel, followed by the middle matrix that stores information of the green intensities of each pixel and finally, the last layer that stores information about the blue intensities of each pixel.
           </p>
         </div>
       </section>
