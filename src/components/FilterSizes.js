@@ -53,7 +53,7 @@ class FilterSizes extends React.Component {
                 </button>
         });
         return (
-        <section className = "grey section">
+        <section className = "blue section">
             <div className="card">
                 <h2>click to see what's up</h2>
                 <div className="more-filters-container">
