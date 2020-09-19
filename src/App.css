@@ -12,6 +12,7 @@ h1 {
 h2 {
   font-size: 20px;
   color: #1c1a19;
+  line-height: 1.5;
 }
 
 p {
@@ -51,29 +52,43 @@ em {
   box-shadow: 0px 0px 10px 2px rgba(30, 30, 30, 0.2);
   justify-content: flex-start;
 
-}
-.toc-panel {
+}.toc-panel {
   display: flex;
   align-items: center;
+  flex-flow: row;
+  justify-content: center;
   border-radius: 7px;
   width: 95%;
   padding: 1em;
   opacity: 0.95;
-
 }
 .mini-card {
-  background: rgba(251, 251, 251, 0.94);
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 7px;
   box-shadow: 0px 0px 10px 2px rgba(30, 30, 30, 0.2);
   padding: 1em;
-  margin-left: 5%;
-  margin-right: 5%;
-  max-width: 60%;
+  margin: 5%;
+  width: 50%;
+  min-width: 300px;
+  background: white;
 }
 .clipart-container {
   display: flex;
-  align-items: center;
-  margin-right: 5%;
+  max-width: 500px;
+  min-width: 300px;
+  width:50%;
+}
+#clipart {
+  border-radius: 10px;
+  width: 100%;
+}
+@media screen and (max-width:690px) {
+  .toc-panel { flex-wrap: wrap; }
+  .mini-card { width: 100%;}
+  .clipart-container { width: 100%;}
 }
 .row {
   display: flex;
@@ -111,12 +126,6 @@ em {
 .side-text {
   margin-left: 2em;
 }
-#clipart {
-  border-radius: 10px;
-  width: 100%;
-  max-width: 400px;
-  min-width: 250px;
-}
 
 .link-to-slides {
   display: flex;
@@ -127,9 +136,15 @@ em {
   padding: 0.5em;
   text-decoration: none;
   max-width: max-content;
+  align-self: center;
 
 }
-
 .link-to-slides:hover {
   background-color: rgba(0,0,0,0.07);
+}
+#cnn-vis {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  min-width: 400px;
 }
