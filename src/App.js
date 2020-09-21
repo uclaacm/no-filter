@@ -11,8 +11,10 @@ import FilterSizes from './components/FilterSizes.js';
 import visualizer from './img/cnn-vis.png';
 import Magnifier from "react-magnifier";
 import Carousel from './components/Carousel.js';
+import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
 function App() {
+  const handle = useFullScreenHandle();
   return (
     <div className="App">
     <Navbar />
@@ -127,9 +129,9 @@ function App() {
       <section className="blue section">
         <div className="card">
           <p>
-          The animation abvove shows the effects of a filter on an image in greyscale. A greyscale image has a depth of 1 since we just need to store the black/white information of each pixel. 
-          A majority of the images taken today are in color. 
-          These images have multiple matrices stacked on top of each other with each matrix containing pixel values for a specific color. 
+          The animation abvove shows the effects of a filter on an image in greyscale. A greyscale image has a depth of 1 since we just need to store the black/white information of each pixel.
+          A majority of the images taken today are in color.
+          These images have multiple matrices stacked on top of each other with each matrix containing pixel values for a specific color.
           In an RGB image, for example, there are 3 matrices stacked on top of each other. <b>Thus, we say that an RGB image has a depth of 3.</b> The topmost layer contains the red intensity values of each pixel, followed by the middle matrix that stores information of the blue intensities of each pixel and finally, the last layer that stores information about the green intensities of each pixel.
           </p>
         </div>
@@ -147,11 +149,6 @@ function App() {
         </div>
       </section>
       <FilterSizes />
-      <section className="blue section">
-        <div className="card">
-          <h1>placeholder bc the colors are changing</h1>
-        </div>
-      </section>
       <section className="grey section">
         <div className="card">
           <h1>What do CNNs look like?</h1>
@@ -162,7 +159,16 @@ function App() {
       </section>
       <section className="blue section">
       <div className="card">
-       <Magnifier src={visualizer} id="cnn-vis" mgShape="square" mgWidth={100} mgHeight={100} zoomFactor="1.5" mgShowOverflow="false" alt="two filters applied to one layer of a CNN"/>
+       <button id="fullscreen" onClick={handle.enter}>
+         Enter fullscreen
+       </button>
+
+       <FullScreen handle={handle}>
+         <div className="cnnHolder">
+            <img src={visualizer} id="cnn-vis" alt="two filters applied to one layer of a CNN"/>
+         </div>
+       </FullScreen>
+
        </div>
        </section>
 

@@ -137,14 +137,31 @@ em {
   text-decoration: none;
   max-width: max-content;
   align-self: center;
-
 }
 .link-to-slides:hover {
   background-color: rgba(0,0,0,0.07);
+}
+#fullscreen {
+  font-family: 'Source Sans Pro', sans-serif;
+  align-self: left;
+  border: 2px #1EBDF4 solid;
+  font-size: 16px;
+  color: black;
+  padding: 0.5em;
+  background-color: #EBF9FE;
+}
+#fullscreen:hover {
+  opacity: 0.7;
+}
+.cnnHolder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #cnn-vis {
   display: flex;
   flex-direction: column;
   background-color: white;
   min-width: 400px;
+  align-self: center;
 }
