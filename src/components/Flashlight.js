@@ -42,7 +42,8 @@ class Flashlight extends React.Component {
     render () {
         return (
             <div id="container" style={backgroundStyles}
-                onMouseEnter={this.showFlashlight} onMouseMove={this.moveFlashlight} onMouseLeave={this.hideFlashlight}>
+                onMouseEnter={this.showFlashlight} onMouseMove={this.moveFlashlight} onMouseLeave={this.hideFlashlight}
+                onTouchStart={this.showFlashlight} onTouchMove={this.moveFlashlight} onTouchEnd={this.hideFlashlight}>
                 {/* <img id="flashlight-img" src={koala} alt="koala"></img> */}
                 <div id="spotlight"></div>
             </div>

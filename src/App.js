@@ -21,12 +21,12 @@ function App() {
         <div className="mini-card">
           <h1>
             Let's learn about Convolutional Neural Networks!
-            </h1>
-            <ol>
-              <li> What are CNN <em>filters</em>?</li>
-              <li> What do filters <em>"see"</em>?</li>
-              <li> What do CNNs look like? </li>
-            </ol>
+          </h1>
+          <ol>
+            <li> What are CNN <em>filters</em>?</li>
+            <li> What do filters <em>"see"</em>?</li>
+            <li> What do CNNs look like? </li>
+          </ol>
         </div>
         <div className="clipart-container">
         <img id="clipart" src={clipart} alt="People working at a computer." />
@@ -38,18 +38,24 @@ function App() {
           <h1>First, Neural Networks</h1>
           <div className="first-neural-networks">
             <div className="words">
-              <p>Maybe you know about neural networks.
-              They’re a type of classification method that uses lots of math to produce an output.
-              Neural networks can do many things: classify images, voice recognition, and more.
+              <p>Maybe you've heard about neural networks. If you haven't, <em>check out the slides on the right.</em>
+              </p>
+              <p>Neural networks can:
+                <ul className="list">
+                  <li>Predict stock market prices</li>
+                  <li>Analyze your voice</li>
+                  <li>Find differences between cats and dogs</li>
+                </ul>
               </p>
               <p>
               <em>Convolutional Neural Networks</em>, or CNNs, are a type of neural network.
-              CNNs “revolve” around an image, analyzing it piece by piece. In this learning lab, we'll learn about how that works.
+              They find <em>features</em> by analyzing data (like images) <em>piece by piece</em>.
               </p>
+              <p> In this learning lab, we'll learn about how that works.</p>
             </div>
             <div className="links">
-              <a className="chubby-link" href="https://docs.google.com/presentation/d/1GpQkI9bcFbWteC0yxY-zg7Tt_fP-2CyG8EAWbfcL7ws/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Fully-connected neural networks</a>
-              <a className="chubby-link" href="https://google.com" target="_blank" rel="noopener noreferrer">Convolutional neural networks</a>
+              <a className="chubby-link" href="https://teachla.uclaacm.com/classes/ml/08-fc-neural-networks" target="_blank" rel="noopener noreferrer">Fully-connected neural networks</a>
+              <a className="chubby-link" href="https://teachla.uclaacm.com/classes/ml/10-cnn" target="_blank" rel="noopener noreferrer">Convolutional neural networks</a>
             </div>
           </div>
         </div>
@@ -58,13 +64,10 @@ function App() {
         <div className="card">
           <h1>Shining a Flashlight on Filters</h1>
           <h2>Can you figure out what's in the image below using the flashlight?</h2>
-
-        </div>
-      </section>
-      <section className="grey section">
-        <div className="card row" id="flashlight-holder">
-          <p style={{alignSelf: 'center', marginRight: '1em',}}><em>Hover your mouse/finger over the image.</em></p>
-          <Flashlight />
+          <div id="flashlight-holder">
+            <p style={{alignSelf: 'center', marginRight: '1em',}}>Hover your mouse/finger over the image.</p>
+            <Flashlight />
+          </div>
         </div>
       </section>
       <section className="blue section">
