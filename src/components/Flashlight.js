@@ -17,25 +17,29 @@ class Flashlight extends React.Component {
     }
 
     hoverMoveFlashlight = e => {
-        const spotlight = document.getElementById("spotlight");
         const container = document.getElementById("container");
         let rect = container.getBoundingClientRect();
 
         //get coordinates of mouse
         let x = Math.round(e.clientX - rect.x);
         let y = Math.round(e.clientY - rect.y);
-        spotlight.style.left = (x) + 'px';
-        spotlight.style.top = (y) + 'px';
+
+        this.moveFlashlight(x, y);
     }
 
     touchMoveFlashlight = e => {
-        const spotlight = document.getElementById("spotlight");
         const container = document.getElementById("container");
         let rect = container.getBoundingClientRect();
 
         //get coordinates of mouse
-        let x = Math.round(e.targetTouches[0].clientX - rect.x);
-        let y = Math.round(e.targetTouches[0].clientY - rect.y);
+        let x = Math.round(e.targetTouches[0].clientX - rect.x - 20);
+        let y = Math.round(e.targetTouches[0].clientY - rect.y - 20);
+
+        this.moveFlashlight(x, y);
+    }
+
+    moveFlashlight = (x, y) => {
+        const spotlight = document.getElementById("spotlight");
         spotlight.style.left = (x) + 'px';
         spotlight.style.top = (y) + 'px';
     }
