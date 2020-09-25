@@ -16,7 +16,7 @@ class Flashlight extends React.Component {
         img.style.filter = "brightness(100%)";
     }
 
-    moveFlashlight = e => {
+    hoverMoveFlashlight = e => {
         const spotlight = document.getElementById("spotlight");
         const container = document.getElementById("container");
         let rect = container.getBoundingClientRect();
@@ -24,6 +24,18 @@ class Flashlight extends React.Component {
         //get coordinates of mouse
         let x = Math.round(e.clientX - rect.x);
         let y = Math.round(e.clientY - rect.y);
+        spotlight.style.left = (x) + 'px';
+        spotlight.style.top = (y) + 'px';
+    }
+
+    touchMoveFlashlight = e => {
+        const spotlight = document.getElementById("spotlight");
+        const container = document.getElementById("container");
+        let rect = container.getBoundingClientRect();
+
+        //get coordinates of mouse
+        let x = Math.round(e.targetTouches[0].clientX - rect.x);
+        let y = Math.round(e.targetTouches[0].clientY - rect.y);
         spotlight.style.left = (x) + 'px';
         spotlight.style.top = (y) + 'px';
     }
@@ -42,8 +54,8 @@ class Flashlight extends React.Component {
     render () {
         return (
             <div id="container" style={backgroundStyles}
-                onMouseEnter={this.showFlashlight} onMouseMove={this.moveFlashlight} onMouseLeave={this.hideFlashlight}
-                onTouchStart={this.showFlashlight} onTouchMove={this.moveFlashlight} onTouchEnd={this.hideFlashlight}>
+                onMouseEnter={this.showFlashlight} onMouseMove={this.hoverMoveFlashlight} onMouseLeave={this.hideFlashlight}
+                onTouchStart={this.showFlashlight} onTouchMove={this.touchMoveFlashlight} onTouchEnd={this.hideFlashlight}>
                 {/* <img id="flashlight-img" src={koala} alt="koala"></img> */}
                 <div id="spotlight"></div>
             </div>
