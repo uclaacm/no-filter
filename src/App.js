@@ -19,17 +19,14 @@ function App() {
     <section className="blue section">
       <div className="toc-panel">
         <div className="mini-card">
-          <h2>
-            Today, we’ll be looking at Convolutional Neural Networks.
-            We’ll aim to briefly answer the following three questions:
+          <h1>
+            Let's learn about Convolutional Neural Networks!
+            </h1>
             <ol>
-              <li> What are CNN filters? </li>
-              <li> What do filters "see"? </li>
-              <li> What are they used for? </li>
+              <li> What are CNN <em>filters</em>?</li>
+              <li> What do filters <em>"see"</em>?</li>
+              <li> What do CNNs look like? </li>
             </ol>
-          </h2>
-        </div>
-        <div>
         </div>
         <div className="clipart-container">
         <img id="clipart" src={clipart} alt="People working at a computer." />
@@ -39,15 +36,22 @@ function App() {
       <section className="grey section">
         <div className="card">
           <h1>First, Neural Networks</h1>
-          <p>Maybe you know about neural networks.
-          They’re a type of classification method that uses lots of math to produce an output.
-          Neural networks can do many things: classify images, voice recognition, and more.
-          </p>
-          <a className="link-to-slides" href="https://docs.google.com/presentation/d/1GpQkI9bcFbWteC0yxY-zg7Tt_fP-2CyG8EAWbfcL7ws/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Learn more about neural networks here!</a>
-          <p>
-          <em>Convolutional Neural Networks</em>, or CNNs, are a type of neural network.
-          CNNs “revolve” around an image, analyzing it piece by piece. In this learning lab, we'll learn about how that works.
-          </p>
+          <div className="first-neural-networks">
+            <div className="words">
+              <p>Maybe you know about neural networks.
+              They’re a type of classification method that uses lots of math to produce an output.
+              Neural networks can do many things: classify images, voice recognition, and more.
+              </p>
+              <p>
+              <em>Convolutional Neural Networks</em>, or CNNs, are a type of neural network.
+              CNNs “revolve” around an image, analyzing it piece by piece. In this learning lab, we'll learn about how that works.
+              </p>
+            </div>
+            <div className="links">
+              <a className="chubby-link" href="https://docs.google.com/presentation/d/1GpQkI9bcFbWteC0yxY-zg7Tt_fP-2CyG8EAWbfcL7ws/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Fully-connected neural networks</a>
+              <a className="chubby-link" href="https://google.com" target="_blank" rel="noopener noreferrer">Convolutional neural networks</a>
+            </div>
+          </div>
         </div>
       </section>
       <section className="blue section">
