@@ -36,6 +36,7 @@ class Flashlight extends React.Component {
         let y = Math.round(e.targetTouches[0].clientY - rect.y - 20);
 
         this.moveFlashlight(x, y);
+        e.preventDefault();
     }
 
     moveFlashlight = (x, y) => {
