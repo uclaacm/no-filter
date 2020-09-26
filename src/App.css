@@ -115,13 +115,25 @@ em {
 .links {
   display: flex;
   flex-direction: column;
-  margin-left: 1em;
+  margin: 0 1em;
+}
+
+@media screen and (max-width: 450px) {
+  .first-neural-networks {
+    display: flex;
+    flex-direction: column;
+  }
+  .links {
+    margin: 0;
+    align-items: center; 
+  }
 }
 .chubby-link {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  text-align: center;
   height: stretch;
   background-color: #1EBDF4;
   width: 90%;

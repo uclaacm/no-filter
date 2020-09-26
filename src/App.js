@@ -38,7 +38,7 @@ function App() {
           <h1>First, Neural Networks</h1>
           <div className="first-neural-networks">
             <div className="words">
-              <p>Maybe you've heard about neural networks. If you haven't, <em>check out the slides on the right.</em>
+              <p>Maybe you've heard about neural networks. If you haven't, <em>check out the linked slides.</em>
               </p>
               <p>Neural networks can:
                 <ul className="list">
