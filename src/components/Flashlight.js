@@ -7,7 +7,8 @@ import './style/Flashlight.css';
 
 class Flashlight extends React.Component {
 
-    showFlashlight = () => {
+    showFlashlight = e => {
+        e.preventDefault();
         const spotlight = document.getElementById("spotlight");
         spotlight.style.opacity = 1;
 
@@ -28,6 +29,7 @@ class Flashlight extends React.Component {
     }
 
     touchMoveFlashlight = e => {
+        e.preventDefault();
         const container = document.getElementById("container");
         let rect = container.getBoundingClientRect();
 
@@ -36,7 +38,6 @@ class Flashlight extends React.Component {
         let y = Math.round(e.targetTouches[0].clientY - rect.y - 20);
 
         this.moveFlashlight(x, y);
-        e.preventDefault();
     }
 
     moveFlashlight = (x, y) => {
@@ -45,7 +46,8 @@ class Flashlight extends React.Component {
         spotlight.style.top = (y) + 'px';
     }
 
-    hideFlashlight = () => {
+    hideFlashlight = e => {
+        e.preventDefault();
         const spotlight = document.getElementById("spotlight");
         spotlight.style.opacity = 0;
 
