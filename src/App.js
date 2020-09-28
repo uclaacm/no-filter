@@ -36,7 +36,7 @@ function App() {
       <section className="grey section">
         <div className="card">
           <h1>First, Neural Networks</h1>
-          <div className="first-neural-networks">
+          <div className="grid-60-40">
             <div className="words">
               <p>Maybe you've heard about neural networks. If you haven't, <em>check out the linked slides.</em>
               </p>
@@ -70,34 +70,38 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="blue section">
+      <section className="grey section">
 
         <div className="card">
-          <img src={koala} alt="koala in a forest" id="koala-reveal-img"></img>
           <h2>If you guessed a koala: congrats, you're (basically) a CNN!</h2>
-          <p>Now take a moment to think about how you actually identified the koala. First, you probably looked at each piece—edges,
-            the eyes, the nose, etc—individually.
-          </p>
-          <p>
-            Then, you probably put these <em>features</em> together to form bigger structures like the face and the body.
-          </p>
-          <p>Finally, you were able to combine the larger components to form an answer: koala.</p>
-        </div>
-      </section>
-      <section className="grey section">
-        <div className="card">
-          <p>Believe it or not, CNNs work the same way! A <em>filter</em> will focus on one tiny area of an
-           image at a time, analyzing the picture piece by piece.
-           This process is called <em>convolving</em>.</p>
-           <p><em>Fully-connected neural networks</em> are very different. When you look at the picture below, what do you see?</p>
+          <div className="grid-50-50">
+            <div>
+              <p>Think about how you identified the koala:
+                <ul>
+                  <li>First, you looked at pieces like the koala's eyes and color.</li>
+                  <li>You used these pieces to identify <em>features</em> like the face and fur texture.</li>
+                  <li>Finally, you combined these features to form a koala.</li>
+                </ul>
+              </p>
+              <p>Believe it or not, CNNs work the same way! A <em>filter</em> will focus on one tiny area of an
+                image at a time and analyzes the picture piece by piece.
+                This process is called <em>convolution</em>.</p>
+            </div>
+            <div className="center">
+              <img src={koala} alt="koala in a forest" id="koala-reveal-img"></img>
+            </div>
+          </div>
         </div>
       </section>
       <section className="blue section">
-        <div className="card grid-holder">
+        <div className="card">
+          <h1>Fully-connected Neural Networks</h1>
+          <h2>When you look at the picture below, what do you see?</h2>
+          <div className="grid-holder">
           <img src={flamingo} className="grid-img" alt="flamingo"></img>
           <div className="side-text">
-            <p>You probably recognized this picture as a flamingo instantly.
-              You didn't look at the picture as legs, wings, and a beak, but rather looked at the image as a whole.
+            <p>You probably recognized this flamingo instantly.
+              You didn't look at the legs, wings, and beak, but at the whole image.
             </p>
             <p>
               This is what fully-connected neural networks do.
@@ -107,6 +111,7 @@ function App() {
              an image one feature at a time.</em></p>
           {/* NEED TO ADD LINK */}
           <a className="link-to-slides" href="https://www.placeholder.com" target="_blank" rel="noopener noreferrer">Before we move on, check out these slides to learn more about how filters work.</a>
+          </div>
           </div>
         </div>
       </section>

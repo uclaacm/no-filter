@@ -108,7 +108,7 @@ em {
   justify-content: space-evenly;
 }
 
-.first-neural-networks {
+.grid-60-40 {
   display: grid;
   grid-template-columns: 60% 40%;
 }
@@ -118,8 +118,8 @@ em {
   margin: 0 1em;
 }
 
-@media screen and (max-width: 450px) {
-  .first-neural-networks {
+@media screen and (max-width: 500px) {
+  .grid-60-40 {
     display: flex;
     flex-direction: column;
   }
@@ -153,18 +153,35 @@ em {
   border: solid #1EBDF4 3px;
 }
 
-
-
 #flashlight-holder {
   display: grid;
   grid-template-columns: 30% 70%;
 }
 
+.grid-50-50 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .grid-50-50 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 #koala-reveal-img {
-  width: 40%;
-  border-radius: 15px;
-  align-self: center;
-  margin-bottom: 1em;
+  width: 90%;
+  height: auto;
+  border-radius: 7px;
 }
 
 .grid-holder {
