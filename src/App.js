@@ -106,11 +106,11 @@ function App() {
             <p>
               This is what fully-connected neural networks do.
             </p>
-
-          <p>So CNNs are different from fully-connected neural networks because <em>CNNs use filters to analyze
-             an image one feature at a time.</em></p>
-          {/* NEED TO ADD LINK */}
-          <a className="link-to-slides" href="https://www.placeholder.com" target="_blank" rel="noopener noreferrer">Before we move on, check out these slides to learn more about how filters work.</a>
+            <p>
+              While fully-connected neural networks look at data as a whole,
+              CNNs look at data <em>one feature at a time</em>. </p>
+            <p>Before we move on, check out <a className="link-to-slides" href="https://teachla.uclaacm.com/classes/ml/10-cnn" target="_blank" rel="noopener noreferrer">these slides</a> to learn about how filters work.</p>
+          
           </div>
           </div>
         </div>
