@@ -55,7 +55,7 @@ class FilterSizes extends React.Component {
         return (
         <section className = "blue section">
             <div className="card">
-                <h2>click to see what's up</h2>
+                <h2>Yooooo</h2>
                 <div className="more-filters-container">
                     <img src={size} alt="Filters and layers of a CNN" id="size-img"/>
                     {buttons}

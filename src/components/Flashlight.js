@@ -18,6 +18,7 @@ class Flashlight extends React.Component {
     }
 
     hoverMoveFlashlight = e => {
+        e.preventDefault();
         const container = document.getElementById("container");
         let rect = container.getBoundingClientRect();
 
