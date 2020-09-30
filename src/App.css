@@ -20,6 +20,7 @@ p {
   line-height: 1.5;
   color: #1c1a19;
   max-width: 50rem;
+  margin: 0.5em 0;
 }
 
 em {
@@ -166,7 +167,9 @@ em {
 .grid-50-50 {
   display: grid;
   grid-template-columns: 50% 50%;
+  align-items: center;
 }
+
 
 .center {
   display: flex;

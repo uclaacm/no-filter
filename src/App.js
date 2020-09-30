@@ -117,9 +117,11 @@ function App() {
       </section>
       <section className="grey section">
         <div className="card">
-          <h1>How do CNNs use filters to analyze images?</h1>
+          <h1>How do we use filters to analyze images?</h1>
+          <p>Think of an image as a bunch of <em>pixel values</em>.</p>
+          <p>Pixel values are numbers that determine the color of each tiny section of an image.</p>
           <p>
-            Filters can be used to modify the value of each pixel in an image.
+            Filters modify the value of each pixel in an image.
             This is how Instagram or Snapchat filters work! We'll see what actual CNNs look at in a bit. For now, however, check out how we can use filters and their values to manipulate images
             and make features easier to see.
           </p>
