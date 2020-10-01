@@ -104,7 +104,6 @@ em {
 }
 .row {
   display: flex;
-  flex-direction: row;
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
@@ -234,6 +233,31 @@ em {
   background-color: #1EBDF4;
   color: white;
 }
+
+.filters-intro {
+  justify-content: space-between;
+}
+
+.filters-intro div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sentiment-holder {
+  align-items: flex-end;
+}
+#sentiment-analysis {
+  width: 250px;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .sentiment-holder {
+    width: stretch;
+  }
+}
+
 #cnn-vis {
   display: flex;
   flex-direction: column;

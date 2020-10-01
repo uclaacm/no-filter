@@ -5,6 +5,7 @@ import koala from './img/koala2.jpg';
 import flamingo from './img/flamingo.jpg';
 import Navbar from './components/Navbar.js';
 import clipart from './img/people.png';
+import sentimentAnalysis from './img/undraw_sentiment_analysis.svg';
 import Filters from './components/Filters.js';
 import depth from './img/depth.png';
 import FilterSizes from './components/FilterSizes.js';
@@ -118,16 +119,22 @@ function App() {
       <section className="grey section">
         <div className="card">
           <h1>How do we use filters to analyze images?</h1>
-          <p>Think of an image as a bunch of <em>pixel values</em>.</p>
-          <p>Pixel values are numbers that determine the color of each tiny section of an image.</p>
-          <p>
-            Filters modify the value of each pixel in an image.
-            This is how Instagram or Snapchat filters work! We'll see what actual CNNs look at in a bit. For now, however, check out how we can use filters and their values to manipulate images
-            and make features easier to see.
-          </p>
-          <p>
-            <em>In this example, select different filters to see how their values correspond to the image output. What patterns do you see?</em>
-          </p>
+          <div className="row filters-intro">
+            <div>
+              <p>Filters modify the value of each <em>pixel</em> in an image.</p>
+              <p>We see filters used in:
+                <ul>
+                  <li>Instagram/Snapchat filters</li>
+                  <li>Photoshop effects</li>
+                  <li>Editing/synthesizing music</li>
+                </ul>
+              </p>
+              <p>How can we use filters and their values to manipulate images? </p>
+            </div>
+            <div className="sentiment-holder">
+              <img src={sentimentAnalysis} alt="Guy looking at selfie" id="sentiment-analysis"/>
+            </div>
+          </div>
         </div>
       </section>
       <Filters />

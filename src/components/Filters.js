@@ -99,6 +99,10 @@ class Filters extends React.Component {
     render() {
     return (
         <section className="section blue">
+            <div className="card">
+                <h2>How do filters make features easier to see?</h2>
+                <p>Select the different filters in this example. What patterns do you see in the filter values?</p>
+            </div>
             <div className="filters-holder">
                 <img src={amsterdamRegular} alt="black and white amsterdam" width="500px"></img>
                 <div className="card"  id="form">
