@@ -3,11 +3,12 @@ import koala from '../img/koala2.jpg';
 import './style/Flashlight.css';
 
 
-
+/*TODO: REMOVE DOM MANIPULATION*/
 
 class Flashlight extends React.Component {
 
-    showFlashlight = () => {
+    showFlashlight = e => {
+        e.preventDefault();
         const spotlight = document.getElementById("spotlight");
         spotlight.style.opacity = 1;
 
@@ -16,19 +17,39 @@ class Flashlight extends React.Component {
         img.style.filter = "brightness(100%)";
     }
 
-    moveFlashlight = e => {
-        const spotlight = document.getElementById("spotlight");
+    hoverMoveFlashlight = e => {
+        e.preventDefault();
         const container = document.getElementById("container");
         let rect = container.getBoundingClientRect();
 
         //get coordinates of mouse
-        let x = Math.round(e.clientX - rect.x);
-        let y = Math.round(e.clientY - rect.y);
+        let x = e.clientX - rect.x;
+        let y = e.clientY - rect.y;
+
+        this.moveFlashlight(x, y);
+    }
+
+    touchMoveFlashlight = e => {
+        //TODO: Mobile compatibility
+        e.preventDefault();
+        const container = document.getElementById("container");
+        let rect = container.getBoundingClientRect();
+
+        //get coordinates of mouse
+        let x = e.targetTouches[0].clientX - rect.x - 20;
+        let y = e.targetTouches[0].clientY - rect.y - 20;
+
+        this.moveFlashlight(x, y);
+    }
+
+    moveFlashlight = (x, y) => {
+        const spotlight = document.getElementById("spotlight");
         spotlight.style.left = (x) + 'px';
         spotlight.style.top = (y) + 'px';
     }
 
-    hideFlashlight = () => {
+    hideFlashlight = e => {
+        e.preventDefault();
         const spotlight = document.getElementById("spotlight");
         spotlight.style.opacity = 0;
 
@@ -42,8 +63,8 @@ class Flashlight extends React.Component {
     render () {
         return (
             <div id="container" style={backgroundStyles}
-                onMouseEnter={this.showFlashlight} onMouseMove={this.moveFlashlight} onMouseLeave={this.hideFlashlight}>
-                {/* <img id="flashlight-img" src={koala} alt="koala"></img> */}
+                onMouseEnter={this.showFlashlight} onMouseMove={this.hoverMoveFlashlight} onMouseLeave={this.hideFlashlight}
+                onTouchStart={this.showFlashlight} onTouchMove={this.touchMoveFlashlight} onTouchEnd={this.hideFlashlight}>
                 <div id="spotlight"></div>
             </div>
         );

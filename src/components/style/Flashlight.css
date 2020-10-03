@@ -7,6 +7,7 @@
     background-size: cover;
     width: 100%;
     height: 40vw; /*estimated proportions because background image messes things up :( */
+    border-radius: 7px;
     
 }
 #spotlight {
@@ -14,9 +15,9 @@
     border-radius: 100%;
     content: "";
     position: absolute;
-    width: 10vw;
-    height: 10vw;
+    width: 5vw;
+    height: 5vw;
     z-index: 1;
     transform: translate(-50%, -50%); /*center on mouse*/
-    border: solid black 70vw;
+    border: solid black 90vw;
 }
