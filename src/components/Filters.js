@@ -11,7 +11,7 @@ import amsterdamRightSobel from '../img/filter-picker/amsterdam-right-sobel.jpg'
 import amsterdamSharpen from '../img/filter-picker/amsterdam-sharpen.jpg';
 import amsterdamTopSobel from '../img/filter-picker/amsterdam-top-sobel.jpg';
 
-
+/*TODO: Change images to koala rather than amsterdam?*/
 
 class Filters extends React.Component {
     constructor(props) {
@@ -26,8 +26,6 @@ class Filters extends React.Component {
 
     //val is string value
     changeImage = val => {
-        // const filterImage = document.getElementById("filter-applied");
-        // const description = document.getElementById("img-description")
         let src = null;
         let paragraph = null;
         let filter = [];
@@ -99,47 +97,46 @@ class Filters extends React.Component {
     render() {
     return (
         <section className="section blue">
-            <div className="filters-holder flexy">
-                <img src={amsterdamRegular} alt="black and white amsterdam" width="500px"></img>
-                <div className="flexy">
-                    <div className="card"  id="form">
-                        <div className="kernel-matrix">
-                            <div className="kernel-row">
-                                <div>{this.state.filter[0]}</div>
-                                <div>{this.state.filter[1]}</div>
-                                <div>{this.state.filter[2]}</div>
-                            </div>
-                            <div className="kernel-row">
-                                <div>{this.state.filter[3]}</div>
-                                <div>{this.state.filter[4]}</div>
-                                <div>{this.state.filter[5]}</div>
-                            </div>
-                            <div className="kernel-row">
-                                <div>{this.state.filter[6]}</div>
-                                <div>{this.state.filter[7]}</div>
-                                <div>{this.state.filter[8]}</div>
-                            </div>
+            <div className="card">
+                <h2>How do filters make features easier to see?</h2>
+                <p>Select the different filters in this example. What patterns do you see in the filter values?</p>
+            </div>
+            <div className="filters-holder">
+                <img src={amsterdamRegular} alt="black and white amsterdam"></img>
+                <div className="card"  id="form">
+                    <div className="kernel-matrix">
+                        <div className="kernel-row">
+                            <div>{this.state.filter[0]}</div>
+                            <div>{this.state.filter[1]}</div>
+                            <div>{this.state.filter[2]}</div>
                         </div>
-                        <form>
-                            <label>
-                                Choose a filter:
-                                <select value={this.state.value} onChange={this.handleChange}>
-                                    <option value="identity">Identity</option>
-                                    <option value="blur">Blur</option>
-                                    <option value="bottom sobel">Bottom sobel</option>
-                                    <option value="emboss">Emboss</option>
-                                    <option value="left sobel">Left sobel</option>
-                                    <option value="outline">Outline</option>
-                                    <option value="right sobel">Right sobel</option>
-                                    <option value="sharpen">Sharpen</option>
-                                    <option value="top sobel">Top sobel</option>
-                                </select>
-                            </label>
-                        </form>
-
+                        <div className="kernel-row">
+                            <div>{this.state.filter[3]}</div>
+                            <div>{this.state.filter[4]}</div>
+                            <div>{this.state.filter[5]}</div>
+                        </div>
+                        <div className="kernel-row">
+                            <div>{this.state.filter[6]}</div>
+                            <div>{this.state.filter[7]}</div>
+                            <div>{this.state.filter[8]}</div>
+                        </div>
                     </div>
-                    <img id="filter-applied" src={this.state.src} alt="amsterdam with filter applied" width="500px"></img>
+                    <form className="form-select">
+                        <label> Choose a filter:</label>
+                        <select value={this.state.value} onChange={this.handleChange}>
+                            <option value="identity">Identity</option>
+                            <option value="blur">Blur</option>
+                            <option value="bottom sobel">Bottom sobel</option>
+                            <option value="emboss">Emboss</option>
+                            <option value="left sobel">Left sobel</option>
+                            <option value="outline">Outline</option>
+                            <option value="right sobel">Right sobel</option>
+                            <option value="sharpen">Sharpen</option>
+                            <option value="top sobel">Top sobel</option>
+                        </select>
+                    </form>
                 </div>
+                <img id="filter-applied" src={this.state.src} alt="amsterdam with filter applied"></img>
             </div>
             <div className="card" id="img-description">
                 <p>{this.state.paragraph}</p>

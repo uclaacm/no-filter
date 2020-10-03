@@ -1,16 +1,21 @@
-.flexy {
+.filters-holder {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    padding: 1em;
 }
 
 .filters-holder img {
     margin: 1em;
+    width: 33vw;
+    height: auto;
 }
+
 
 #form {
     margin: 1em;
-    width: max-content;
+    width: 20vw;
     height: max-content;
 }
 
@@ -31,13 +36,36 @@
 
 .kernel-row>* {
     border: 0.5px rgba(0, 0, 0, 0.5) solid;
-    padding: 25% 0px;
+    padding: 8px 0px;
     font-size: 16px;
     text-align: center;
 }
 
-#form select {
-    margin-left: 1em;
+#form .form-select {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#form label {
+    margin-right: 0.25em;
+}
+
+@media screen and (max-width: 800px) {
+    .filters-holder {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .filters-holder img {
+        width: 80%;
+        height: auto;
+    }
+    #form {
+        width: max-content;
+        height: max-content;
+    }
+
 }
 
 #img-description {
@@ -47,11 +75,6 @@
 }
 
 
-@media(max-width: 600px) {
-    .filters-holder img {
-        width: 80%;
-    }
-}
 
 .small-stuff {
     font-size: 14px;
