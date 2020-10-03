@@ -41,14 +41,14 @@
     text-align: center;
 }
 
-#form label {
+#form .form-select {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
-#form select {
-    margin-top: 0.25em;
+#form label {
+    margin-right: 0.25em;
 }
 
 @media screen and (max-width: 800px) {
