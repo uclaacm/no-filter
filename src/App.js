@@ -5,6 +5,7 @@ import koala from './img/koala2.jpg';
 import flamingo from './img/flamingo.jpg';
 import Navbar from './components/Navbar.js';
 import clipart from './img/people.png';
+import sentimentAnalysis from './img/undraw_sentiment_analysis.svg';
 import Filters from './components/Filters.js';
 import depth from './img/depth.png';
 import FilterSizes from './components/FilterSizes.js';
@@ -20,17 +21,14 @@ function App() {
     <section className="blue section">
       <div className="toc-panel">
         <div className="mini-card">
-          <h2>
-            Today, we’ll be looking at Convolutional Neural Networks.
-            We’ll aim to briefly answer the following three questions:
-            <ol>
-              <li> What are CNN filters? </li>
-              <li> What do filters "see"? </li>
-              <li> What are they used for? </li>
-            </ol>
-          </h2>
-        </div>
-        <div>
+          <h1>
+            Let's learn about Convolutional Neural Networks!
+          </h1>
+          <ol>
+            <li> What are CNN <em>filters</em>?</li>
+            <li> What do filters <em>"see"</em>?</li>
+            <li> What do CNNs look like? </li>
+          </ol>
         </div>
         <div className="clipart-container">
         <img id="clipart" src={clipart} alt="People working at a computer." />
@@ -40,81 +38,104 @@ function App() {
       <section className="grey section">
         <div className="card">
           <h1>First, Neural Networks</h1>
-          <p>Maybe you know about neural networks.
-          They’re a type of classification method that uses lots of math to produce an output.
-          Neural networks can do many things: classify images, voice recognition, and more.
-          </p>
-          <a className="link-to-slides" href="https://docs.google.com/presentation/d/1GpQkI9bcFbWteC0yxY-zg7Tt_fP-2CyG8EAWbfcL7ws/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Learn more about neural networks here!</a>
-          <p>
-          <em>Convolutional Neural Networks</em>, or CNNs, are a type of neural network.
-          CNNs “revolve” around an image, analyzing it piece by piece. In this learning lab, we'll learn about how that works.
-          </p>
+          <div className="grid-60-40">
+            <div className="words">
+              <p>Maybe you've heard about neural networks. If you haven't, <em>check out the linked slides.</em>
+              </p>
+              <p>Neural networks can:
+                <ul className="list">
+                  <li>Predict stock market prices</li>
+                  <li>Analyze your voice</li>
+                  <li>Find differences between cats and dogs</li>
+                </ul>
+              </p>
+              <p>
+              <em>Convolutional Neural Networks</em>, or CNNs, are a type of neural network.
+              They find <em>features</em> by analyzing data (like images) <em>piece by piece</em>.
+              </p>
+              <p> In this learning lab, we'll learn about how that works.</p>
+            </div>
+            <div className="links">
+              <a className="chubby-link" href="https://teachla.uclaacm.com/classes/ml/08-fc-neural-networks" target="_blank" rel="noopener noreferrer">Fully-connected neural networks</a>
+              <a className="chubby-link" href="https://teachla.uclaacm.com/classes/ml/10-cnn" target="_blank" rel="noopener noreferrer">Convolutional neural networks</a>
+            </div>
+          </div>
         </div>
       </section>
       <section className="blue section">
         <div className="card">
           <h1>Shining a Flashlight on Filters</h1>
           <h2>Can you figure out what's in the image below using the flashlight?</h2>
-
+          <div id="flashlight-holder">
+            <p style={{alignSelf: 'center', marginRight: '1em',}}>Hover your mouse/finger over the image.</p>
+            <Flashlight />
+          </div>
         </div>
       </section>
       <section className="grey section">
-        <div className="card row" id="flashlight-holder">
-          <p style={{alignSelf: 'center', marginRight: '1em',}}><em>Hover your mouse/finger over the image.</em></p>
-          <Flashlight />
-        </div>
-      </section>
-      <section className="blue section">
 
         <div className="card">
-          <img src={koala} alt="koala in a forest" id="koala-reveal-img"></img>
           <h2>If you guessed a koala: congrats, you're (basically) a CNN!</h2>
-          <p>Now take a moment to think about how you actually identified the koala. First, you probably looked at each piece—edges,
-            the eyes, the nose, etc—individually.
-          </p>
-          <p>
-            Then, you probably put these <em>features</em> together to form bigger structures like the face and the body.
-          </p>
-          <p>Finally, you were able to combine the larger components to form an answer: koala.</p>
-        </div>
-      </section>
-      <section className="grey section">
-        <div className="card">
-          <p>Believe it or not, CNNs work the same way! A <em>filter</em> will focus on one tiny area of an
-           image at a time, analyzing the picture piece by piece.
-           This process is called <em>convolving</em>.</p>
-           <p><em>Fully-connected neural networks</em> are very different. When you look at the picture below, what do you see?</p>
+          <div className="grid-50-50">
+            <div>
+              <p>Think about how you identified the koala:
+                <ul>
+                  <li>First, you looked at pieces like the koala's eyes and color.</li>
+                  <li>You used these pieces to identify <em>features</em> like the face and fur texture.</li>
+                  <li>Finally, you combined these features to form a koala.</li>
+                </ul>
+              </p>
+              <p>Believe it or not, CNNs work the same way! A <em>filter</em> will focus on one tiny area of an
+                image at a time and analyzes the picture piece by piece.
+                This process is called <em>convolution</em>.</p>
+            </div>
+            <div className="center">
+              <img src={koala} alt="koala in a forest" id="koala-reveal-img"></img>
+            </div>
+          </div>
         </div>
       </section>
       <section className="blue section">
-        <div className="card grid-holder">
+        <div className="card">
+          <h1>Fully-connected Neural Networks</h1>
+          <h2>When you look at the picture below, what do you see?</h2>
+          <div className="grid-holder">
           <img src={flamingo} className="grid-img" alt="flamingo"></img>
           <div className="side-text">
-            <p>You probably recognized this picture as a flamingo instantly.
-              You didn't look at the picture as legs, wings, and a beak, but rather looked at the image as a whole.
+            <p>You probably recognized this flamingo instantly.
+              You didn't look at the legs, wings, and beak, but at the whole image.
             </p>
             <p>
               This is what fully-connected neural networks do.
             </p>
-
-          <p>So CNNs are different from fully-connected neural networks because <em>CNNs use filters to analyze
-             an image one feature at a time.</em></p>
-          {/* NEED TO ADD LINK */}
-          <a className="link-to-slides" href="https://www.placeholder.com" target="_blank" rel="noopener noreferrer">Before we move on, check out these slides to learn more about how filters work.</a>
+            <p>
+              While fully-connected neural networks look at data as a whole,
+              CNNs look at data <em>one feature at a time</em>. </p>
+            <p>Before we move on, check out <a className="link-to-slides" href="https://teachla.uclaacm.com/classes/ml/10-cnn" target="_blank" rel="noopener noreferrer">these slides</a> to learn about how filters work.</p>
+          
+          </div>
           </div>
         </div>
       </section>
       <section className="grey section">
         <div className="card">
-          <h1>How do CNNs use filters to analyze images?</h1>
-          <p>
-            Filters can be used to modify the value of each pixel in an image.
-            This is how Instagram or Snapchat filters work! We'll see what actual CNNs look at in a bit. For now, however, check out how we can use filters and their values to manipulate images
-            and make features easier to see.
-          </p>
-          <p>
-            <em>In this example, select different filters to see how their values correspond to the image output. What patterns do you see?</em>
-          </p>
+          <h1>How do we use filters to analyze images?</h1>
+          <div className="row filters-intro">
+            <div>
+              <p>Filters modify the value of each <em>pixel</em> in an image.</p>
+              <p>We see filters used in:
+                <ul>
+                  <li>Instagram/Snapchat filters</li>
+                  <li>Photoshop effects</li>
+                  <li>Editing/synthesizing music</li>
+                </ul>
+              </p>
+              <p>How can we use filters and their values to manipulate images? </p>
+            </div>
+            <div className="sentiment-holder">
+              <img src={sentimentAnalysis} alt="Guy looking at selfie" id="sentiment-analysis"/>
+            </div>
+          </div>
         </div>
       </section>
       <Filters />
