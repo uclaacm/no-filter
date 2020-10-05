@@ -10,12 +10,12 @@ import Filters from './components/Filters.js';
 import depth from './img/depth.png';
 import FilterSizes from './components/FilterSizes.js';
 import visualizer from './img/cnn-vis.png';
-import Magnifier from "react-magnifier";
 import filterGIF from './img/filter.gif';
 import greyscaleGIF from './img/greyscale.gif';
 import rgbGIF from './img/rgb.gif';
 import Carousel from './components/Carousel.js';
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
+
 
 function App() {
   const handle = useFullScreenHandle();
@@ -84,13 +84,13 @@ function App() {
             <div>
               <p>Think about how you identified the koala:
                 <ul>
-                  <li>First, you looked at pieces like the koala's eyes and color.</li>
-                  <li>You used these pieces to identify <em>features</em> like the face and fur texture.</li>
+                  <li>First, you looked at basic <em>features</em> like the koala's eyes and color.</li>
+                  <li>You used these pieces to identify more complicated features like the face and fur texture.</li>
                   <li>Finally, you combined these features to form a koala.</li>
                 </ul>
               </p>
-              <p>Believe it or not, CNNs work the same way! A <em>filter</em> will focus on one tiny area of an
-                image at a time and analyzes the picture piece by piece.
+              <p>Believe it or not, CNNs work the same way! A <em>filter</em> is a matrix that focuses on one tiny area of an
+                image at a time, just like our flashlight.
                 This process is called <em>convolution</em>.</p>
             </div>
             <div className="center">
@@ -126,7 +126,7 @@ function App() {
           <h1>How do we use filters to analyze images?</h1>
           <div className="row filters-intro">
             <div>
-              <p>Filters modify the value of each <em>pixel</em> in an image.</p>
+              <p>So far, we've learned that filters are matrices that analyze images piece-by-piece.</p>
               <p>We see filters used in:
                 <ul>
                   <li>Instagram/Snapchat filters</li>
@@ -134,11 +134,22 @@ function App() {
                   <li>Editing/synthesizing music</li>
                 </ul>
               </p>
-              <p>How can we use filters and their values to manipulate images? </p>
-            </div>
-            <div className="sentiment-holder">
-              <img src={sentimentAnalysis} alt="Guy looking at selfie" id="sentiment-analysis"/>
-            </div>
+              <h3>How do these filters actually work? </h3>
+              </div>
+              <div className="sentiment-holder">
+                <img src={sentimentAnalysis} alt="Guy looking at selfie" id="sentiment-analysis"/>
+              </div>
+              <div>
+
+              <p>Filters manipulate images by modifying the values of <em>pixels</em>, which are the tiniest units of brightness or color that make up an image.</p>
+              <p> Filters look at one small clump of pixels at a time, slowly revolving around the entire image (remember, this process is called <em>convolution</em>).
+              The output of a convolution is called a <em>feature map</em>.</p>
+              <div className="filterGIF-holder">
+                <img src={filterGIF} alt="Filter animation" id="filterGIF"/>
+              </div>
+              </div>
+
+
           </div>
         </div>
       </section>
@@ -152,12 +163,18 @@ function App() {
 
       <section className="blue section">
         <div className="card">
-          <p>
-          The animation above shows the effects of a filter on an image in <b>grayscale</b>. A grayscale image has a depth of 1 since it just stores the black/white intensity information of each pixel.
-          A majority of the images taken today are in color.
-          These images have multiple matrices stacked on top of each other with each matrix containing pixel values for a specific color.
-          In an RGB image, for example, there are 3 matrices stacked on top of each other. <b>Thus, we say that an RGB image has a depth of 3.</b> The topmost layer contains the red intensity values of each pixel, followed by the middle matrix that stores information of the green intensities of each pixel and finally, the last layer that stores information about the blue intensities of each pixel.
+          <p>The animation above shows the effects of a filter on an image in <em>grayscale</em> (black and white). </p>
+          <p>A grayscale image has a depth of 1 since it just stores the black/white <em>intensity</em> (brightness) of each pixel. </p>
+          <p> So, as we've already seen, convolution with a greyscale image looks like this: </p>
+          <img src={greyscaleGIF} alt="Greyscale filter animation" id="filterGIF"/>
+          <p> But a majority of the images taken today are in color. </p>
+          <p> These images have multiple matrices stacked on top of each other with each matrix containing pixel values for a specific color.
+          In an <em> RGB </em> image, for example, there are 3 matrices - red, green, and blue - stacked on top of each other.
+          Thus, we say that <em> an RGB image has a depth of 3</em>.
+          The topmost layer contains the red intensity values of each pixel, followed by the middle matrix that stores information of the green intensities of each pixel and finally, the last layer that stores information about the blue intensities of each pixel.
           </p>
+          <p> With three layers instead of one, convolution with an RGB image looks like this: </p>
+          <img src={rgbGIF} alt="RGB filter animation" id="filterGIF" style={{width: '400px'}}/>
         </div>
       </section>
       <section className="grey section">

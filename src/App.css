@@ -21,7 +21,6 @@ p {
   font-size: 18px;
   line-height: 1.5;
   color: #1c1a19;
-  max-width: 50rem;
   margin: 0.5em 0;
 }
 
@@ -208,6 +207,9 @@ em {
 .side-text {
   margin-left: 2em;
 }
+.left-text {
+  max-width: 50rem;
+}
 
 @media screen and (max-width: 600px) {
   .grid-holder {
@@ -256,6 +258,20 @@ em {
   align-items: center;
   justify-content: center;
 }
+.filterGIF-container {
+  width:100%;
+  display: flex;
+  align-items: center;
+}
+
+#filterGIF {
+  align-self: center;
+  width: 250px;
+  height: auto;
+}
+.filters-intro {
+  justify-content: space-between;
+}
 
 .filters-intro div {
   display: flex;
@@ -265,9 +281,10 @@ em {
 
 .sentiment-holder {
   align-items: flex-end;
+  width: 250px;
 }
 #sentiment-analysis {
-  width: 250px;
+  width:100%;
   height: auto;
 }
 
@@ -276,7 +293,23 @@ em {
     width: stretch;
   }
 }
-
+#fullscreen {
+  font-family: 'Source Sans Pro', sans-serif;
+  align-self: left;
+  border: 2px #1EBDF4 solid;
+  font-size: 16px;
+  color: black;
+  padding: 0.5em;
+  background-color: #EBF9FE;
+}
+#fullscreen:hover {
+  opacity: 0.7;
+}
+.cnnHolder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 #cnn-vis {
   display: flex;
   flex-direction: column;
