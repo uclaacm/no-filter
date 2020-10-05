@@ -10,6 +10,10 @@ import Filters from './components/Filters.js';
 import depth from './img/depth.png';
 import FilterSizes from './components/FilterSizes.js';
 import visualizer from './img/cnn-vis.png';
+import Magnifier from "react-magnifier";
+import filterGIF from './img/filter.gif';
+import greyscaleGIF from './img/greyscale.gif';
+import rgbGIF from './img/rgb.gif';
 import Carousel from './components/Carousel.js';
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
@@ -112,7 +116,7 @@ function App() {
               While fully-connected neural networks look at data as a whole,
               CNNs look at data <em>one feature at a time</em>. </p>
             <p>Before we move on, check out <a className="link-to-slides" href="https://teachla.uclaacm.com/classes/ml/10-cnn" target="_blank" rel="noopener noreferrer">these slides</a> to learn about how filters work.</p>
-          
+
           </div>
           </div>
         </div>
