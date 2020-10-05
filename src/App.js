@@ -9,13 +9,16 @@ import sentimentAnalysis from './img/undraw_sentiment_analysis.svg';
 import Filters from './components/Filters.js';
 import depth from './img/depth.png';
 import FilterSizes from './components/FilterSizes.js';
-import Magnifier from "react-magnifier";
+import visualizer from './img/cnn-vis.png';
 import filterGIF from './img/filter.gif';
 import greyscaleGIF from './img/greyscale.gif';
 import rgbGIF from './img/rgb.gif';
 import Carousel from './components/Carousel.js';
+import { FullScreen, useFullScreenHandle } from "react-full-screen";
+
 
 function App() {
+  const handle = useFullScreenHandle();
   return (
     <div className="App">
     <Navbar />
@@ -187,11 +190,6 @@ function App() {
         </div>
       </section>
       <FilterSizes />
-      <section className="blue section">
-        <div className="card">
-          <h1>placeholder bc the colors are changing</h1>
-        </div>
-      </section>
       <section className="grey section">
         <div className="card">
           <h1>What do CNNs look like?</h1>
@@ -202,7 +200,16 @@ function App() {
       </section>
       <section className="blue section">
       <div className="card">
-       <Magnifier src={visualizer} id="cnn-vis" mgShape="square" mgWidth={100} mgHeight={100} zoomFactor="1.5" mgShowOverflow="false" alt="two filters applied to one layer of a CNN"/>
+       <button id="fullscreen" onClick={handle.enter}>
+         View full image
+       </button>
+
+       <FullScreen handle={handle}>
+         <div className="cnnHolder">
+            <img src={visualizer} id="cnn-vis" alt="two filters applied to one layer of a CNN"/>
+         </div>
+       </FullScreen>
+
        </div>
        </section>
 
