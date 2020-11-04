@@ -6,15 +6,20 @@ import './style/Flashlight.css';
 /*TODO: REMOVE DOM MANIPULATION*/
 
 class Flashlight extends React.Component {
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            opacity: 0,
+            left: null,
+            top: null,
+            brightness: "brightness(0%)",
+        }
+    }
     showFlashlight = e => {
         e.preventDefault();
-        const spotlight = document.getElementById("spotlight");
-        spotlight.style.opacity = 1;
 
-        //show image after flashlight moves on
-        const img = document.getElementById("container");
-        img.style.filter = "brightness(100%)";
+        //opacity for spotlight, brightness for container
+        this.setState({opacity: 1, brightness: "brightness(100%)"});
     }
 
     hoverMoveFlashlight = e => {
@@ -43,37 +48,40 @@ class Flashlight extends React.Component {
     }
 
     moveFlashlight = (x, y) => {
-        const spotlight = document.getElementById("spotlight");
-        spotlight.style.left = (x) + 'px';
-        spotlight.style.top = (y) + 'px';
+        this.setState({left: `${x}px`, top: `${y}px`});
     }
 
     hideFlashlight = e => {
         e.preventDefault();
-        const spotlight = document.getElementById("spotlight");
-        spotlight.style.opacity = 0;
 
-        //hide the image after flashlight is moved off
-        const img = document.getElementById("container");
-        img.style.filter = "brightness(0%)";
-        
-
+        //opacity for spotlight, brightness for container
+        this.setState({opacity: 0, brightness: "brightness(0%)"});
     }
 
     render () {
+        const stylesInJS = {
+            backgroundStyles: {
+                backgroundImage: `url(${koala})`,
+                filter: this.state.brightness,
+            },
+            spotlight: {
+                opacity: this.state.opacity,
+                top: this.state.top,
+                left: this.state.left,
+            }
+        }
         return (
-            <div id="container" style={backgroundStyles}
+            <div id="container" style={stylesInJS.backgroundStyles}
                 onMouseEnter={this.showFlashlight} onMouseMove={this.hoverMoveFlashlight} onMouseLeave={this.hideFlashlight}
                 onTouchStart={this.showFlashlight} onTouchMove={this.touchMoveFlashlight} onTouchEnd={this.hideFlashlight}>
-                <div id="spotlight"></div>
+                <div id="spotlight" style={stylesInJS.spotlight}></div>
             </div>
         );
     }
 
 }
 
-const backgroundStyles = {
-    backgroundImage: `url(${koala})`,
-};
+
+
 
 export default Flashlight;
