@@ -14,6 +14,7 @@ class Flashlight extends React.Component {
             top: null,
             brightness: "brightness(0%)",
         }
+        this.myRef = React.createRef();
     }
     showFlashlight = e => {
         e.preventDefault();
@@ -24,8 +25,12 @@ class Flashlight extends React.Component {
 
     hoverMoveFlashlight = e => {
         e.preventDefault();
-        const container = document.getElementById("container");
-        let rect = container.getBoundingClientRect();
+        let rect = this.myRef.current.getBoundingClientRect();
+
+        //OLD CODE
+        // const container = document.getElementById("container");
+        // let rect = container.getBoundingClientRect();
+        // console.log(this.myRef.current.getBoundingClientRect());
 
         //get coordinates of mouse
         let x = e.clientX - rect.x;
@@ -37,8 +42,11 @@ class Flashlight extends React.Component {
     touchMoveFlashlight = e => {
         //TODO: Mobile compatibility
         e.preventDefault();
-        const container = document.getElementById("container");
-        let rect = container.getBoundingClientRect();
+        let rect = this.myRef.current.getBoundingClientRect();
+
+        //OLD CODE (havent tested)
+        // const container = document.getElementById("container");
+        // let rect = container.getBoundingClientRect();
 
         //get coordinates of mouse
         let x = e.targetTouches[0].clientX - rect.x - 20;
@@ -58,6 +66,10 @@ class Flashlight extends React.Component {
         this.setState({opacity: 0, brightness: "brightness(0%)"});
     }
 
+    componentDidMount() {
+        console.log(this.myRef);
+    }
+
     render () {
         const stylesInJS = {
             backgroundStyles: {
@@ -71,14 +83,13 @@ class Flashlight extends React.Component {
             }
         }
         return (
-            <div id="container" style={stylesInJS.backgroundStyles}
+            <div id="container" style={stylesInJS.backgroundStyles} ref={this.myRef}
                 onMouseEnter={this.showFlashlight} onMouseMove={this.hoverMoveFlashlight} onMouseLeave={this.hideFlashlight}
                 onTouchStart={this.showFlashlight} onTouchMove={this.touchMoveFlashlight} onTouchEnd={this.hideFlashlight}>
                 <div id="spotlight" style={stylesInJS.spotlight}></div>
             </div>
         );
     }
-
 }
 
 
