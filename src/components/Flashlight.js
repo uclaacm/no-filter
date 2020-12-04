@@ -2,9 +2,6 @@ import React from 'react';
 import koala from '../img/koala2.jpg';
 import './style/Flashlight.css';
 
-
-/*TODO: REMOVE DOM MANIPULATION*/
-
 class Flashlight extends React.Component {
     constructor(props) {
         super(props);
@@ -27,11 +24,6 @@ class Flashlight extends React.Component {
         e.preventDefault();
         let rect = this.myRef.current.getBoundingClientRect();
 
-        //OLD CODE
-        // const container = document.getElementById("container");
-        // let rect = container.getBoundingClientRect();
-        // console.log(this.myRef.current.getBoundingClientRect());
-
         //get coordinates of mouse
         let x = e.clientX - rect.x;
         let y = e.clientY - rect.y;
@@ -43,10 +35,6 @@ class Flashlight extends React.Component {
         //TODO: Mobile compatibility
         e.preventDefault();
         let rect = this.myRef.current.getBoundingClientRect();
-
-        //OLD CODE (havent tested)
-        // const container = document.getElementById("container");
-        // let rect = container.getBoundingClientRect();
 
         //get coordinates of mouse
         let x = e.targetTouches[0].clientX - rect.x - 20;
@@ -64,10 +52,6 @@ class Flashlight extends React.Component {
 
         //opacity for spotlight, brightness for container
         this.setState({opacity: 0, brightness: "brightness(0%)"});
-    }
-
-    componentDidMount() {
-        console.log(this.myRef);
     }
 
     render () {
@@ -91,8 +75,5 @@ class Flashlight extends React.Component {
         );
     }
 }
-
-
-
 
 export default Flashlight;
