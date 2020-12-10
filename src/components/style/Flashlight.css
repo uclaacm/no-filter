@@ -1,14 +1,33 @@
 #container {
-    
+    z-index: auto;
     position: relative;
     overflow: hidden;
-    filter: brightness(0%);
+    background: black;
+    /* filter: brightness(0%); */
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 40vw; /*estimated proportions because background image messes things up :( */
     border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
+}
+#instructions {
+    color: white;
+    z-index: 2;
+    filter: brightness(100%);
+    text-align: center;
+    background-color: #FF699F;
+    padding: 0.25em;
+    border-radius: 15px;
+}
+#mouse {
+    height: 20px;
+    width: auto;
+    filter: invert(1);
+    /*still need to center it cuz it looks ugly*/
 }
 #spotlight {
     opacity: 0; /*so that it is not shown until mouseover*/
