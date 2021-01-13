@@ -1,5 +1,6 @@
 import React from 'react';
 import koala from '../img/koala2.jpg';
+import mouse from '../img/mouse.png';
 import './style/Flashlight.css';
 
 class Flashlight extends React.Component {
@@ -7,9 +8,11 @@ class Flashlight extends React.Component {
         super(props);
         this.state = {
             opacity: 0,
+            instructionOpacity: 1,
             left: null,
             top: null,
-            brightness: "brightness(0%)",
+            // brightness: "brightness(0%)",
+            backgroundImage: false,
         }
         this.myRef = React.createRef();
     }
@@ -17,7 +20,8 @@ class Flashlight extends React.Component {
         e.preventDefault();
 
         //opacity for spotlight, brightness for container
-        this.setState({opacity: 1, brightness: "brightness(100%)"});
+        // this.setState({opacity: 1, brightness: "brightness(100%)"/*, instructions: 0*/});
+        this.setState({opacity: 1, backgroundImage: true, instructionOpacity: 0});
     }
 
     hoverMoveFlashlight = e => {
@@ -51,14 +55,20 @@ class Flashlight extends React.Component {
         e.preventDefault();
 
         //opacity for spotlight, brightness for container
-        this.setState({opacity: 0, brightness: "brightness(0%)"});
+        // this.setState({opacity: 0, brightness: "brightness(0%)"});
+        this.setState({opacity: 0, backgroundImage: false, instructionOpacity: 1})
     }
 
     render () {
+        let background = this.state.backgroundImage ? `url(${koala})` : 'black';
         const stylesInJS = {
             backgroundStyles: {
-                backgroundImage: `url(${koala})`,
-                filter: this.state.brightness,
+                background: background,
+                // backgroundImage: `url(${koala})`,
+                // filter: this.state.brightness,
+            },
+            instructions: {
+                opacity: this.state.instructionOpacity,
             },
             spotlight: {
                 opacity: this.state.opacity,
@@ -70,6 +80,9 @@ class Flashlight extends React.Component {
             <div id="container" style={stylesInJS.backgroundStyles} ref={this.myRef}
                 onMouseEnter={this.showFlashlight} onMouseMove={this.hoverMoveFlashlight} onMouseLeave={this.hideFlashlight}
                 onTouchStart={this.showFlashlight} onTouchMove={this.touchMoveFlashlight} onTouchEnd={this.hideFlashlight}>
+                <p id="instructions" style={stylesInJS.instructions}>
+                    <img src={mouse} alt="Computer mouse arrow" id="mouse"></img>
+                    Hover your mouse/finger over this image.</p>
                 <div id="spotlight" style={stylesInJS.spotlight}></div>
             </div>
         );

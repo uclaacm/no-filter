@@ -71,7 +71,7 @@ function App() {
           <h1>Shining a Flashlight on Filters</h1>
           <h2>Can you figure out what's in the image below using the flashlight?</h2>
           <div id="flashlight-holder">
-            <p style={{alignSelf: 'center', marginRight: '1em',}}>Hover your mouse/finger over the image.</p>
+            {/* <p style={{alignSelf: 'center', marginRight: '1em',}}>Hover your mouse/finger over the image.</p> */}
             <Flashlight />
           </div>
         </div>

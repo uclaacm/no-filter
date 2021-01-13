@@ -160,8 +160,12 @@ em {
 }
 
 #flashlight-holder {
-  display: grid;
-  grid-template-columns: 30% 70%;
+  /* display: grid;
+  grid-template-columns: 30% 70%; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .grid-50-50 {
