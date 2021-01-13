@@ -82,7 +82,7 @@ class Flashlight extends React.Component {
                 onTouchStart={this.showFlashlight} onTouchMove={this.touchMoveFlashlight} onTouchEnd={this.hideFlashlight}>
                 <p id="instructions" style={stylesInJS.instructions}>
                     <img src={mouse} alt="Computer mouse arrow" id="mouse"></img>
-                    Hover your mouse/finger over the image.</p>
+                    Hover your mouse/finger over this image.</p>
                 <div id="spotlight" style={stylesInJS.spotlight}></div>
             </div>
         );

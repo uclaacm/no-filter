@@ -5,8 +5,8 @@
     background: black;
     /* filter: brightness(0%); */
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
+    /* background-size: cover; */
+    width: 70%;
     height: 40vw; /*estimated proportions because background image messes things up :( */
     border-radius: 7px;
     display: flex;
@@ -16,12 +16,15 @@
 }
 #instructions {
     color: white;
+    font-weight: bolder;
     z-index: 2;
     filter: brightness(100%);
     text-align: center;
     background-color: #FF699F;
-    padding: 0.25em;
+    padding: 0.3em;
+    margin: 0.25em;
     border-radius: 15px;
+    cursor: default;
 }
 #mouse {
     height: 20px;
