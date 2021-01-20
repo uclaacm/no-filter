@@ -5,8 +5,8 @@
     background: black;
     /* filter: brightness(0%); */
     background-repeat: no-repeat;
-    /* background-size: cover; */
-    width: 70%;
+    background-size: cover;
+    width: 100%;
     height: 40vw; /*estimated proportions because background image messes things up :( */
     border-radius: 7px;
     display: flex;
