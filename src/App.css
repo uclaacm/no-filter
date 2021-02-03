@@ -9,6 +9,7 @@ h1 {
   margin: 0;
   color: #1c1a19;
   font-family: 'poppinslight';
+  font-weight: 800;
 }
 
 h2 {
@@ -34,22 +35,23 @@ em {
   flex-flow: row wrap;
   justify-content: center;
   padding: 1em;
+  background-color: #fbf7f5;
 }
 
-.blue { /*blue divs*/
+/* .blue { /*blue divs
   background-color: #1EBDF4;
 }
 
-.grey { /*grey divs*/
+.grey { /*grey divs
   background-color: #EBF9FE;
-}
+} */
 
 .card {
   display: flex;
   flex-direction: column;
   /* background-color: white; */
   border-radius: 7px;
-  width:70%;
+  width:90%;
   max-width: 750px;
   padding: 1em;
   opacity: 0.95;
