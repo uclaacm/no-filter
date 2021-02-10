@@ -22,6 +22,9 @@ function App() {
   return (
     <div className="App">
     <Navbar />
+    <section className="banner">
+      <h1>Let's learn about Convolutional Neural Networks!</h1>
+    </section>
     <section className="blue section">
       <div className="toc-panel">
         <div className="mini-card">

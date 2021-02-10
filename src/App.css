@@ -23,6 +23,7 @@ p {
   line-height: 1.5;
   color: #1c1a19;
   margin: 0.5em 0;
+  text-align: justify;
 }
 
 em {
@@ -34,7 +35,7 @@ em {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  padding: 1em;
+  padding: 0.5em 1em;
   background-color: #fbf7f5;
 }
 
@@ -45,6 +46,17 @@ em {
 .grey { /*grey divs
   background-color: #EBF9FE;
 } */
+.banner {
+  padding: 2em 1em;
+  background-color: #1EBDF4;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner h1 {
+  color: white;
+}
 
 .card {
   display: flex;
