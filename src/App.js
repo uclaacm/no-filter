@@ -23,7 +23,7 @@ function App() {
     <div className="App">
     <Navbar />
     <section className="banner">
-      <h1>Let's learn about Convolutional Neural Networks!</h1>
+      <h1>#FFFFFF in the chat</h1>
     </section>
     <section className="blue section">
       <div className="toc-panel">
@@ -84,7 +84,7 @@ function App() {
         <div className="card">
           <h2>If you guessed a koala: congrats, you're (basically) a CNN!</h2>
           <div className="grid-50-50">
-            <div>
+            <div className="needs-padding">
               <p>Think about how you identified the koala:
                 <ul>
                   <li>First, you looked at basic <em>features</em> like the koala's eyes and color.</li>

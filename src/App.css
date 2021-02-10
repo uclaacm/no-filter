@@ -189,6 +189,10 @@ em {
   align-items: center;
 }
 
+.needs-padding {
+  padding-right: 1em;
+}
+
 
 .center {
   display: flex;
