@@ -202,18 +202,24 @@ function App() {
         </div>
       </section>
       <section className="blue section">
-      <div className="card">
-       <button id="fullscreen" onClick={handle.enter}>
-         View full image
-       </button>
+        <div className="card">
+        <button id="fullscreen" onClick={handle.enter}>
+          View full image
+        </button>
 
-       <FullScreen handle={handle}>
-         <div className="cnnHolder">
-            <img src={visualizer} id="cnn-vis" alt="two filters applied to one layer of a CNN"/>
+        <FullScreen handle={handle}>
+          <div className="cnnHolder">
+              <img src={visualizer} id="cnn-vis" alt="two filters applied to one layer of a CNN"/>
+          </div>
+        </FullScreen>
+
+        </div>
+       </section>
+       <section className="section">
+         <div className="card">
+           <h1>In conclusion...</h1>
+           <h2>idk put something here</h2>
          </div>
-       </FullScreen>
-
-       </div>
        </section>
 
     </div>
