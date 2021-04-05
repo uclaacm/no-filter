@@ -130,7 +130,7 @@ function App() {
           <div className="row filters-intro">
             <div>
               <p>So far, we've learned that filters are matrices that analyze images piece-by-piece.</p>
-              <p>We see filters used in:
+              <p>Filters are used in:
                 <ul>
                   <li>Instagram/Snapchat filters</li>
                   <li>Photoshop effects</li>
