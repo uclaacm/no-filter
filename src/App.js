@@ -5,7 +5,7 @@ import koala from './img/koala2.jpg';
 import flamingo from './img/flamingo.jpg';
 import Navbar from './components/Navbar.js';
 import clipart from './img/people.png';
-import sentimentAnalysis from './img/undraw_sentiment_analysis.svg';
+// import sentimentAnalysis from './img/undraw_sentiment_analysis.svg';
 import Filters from './components/Filters.js';
 import depth from './img/depth.png';
 import FilterSizes from './components/FilterSizes.js';
@@ -139,9 +139,9 @@ function App() {
               </p>
               <h3>How do these filters actually work? </h3>
               </div>
-              <div className="sentiment-holder">
+              {/* <div className="sentiment-holder">
                 <img src={sentimentAnalysis} alt="Guy looking at selfie" id="sentiment-analysis"/>
-              </div>
+              </div> */}
               <div>
 
               <p>Filters manipulate images by modifying the values of <em>pixels</em>, which are the tiniest units of brightness or color that make up an image.</p>
@@ -218,7 +218,9 @@ function App() {
        <section className="section">
          <div className="card">
            <h1>In conclusion...</h1>
-           <h2>idk put something here</h2>
+           <h2>CNNs are cool!</h2>
+           <p>CNN filters are just like using a flashlight to determine an object! </p>
+           <p>some other stuff UGH idk</p>
          </div>
        </section>
 
