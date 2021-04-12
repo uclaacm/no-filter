@@ -322,3 +322,6 @@ em {
   min-width: 400px;
   align-self: center;
 }
+.panelimg {
+  width: 100px;
+}

@@ -13,12 +13,45 @@ import visualizer from './img/cnn-vis.png';
 import filterGIF from './img/filter.gif';
 import greyscaleGIF from './img/greyscale.gif';
 import rgbGIF from './img/rgb.gif';
+import panel1 from './img/panels/panel1.png';
+import panel2 from './img/panels/panel2.png';
+import panel3 from './img/panels/panel3.png';
+import panel4 from './img/panels/panel4.png';
+import panel5 from './img/panels/panel5.png';
 import Carousel from './components/Carousel.js';
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
-
+import { SRLWrapper } from "simple-react-lightbox";
 
 function App() {
   const handle = useFullScreenHandle();
+  const options = {
+    settings: {
+      autoplaySpeed: 3000,
+      boxShadow: 'none',
+      disableKeyboardControls: false,
+      disablePanzoom: false,
+      disableWheelControls: false,
+      hideControlsAfter: 3000,
+      lightboxTransitionSpeed: 0.3,
+      lightboxTransitionTimingFunction: 'linear',
+      overlayColor: 'white',
+      slideAnimationType: 'fade',
+      slideSpringValues: [300, 50],
+      slideTransitionSpeed: 0.6,
+      slideTransitionTimingFunction: 'linear',
+      usingPreact: false
+  },
+  buttons: {
+    backgroundColor: "#1EBDF4",
+    iconColor: "white",
+  },
+  caption: {
+    captionColor: '#1EBDF4',
+    captionFontFamily: "Source Sans Pro, sans-serif",
+    captionFontWeight: "300",
+    captionTextTransform: "uppercase",
+  }
+}
   return (
     <div className="App">
     <Navbar />
@@ -205,10 +238,18 @@ function App() {
        </button>
 
        <FullScreen handle={handle}>
-         <div className="cnnHolder">
-            <img src={visualizer} id="cnn-vis" alt="two filters applied to one layer of a CNN"/>
-         </div>
+       <div className="cnnHolder">
+          <img src={visualizer} id="cnn-vis" alt="two filters applied to one layer of a CNN"/>
+       </div>
        </FullScreen>
+
+       <SRLWrapper options={options}>
+          <img class="panelimg" src={panel1} alt="Caption 1" />
+          <img class="panelimg" src={panel2} alt="Caption 2" />
+          <img class="panelimg" src={panel3} alt="Caption 3" />
+          <img class="panelimg" src={panel4} alt="Caption 4" />
+          <img class="panelimg" src={panel5} alt="Caption 5" />
+        </SRLWrapper>
 
        </div>
        </section>
