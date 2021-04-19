@@ -157,7 +157,7 @@ function App() {
       <section className="grey section">
         <div className="card">
           <h2 style={{textAlign:"center"}}>Look at the animation below to learn how a filter (shown as the red matrix) works on images to calculate each element of the feature map</h2>
-          <p style={{textAlign:"center"}}>(You can also explore our slides on filters (slide 28) from our <a target="_blank" href="https://docs.google.com/presentation/d/1je-mnp1E6y-wj3q_5GNHG8jJm9ckLTyoFNjF3Qj_6LM/edit?usp=sharing">CNN high-school lesson)</a></p> 
+          <p style={{textAlign:"center"}}>(You can also explore our slides on filters (slide 28) from our <a target="_blank" href="https://docs.google.com/presentation/d/1je-mnp1E6y-wj3q_5GNHG8jJm9ckLTyoFNjF3Qj_6LM/edit?usp=sharing" rel="noopener noreferrer">CNN high-school lesson)</a></p> 
           <p style={{textAlign:"center"}}>Note that whenever the filter hovers over a portion of the image, the corresponding element on the
            feature map is calculated by <em>multiplying the filter value of each cell </em> (at the bottom right of each cell) with 
            the <em> pixel value of the image's cell it is hovering over </em> and <em>adding them all together.</em></p>
