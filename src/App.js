@@ -22,6 +22,9 @@ function App() {
   return (
     <div className="App">
     <Navbar />
+    <section className="banner">
+      <h1>#FFFFFF in the chat</h1>
+    </section>
     <section className="blue section">
       <div className="toc-panel">
         <div className="mini-card">
@@ -81,7 +84,7 @@ function App() {
         <div className="card">
           <h2>If you guessed a koala: congrats, you're (basically) a CNN!</h2>
           <div className="grid-50-50">
-            <div>
+            <div className="needs-padding">
               <p>Think about how you identified the koala:
                 <ul>
                   <li>First, you looked at basic <em>features</em> like the koala's eyes and color.</li>
@@ -127,7 +130,7 @@ function App() {
           <div className="row filters-intro">
             <div>
               <p>So far, we've learned that filters are matrices that analyze images piece-by-piece.</p>
-              <p>We see filters used in:
+              <p>Filters are used in:
                 <ul>
                   <li>Instagram/Snapchat filters</li>
                   <li>Photoshop effects</li>
@@ -199,18 +202,24 @@ function App() {
         </div>
       </section>
       <section className="blue section">
-      <div className="card">
-       <button id="fullscreen" onClick={handle.enter}>
-         View full image
-       </button>
+        <div className="card">
+        <button id="fullscreen" onClick={handle.enter}>
+          View full image
+        </button>
 
-       <FullScreen handle={handle}>
-         <div className="cnnHolder">
-            <img src={visualizer} id="cnn-vis" alt="two filters applied to one layer of a CNN"/>
+        <FullScreen handle={handle}>
+          <div className="cnnHolder">
+              <img src={visualizer} id="cnn-vis" alt="two filters applied to one layer of a CNN"/>
+          </div>
+        </FullScreen>
+
+        </div>
+       </section>
+       <section className="section">
+         <div className="card">
+           <h1>In conclusion...</h1>
+           <h2>idk put something here</h2>
          </div>
-       </FullScreen>
-
-       </div>
        </section>
 
     </div>
