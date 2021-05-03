@@ -11,13 +11,15 @@ import depth from './img/depth.png';
 import FilterSizes from './components/FilterSizes.js';
 import visualizer from './img/cnn-vis.png';
 import filterGIF from './img/filter.gif';
-import greyscaleGIF from './img/greyscale.gif';
+//import greyscaleGIF from './img/greyscale.gif';
 import rgbGIF from './img/rgb.gif';
 import panel1 from './img/panels/panel1.png';
 import panel2 from './img/panels/panel2.png';
 import panel3 from './img/panels/panel3.png';
 import panel4 from './img/panels/panel4.png';
 import panel5 from './img/panels/panel5.png';
+import panel6 from './img/panels/panel6.png';
+
 import Carousel from './components/Carousel.js';
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { SRLWrapper } from "simple-react-lightbox";
@@ -50,11 +52,25 @@ function App() {
     captionFontFamily: "Source Sans Pro, sans-serif",
     captionFontWeight: "300",
     captionTextTransform: "uppercase",
+  },
+  thumbnails: {
+    showThumbnails: true,
+    thumbnailsAlignment: 'center',
+    thumbnailsContainerBackgroundColor: 'transparent',
+    thumbnailsContainerPadding: '0',
+    thumbnailsGap: '0 1px',
+    thumbnailsIconColor: '#ffffff',
+    thumbnailsOpacity: 0.4,
+    thumbnailsPosition: 'bottom',
+    thumbnailsSize: ['100px', '80px']
   }
 }
   return (
     <div className="App">
     <Navbar />
+    <section className="banner">
+      <h1>#FFFFFF in the chat</h1>
+    </section>
     <section className="blue section">
       <div className="toc-panel">
         <div className="mini-card">
@@ -114,7 +130,7 @@ function App() {
         <div className="card">
           <h2>If you guessed a koala: congrats, you're (basically) a CNN!</h2>
           <div className="grid-50-50">
-            <div>
+            <div className="needs-padding">
               <p>Think about how you identified the koala:
                 <ul>
                   <li>First, you looked at basic <em>features</em> like the koala's eyes and color.</li>
@@ -160,7 +176,7 @@ function App() {
           <div className="row filters-intro">
             <div>
               <p>So far, we've learned that filters are matrices that analyze images piece-by-piece.</p>
-              <p>We see filters used in:
+              <p>Filters are used in:
                 <ul>
                   <li>Instagram/Snapchat filters</li>
                   <li>Photoshop effects</li>
@@ -190,23 +206,24 @@ function App() {
       <section className="grey section">
         <div className="card">
           <h2 style={{textAlign:"center"}}>Look at the animation below to learn how a filter (shown as the red matrix) works on images to calculate each element of the feature map</h2>
+          <p style={{textAlign:"center"}}>(You can also explore our slides on filters (slide 28) from our <a target="_blank" href="https://docs.google.com/presentation/d/1je-mnp1E6y-wj3q_5GNHG8jJm9ckLTyoFNjF3Qj_6LM/edit?usp=sharing" rel="noopener noreferrer">CNN high-school lesson)</a></p>
+          <p style={{textAlign:"center"}}>Note that whenever the filter hovers over a portion of the image, the corresponding element on the
+           feature map is calculated by <em>multiplying the filter value of each cell </em> (at the bottom right of each cell) with
+           the <em> pixel value of the image's cell it is hovering over </em> and <em>adding them all together.</em></p>
         <Carousel/>
         </div>
       </section>
 
       <section className="blue section">
         <div className="card">
-          <p>The animation above shows the effects of a filter on an image in <em>grayscale</em> (black and white). </p>
-          <p>A grayscale image has a depth of 1 since it just stores the black/white <em>intensity</em> (brightness) of each pixel. </p>
-          <p> So, as we've already seen, convolution with a greyscale image looks like this: </p>
-          <img src={greyscaleGIF} alt="Greyscale filter animation" id="filterGIF"/>
+          <p>The animation above shows the effects of a filter on an image in <em>grayscale</em> (black and white). A grayscale image has a depth of 1 since it just stores the black/white <em>intensity</em> (brightness) of each pixel. </p>
           <p> But a majority of the images taken today are in color. </p>
           <p> These images have multiple matrices stacked on top of each other with each matrix containing pixel values for a specific color.
           In an <em> RGB </em> image, for example, there are 3 matrices - red, green, and blue - stacked on top of each other.
           Thus, we say that <em> an RGB image has a depth of 3</em>.
-          The topmost layer contains the red intensity values of each pixel, followed by the middle matrix that stores information of the green intensities of each pixel and finally, the last layer that stores information about the blue intensities of each pixel.
+          The topmost channel contains the red intensity values of each pixel, followed by the middle matrix that stores information of the green intensities of each pixel and finally, the last channel that stores information about the blue intensities of each pixel.
           </p>
-          <p> With three layers instead of one, convolution with an RGB image looks like this: </p>
+          <p> With three channels instead of one, convolution with an RGB image looks like this: </p>
           <img src={rgbGIF} alt="RGB filter animation" id="filterGIF" style={{width: '400px'}}/>
         </div>
       </section>
@@ -215,9 +232,9 @@ function App() {
           <img src={depth} alt="Pixel matrices with depth of 3" className="grid-img"/>
           <div className="side-text">
             <p>In order to apply our filter to each channel of an <em>RGB</em> (<em>R</em>ed, <em>G</em>reen, <em>B</em>lue) image,
-            we need our filter to be 3-dimensional as well&mdash;that is, our filter should have length, width, and depth.
+            we need our filter to be 3-dimensional as well&mdash;that is, our filter should have width, height, and depth.
             </p>
-            <p>This is the <em>size</em> of our filter. In CNNs analyzing RGB images, 3 x 3 x 3 filters are some of the most commonly-used filters,
+            <p>The width, height and depth of our filter together determine the <em>size</em> of our filter (the dimensions ). In CNNs analyzing RGB images, 3 x 3 x 3 (width x height x depth) filters are some of the most commonly-used filters,
             along with 5 x 5 x 3 filters.</p>
           </div>
         </div>
@@ -232,16 +249,7 @@ function App() {
         </div>
       </section>
       <section className="blue section">
-      <div className="card">
-       <button id="fullscreen" onClick={handle.enter}>
-         View full image
-       </button>
-
-       <FullScreen handle={handle}>
-       <div className="cnnHolder">
-          <img src={visualizer} id="cnn-vis" alt="two filters applied to one layer of a CNN"/>
-       </div>
-       </FullScreen>
+        <div className="card">
 
        <SRLWrapper options={options}>
           <img class="panelimg" src={panel1} alt="Caption 1" />
@@ -249,6 +257,7 @@ function App() {
           <img class="panelimg" src={panel3} alt="Caption 3" />
           <img class="panelimg" src={panel4} alt="Caption 4" />
           <img class="panelimg" src={panel5} alt="Caption 5" />
+          <img class="panelimg" src={panel6} alt="Caption 6" />
         </SRLWrapper>
 
        </div>

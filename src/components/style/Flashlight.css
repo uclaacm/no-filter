@@ -5,9 +5,10 @@
     background: black;
     /* filter: brightness(0%); */
     background-repeat: no-repeat;
-    /* background-size: cover; */
-    width: 70%;
-    height: 40vw; /*estimated proportions because background image messes things up :( */
+    background-size: 100% auto; /*THIS IS STILL NOT WORKING */
+    width: 100%;
+    height: 50vw; /*estimated proportions because background image messes things up :( */
+    max-height: 480px;
     border-radius: 7px;
     display: flex;
     justify-content: center;
@@ -41,5 +42,5 @@
     height: 5vw;
     z-index: 1;
     transform: translate(-50%, -50%); /*center on mouse*/
-    border: solid black 90vw;
+    border: solid black 150vw;
 }

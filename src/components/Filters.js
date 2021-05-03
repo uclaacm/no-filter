@@ -1,15 +1,15 @@
 import React from 'react';
 import '../App.css';
 import './style/Filters.css'
-import amsterdamRegular from '../img/filter-picker/amsterdam-regular.jpg';
-import amsterdamBlur from '../img/filter-picker/amsterdam-blur.jpg';
-import amsterdamBottomSobel from '../img/filter-picker/amsterdam-bottom-sobel.jpg';
-import amsterdamEmboss from '../img/filter-picker/amsterdam-emboss.jpg';
-import amsterdamLeftSobel from '../img/filter-picker/amsterdam-left-sobel.jpg';
-import amsterdamOutline from '../img/filter-picker/amsterdam-outline.jpg';
-import amsterdamRightSobel from '../img/filter-picker/amsterdam-right-sobel.jpg';
-import amsterdamSharpen from '../img/filter-picker/amsterdam-sharpen.jpg';
-import amsterdamTopSobel from '../img/filter-picker/amsterdam-top-sobel.jpg';
+import amsterdamRegular from '../img/filter-picker/amsterdam-regular-compressed.jpg';
+import amsterdamBlur from '../img/filter-picker/amsterdam-blur-compressed.jpg';
+import amsterdamBottomSobel from '../img/filter-picker/amsterdam-bottom-sobel-compressed.jpg';
+import amsterdamEmboss from '../img/filter-picker/amsterdam-emboss-compressed.jpg';
+import amsterdamLeftSobel from '../img/filter-picker/amsterdam-left-sobel-compressed.jpg';
+import amsterdamOutline from '../img/filter-picker/amsterdam-outline-compressed.jpg';
+import amsterdamRightSobel from '../img/filter-picker/amsterdam-right-sobel-compressed.jpg';
+import amsterdamSharpen from '../img/filter-picker/amsterdam-sharpen-compressed.jpg';
+import amsterdamTopSobel from '../img/filter-picker/amsterdam-top-sobel-compressed.jpg';
 
 /*TODO: Change images to koala rather than amsterdam?*/
 
