@@ -256,7 +256,7 @@ em {
   /* text-decoration: none; */
   max-width: max-content;
   align-self: center;
-  
+
   /* box-shadow: 0px 0px 8px 2px rgba(30, 30, 30, 0.1); */
 }
 .link-to-slides:hover {
@@ -345,5 +345,5 @@ em {
   align-self: center;
 }
 .panelimg {
-  width: 100px;
+  width: 120px;
 }
