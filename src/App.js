@@ -13,12 +13,58 @@ import visualizer from './img/cnn-vis.png';
 import filterGIF from './img/filter.gif';
 //import greyscaleGIF from './img/greyscale.gif';
 import rgbGIF from './img/rgb.gif';
+import panel1 from './img/panels/panel1.png';
+import panel2 from './img/panels/panel2.png';
+import panel3 from './img/panels/panel3.png';
+import panel4 from './img/panels/panel4.png';
+import panel5 from './img/panels/panel5.png';
+import panel6 from './img/panels/panel6.png';
+
 import Carousel from './components/Carousel.js';
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
-
+import { SRLWrapper } from "simple-react-lightbox";
 
 function App() {
   const handle = useFullScreenHandle();
+  const options = {
+    settings: {
+      autoplaySpeed: 3000,
+      boxShadow: 'none',
+      disableKeyboardControls: false,
+      disablePanzoom: false,
+      disableWheelControls: false,
+      hideControlsAfter: 3000,
+      lightboxTransitionSpeed: 0.3,
+      lightboxTransitionTimingFunction: 'linear',
+      overlayColor: 'white',
+      slideAnimationType: 'fade',
+      slideSpringValues: [300, 50],
+      slideTransitionSpeed: 0.6,
+      slideTransitionTimingFunction: 'linear',
+      usingPreact: false
+  },
+  buttons: {
+    backgroundColor: "#1EBDF4",
+    iconColor: "white",
+  },
+  caption: {
+    captionColor: '#1EBDF4',
+    captionFontFamily: "Source Sans Pro, sans-serif",
+    captionFontWeight: "300",
+    captionTextTransform: "uppercase",
+  },
+  thumbnails: {
+    showThumbnails: true,
+    thumbnailsAlignment: 'center',
+    thumbnailsContainerBackgroundColor: 'transparent',
+    thumbnailsContainerPadding: '0',
+    thumbnailsGap: '0 1px',
+    thumbnailsIconColor: '#ffffff',
+    thumbnailsOpacity: 0.4,
+    thumbnailsPosition: 'bottom',
+    thumbnailsSize: ['100px', '80px']
+  }
+}
   return (
     <div className="App">
     <Navbar />
@@ -160,9 +206,9 @@ function App() {
       <section className="grey section">
         <div className="card">
           <h2 style={{textAlign:"center"}}>Look at the animation below to learn how a filter (shown as the red matrix) works on images to calculate each element of the feature map</h2>
-          <p style={{textAlign:"center"}}>(You can also explore our slides on filters (slide 28) from our <a target="_blank" href="https://docs.google.com/presentation/d/1je-mnp1E6y-wj3q_5GNHG8jJm9ckLTyoFNjF3Qj_6LM/edit?usp=sharing" rel="noopener noreferrer">CNN high-school lesson)</a></p> 
+          <p style={{textAlign:"center"}}>(You can also explore our slides on filters (slide 28) from our <a target="_blank" href="https://docs.google.com/presentation/d/1je-mnp1E6y-wj3q_5GNHG8jJm9ckLTyoFNjF3Qj_6LM/edit?usp=sharing" rel="noopener noreferrer">CNN high-school lesson)</a></p>
           <p style={{textAlign:"center"}}>Note that whenever the filter hovers over a portion of the image, the corresponding element on the
-           feature map is calculated by <em>multiplying the filter value of each cell </em> (at the bottom right of each cell) with 
+           feature map is calculated by <em>multiplying the filter value of each cell </em> (at the bottom right of each cell) with
            the <em> pixel value of the image's cell it is hovering over </em> and <em>adding them all together.</em></p>
         <Carousel/>
         </div>
@@ -204,23 +250,17 @@ function App() {
       </section>
       <section className="blue section">
         <div className="card">
-        <button id="fullscreen" onClick={handle.enter}>
-          View full image
-        </button>
 
-        <FullScreen handle={handle}>
-          <div className="cnnHolder">
-              <img src={visualizer} id="cnn-vis" alt="two filters applied to one layer of a CNN"/>
-          </div>
-        </FullScreen>
+       <SRLWrapper options={options}>
+          <img class="panelimg" src={panel1} alt="Caption 1" />
+          <img class="panelimg" src={panel2} alt="Caption 2" />
+          <img class="panelimg" src={panel3} alt="Caption 3" />
+          <img class="panelimg" src={panel4} alt="Caption 4" />
+          <img class="panelimg" src={panel5} alt="Caption 5" />
+          <img class="panelimg" src={panel6} alt="Caption 6" />
+        </SRLWrapper>
 
-        </div>
-       </section>
-       <section className="section">
-         <div className="card">
-           <h1>In conclusion...</h1>
-           <h2>idk put something here</h2>
-         </div>
+       </div>
        </section>
 
     </div>
