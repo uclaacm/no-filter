@@ -1,15 +1,15 @@
 import React from 'react';
 import '../App.css';
 import './style/Filters.css'
-import elephantRegular from '../img/filter-picker/elephant_regular-min.png';
-import elephantBlur from '../img/filter-picker/elephant_blur-min.png';
-import elephantBottomSobel from '../img/filter-picker/elephant_bottom_s-min.png';
-import elephantEmboss from '../img/filter-picker/elephant_emboss-min.png';
-import elephantLeftSobel from '../img/filter-picker/elephant_left_s-min.png';
-import elephantOutline from '../img/filter-picker/elephant_outline-min.png';
-import elephantRightSobel from '../img/filter-picker/elephant_right_sobel-min.png';
-import elephantSharpen from '../img/filter-picker/elephant_sharpen-min.png';
-import elephantTopSobel from '../img/filter-picker/elephant_top_sobel-min.png';
+import elephantRegular from '../img/filter-picker/elephant_regular-min.jpg';
+import elephantBlur from '../img/filter-picker/elephant_blur-min.jpg';
+import elephantBottomSobel from '../img/filter-picker/elephant_bottom_s-min.jpg';
+import elephantEmboss from '../img/filter-picker/elephant_emboss-min.jpg';
+import elephantLeftSobel from '../img/filter-picker/elephant_left_s-min.jpg';
+import elephantOutline from '../img/filter-picker/elephant_outline-min.jpg';
+import elephantRightSobel from '../img/filter-picker/elephant_right_sobel-min.jpg';
+import elephantSharpen from '../img/filter-picker/elephant_sharpen-min.jpg';
+import elephantTopSobel from '../img/filter-picker/elephant_top_sobel-min.jpg';
 
 class Filters extends React.Component {
     constructor(props) {
