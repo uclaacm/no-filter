@@ -9,23 +9,6 @@ export default class Page1 extends Component {
                     <section className="banner">
                         <h1>#FFFFFF in the chat</h1>
                     </section>
-                    <div class="index">
-                        <Link to="/1" className="navButton">
-                            Page 1
-                        </Link>
-                        <Link to="/2" className="navButton">
-                            Page 2
-                        </Link>
-                        <Link to="/3" className="navButton">
-                            Page 3
-                        </Link>
-                        <Link to="/4" className="navButton">
-                            Page 4
-                        </Link>
-                        <Link to="/5" className="navButton">
-                            Page 5
-                        </Link>
-                    </div>
 
                     <section className="blue section">
                         <div className="toc-panel">
