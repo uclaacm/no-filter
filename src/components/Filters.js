@@ -98,6 +98,7 @@ class Filters extends React.Component {
             <div className="card">
                 <h2>Let's see how this works in practice.</h2>
                 <p>Select the different filters in this example to apply them to the image. What patterns do you see in the filter values? How do filters make features easier to see?</p>
+                <p className="small-stuff">FYI: image loading might be slow the first time around!</p>
             </div>
             <div className="filters-holder">
                 <img src={elephantRegular} alt="black and white elephant"></img>
