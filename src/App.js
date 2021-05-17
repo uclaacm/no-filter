@@ -20,11 +20,11 @@ function App() {
 
   function ScrollToTop() {
     const { pathname } = useLocation();
-  
+
     useEffect(() => {
       window.scrollTo(0, 0);
     }, [pathname]);
-  
+
     return null;
   }
 
@@ -68,7 +68,24 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <ScrollToTop/>
+        <ScrollToTop />
+        <div class="index">
+          <Link to="/1" className="navButton" onClick={() => setPage(1)}>
+            Page 1
+          </Link>
+          <Link to="/2" className="navButton" onClick={() => setPage(2)}>
+            Page 2
+          </Link>
+          <Link to="/3" className="navButton" onClick={() => setPage(3)}>
+            Page 3
+          </Link>
+          <Link to="/4" className="navButton" onClick={() => setPage(4)}>
+            Page 4
+          </Link>
+          <Link to="/5" className="navButton" onClick={() => setPage(5)}>
+            Page 5
+          </Link>
+        </div>
         <Route exact path="/"> {/* needs to be exact path otherwise it becomes default */}
           <Page1 />
         </Route>
