@@ -55,6 +55,16 @@ em {
   text-align: center;
 }
 
+.index{
+  margin-left: 35%;
+  display: flex;
+  max-width: 30%;
+  border: solid 2px #1EBDF4;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .banner h1 {
   color: white;
 }
@@ -160,6 +170,22 @@ em {
   border: solid #1EBDF4 3px;
 }
 
+.navigation{
+  width: 30%;
+  border: solid 2px black;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navArrow{
+  font-size: 50px;
+}
+
+.navArrow:hover{
+  color: blue;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 500px) {
   .grid-60-40 {
