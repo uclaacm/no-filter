@@ -1,6 +1,5 @@
 import '../App.css';
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
 import rgbGIF from '../img/rgb.gif';
 import Carousel from '../components/Carousel.js';
 import depth from '../img/depth.png';

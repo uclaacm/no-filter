@@ -1,21 +1,8 @@
 import React, {useState} from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Navbar from './components/Navbar.js';
-import clipart from './img/people.png';
-import sentimentAnalysis from './img/undraw_sentiment_analysis.svg';
-import Filters from './components/Filters.js';
-import depth from './img/depth.png';
-import FilterSizes from './components/FilterSizes.js';
-import visualizer from './img/cnn-vis.png';
-import filterGIF from './img/filter.gif';
-//import greyscaleGIF from './img/greyscale.gif';
-import rgbGIF from './img/rgb.gif';
-import Carousel from './components/Carousel.js';
-import { FullScreen, useFullScreenHandle } from "react-full-screen";
-
 import Page1 from './pages/page-1.js';
 import Page2 from './pages/page-2.js';
 import Page3 from './pages/page-3.js';

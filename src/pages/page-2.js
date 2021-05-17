@@ -1,6 +1,5 @@
 import '../App.css';
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
 import Flashlight from '../components/Flashlight.js';
 import koala from '../img/koala2.jpg';
 import flamingo from '../img/flamingo.jpg';

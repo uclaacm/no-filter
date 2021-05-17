@@ -1,6 +1,5 @@
 import '../App.css';
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import visualizer from '../img/cnn-vis.png';
 

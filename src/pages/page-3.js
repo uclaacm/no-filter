@@ -1,6 +1,5 @@
 import '../App.css';
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
 import sentimentAnalysis from '../img/undraw_sentiment_analysis.svg';
 import Filters from '../components/Filters.js';
 import filterGIF from '../img/filter.gif';
