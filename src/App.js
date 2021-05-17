@@ -13,7 +13,7 @@ import Page5 from './pages/page-5.js';
 function App() {
   const path = window.location.pathname;
   var pageno = path.substring(1);
-  if (pageno == "") {
+  if (pageno === "") {
     pageno = "0";
   }
   const [page, setPage] = useState(1);
@@ -32,7 +32,7 @@ function App() {
     const curPage = props.curPage;
     var rightStr = "/" + (parseInt(curPage, 10) + 1);
     var leftStr = "/" + (parseInt(curPage, 10) - 1);
-    if (curPage == 0 || curPage == 1) {
+    if (curPage === 0 || curPage === 1) {
       return (
         <div className="navigation">
           <Link to={rightStr} className="navArrow" onClick={() => setPage(curPage + 1)}>
@@ -41,7 +41,7 @@ function App() {
         </div>
       )
     }
-    else if (curPage == 5) {
+    else if (curPage === 5) {
       return (
         <div className="navigation">
           <Link to={leftStr} className="navArrow" onClick={() => setPage(curPage - 1)}>
