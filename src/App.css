@@ -72,7 +72,6 @@ em {
 .card {
   display: flex;
   flex-direction: column;
-  /* background-color: white; */
   border-radius: 7px;
   width:90%;
   max-width: 750px;
@@ -152,6 +151,7 @@ em {
   justify-content: center;
   text-align: center;
   height: stretch;
+  max-height: 140px;
   background-color: #1EBDF4;
   width: 90%;
   margin: 0.5em;
@@ -226,7 +226,6 @@ em {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
 @media screen and (max-width: 600px) {
@@ -282,7 +281,7 @@ em {
   /* text-decoration: none; */
   max-width: max-content;
   align-self: center;
-  
+
   /* box-shadow: 0px 0px 8px 2px rgba(30, 30, 30, 0.1); */
 }
 .link-to-slides:hover {
@@ -293,24 +292,7 @@ em {
 .filters-intro {
   justify-content: space-between;
 }
-#fullscreen {
-  font-family: 'Source Sans Pro', sans-serif;
-  align-self: left;
-  border: 2px #1EBDF4 solid;
-  font-size: 16px;
-  color: black;
-  padding: 0.5em;
-  background-color: #EBF9FE;
-}
-#fullscreen:hover {
-  opacity: 0.7;
-}
-.cnnHolder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2%;
-}
+
 .filterGIF-container {
   width:100%;
   display: flex;
@@ -346,6 +328,7 @@ em {
     width: stretch;
   }
 }
+
 #fullscreen {
   font-family: 'Source Sans Pro', sans-serif;
   align-self: left;
@@ -362,11 +345,14 @@ em {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 2%;
 }
+
 #cnn-vis {
   display: flex;
   flex-direction: column;
   background-color: white;
-  min-width: 400px;
+  max-width: 650px;
+  max-height: 450px;
   align-self: center;
 }
