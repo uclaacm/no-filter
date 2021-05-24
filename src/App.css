@@ -7,7 +7,7 @@ body {
 h1 {
   font-size: 30px;
   margin: 0;
-  color: #1c1a19;
+  color: #FFEBFE;
   font-family: 'poppinslight';
   font-weight: 800;
   border-bottom: solid #1EBDF4;
@@ -15,14 +15,14 @@ h1 {
 
 h2 {
   font-size: 20px;
-  color: #1c1a19;
+  color: #FF00F5;
   line-height: 1.5;
 }
 
 p {
   font-size: 18px;
   line-height: 1.5;
-  color: #1c1a19;
+  color: #FFEBFE;
   margin: 0.5em 0;
   text-align: justify;
 }
@@ -37,7 +37,8 @@ em {
   flex-flow: row wrap;
   justify-content: center;
   padding: 0.5em 1em;
-  background-color: #fbf7f5;
+  /* BACKGROUND COLOR: */
+  background-color: #020D2A;
 }
 
 /* .blue { /*blue divs
