@@ -60,7 +60,7 @@ class Flashlight extends React.Component {
     }
 
     render () {
-        let background = this.state.backgroundImage ? `url(${koala})` : 'black';
+        let background = this.state.backgroundImage ? `url(${koala})` : '#041850';
         const stylesInJS = {
             backgroundStyles: {
                 background: background,

@@ -2,7 +2,7 @@
     z-index: auto;
     position: relative;
     overflow: hidden;
-    background: black;
+    background: #041850;
     /* filter: brightness(0%); */
     background-repeat: no-repeat;
     background-size: 100% auto; /*THIS IS STILL NOT WORKING */
@@ -16,12 +16,12 @@
     
 }
 #instructions {
-    color: white;
+    color: #FFEBFE;
     font-weight: bolder;
     z-index: 2;
     filter: brightness(100%);
     text-align: center;
-    background-color: #FF699F;
+    background-color: #FF00F5;
     padding: 0.3em;
     margin: 0.25em;
     border-radius: 15px;
