@@ -12,13 +12,12 @@ export default class Page1 extends Component {
                     <section className="grey section">
                         <div className="card">
                             <h1>first, neural networks</h1>
-                            <div className="grid-60-40">
                                 <div className="words">
                                     <p>Maybe you've heard about neural networks. If you haven't, <em>check out the slides below.</em>
                                     </p>
                                     <div className="links">
-                                        <a className="dark-link" href="https://teachla.uclaacm.com/classes/ml/08-fc-neural-networks" target="_blank" rel="noopener noreferrer">Fully-connected neural networks</a>
-                                        <a className="dark-link" href="https://teachla.uclaacm.com/classes/ml/10-cnn" target="_blank" rel="noopener noreferrer">Convolutional neural networks</a>
+                                        <a className="dark-link" href="https://teachla.uclaacm.com/classes/ml/08-fc-neural-networks" target="_blank" rel="noopener noreferrer">fully-connected neural networks</a>
+                                        <a className="dark-link" href="https://teachla.uclaacm.com/classes/ml/10-cnn" target="_blank" rel="noopener noreferrer">convolutional neural networks</a>
                                     </div>
                                     <p>Neural networks can:
                                     <div className="example-list">
@@ -37,10 +36,8 @@ export default class Page1 extends Component {
                                         <em>Convolutional Neural Networks</em>, or CNNs, are a type of neural network.
               They find <em>features</em> by analyzing data (like images) <em>piece by piece</em>.
               </p>
-                                    <p> In this learning lab, we'll learn about how that works.</p>
+                                    <p> In this lab, we'll learn about how that works.</p>
                                 </div>
-
-                            </div>
                         </div>
                     </section>
                 </div>

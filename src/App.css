@@ -136,8 +136,10 @@ em {
 .example-list {
   display: grid;
   grid-template-columns: 30% 30% 35%;
+  column-gap: 2em;
   margin: 0 1em;
 }
+
 @media screen and (max-width: 500px) {
   .example-list {
     display: grid;
@@ -245,20 +247,20 @@ em {
   background-color: #FF00F5;
   color: #041850;
   border-right: 2px #041850 solid;
-  
-  
+
+
 }
 #rightB{
   background-color: #FF00F5;
   color: #041850;
-  
+
 }
 
 #rightB2:hover{
   background-color: #041850;
   color: #FF00F5;
   border-left: 2px #FF00F5 solid;
-  
+
 }
 
 #leftB2{
