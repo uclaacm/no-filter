@@ -35,8 +35,8 @@ function App() {
     if (curPage === 0 || curPage === 1) {
       return (
         <div className="navigation">
-          <Link to={rightStr} className="navArrow" onClick={() => setPage(curPage + 1)}>
-            right
+          <Link to={rightStr} id="rightB" className="navArrow" onClick={() => setPage(curPage + 1)}>
+            next
         </Link>
         </div>
       )
@@ -44,8 +44,8 @@ function App() {
     else if (curPage === 5) {
       return (
         <div className="navigation">
-          <Link to={leftStr} className="navArrow" onClick={() => setPage(curPage - 1)}>
-            left
+          <Link to={leftStr} id="leftB" className="navArrow" onClick={() => setPage(curPage - 1)}>
+            back
         </Link>
         </div>
       )
@@ -53,11 +53,11 @@ function App() {
     else {
       return (
         <div className="navigation">
-          <Link to={leftStr} className="navArrow" onClick={() => setPage(curPage - 1)}>
-            left
+          <Link to={leftStr} id="leftB2" className="navArrow" onClick={() => setPage(curPage - 1)}>
+            back
         </Link>
-          <Link to={rightStr} className="navArrow" onClick={() => setPage(curPage + 1)}>
-            right
+          <Link to={rightStr} id="rightB2" className="navArrow" onClick={() => setPage(curPage + 1)}>
+            next
         </Link>
         </div>
       )
