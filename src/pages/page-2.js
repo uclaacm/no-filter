@@ -25,15 +25,15 @@ export default class Page2 extends Component {
                         <div className="grid-50-50">
                             <div className="needs-padding">
                                 <p>Think about how you identified the koala:
-                <ul>
+                                    <ul>
                                         <li>First, you looked at basic <em>features</em> like the koala's eyes and color.</li>
                                         <li>You used these pieces to identify more complicated features like the face and fur texture.</li>
                                         <li>Finally, you combined these features to form a koala.</li>
                                     </ul>
                                 </p>
                                 <p>Believe it or not, CNNs work the same way! A <em>filter</em> is a matrix that focuses on one tiny area of an
-                image at a time, just like our flashlight.
-                This process is called <em>convolution</em>.</p>
+                                  image at a time, just like our flashlight.
+                                  This process is called <em>convolution</em>.</p>
                             </div>
                             <div className="center">
                                 <img src={koala} alt="koala in a forest" id="koala-reveal-img"></img>
