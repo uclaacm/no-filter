@@ -20,7 +20,7 @@ export default class Page3 extends Component {
                                         <li>Editing/synthesizing music</li>
                                     </ul>
                                 </p>
-                                <h3>How do these filters actually work? </h3>
+                                <h2>How do these filters actually work? </h2>
                             </div>
                             <div>
 
