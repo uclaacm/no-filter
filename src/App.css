@@ -1,7 +1,9 @@
 /*TODO: Remove duplication in classes */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  /* font-family: 'Source Sans Pro', sans-serif; */
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 h1 {
@@ -17,6 +19,7 @@ h2 {
   font-size: 20px;
   color: #FF00F5;
   line-height: 1.5;
+  font-weight: 600;
 }
 
 p {
