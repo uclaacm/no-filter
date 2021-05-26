@@ -13,15 +13,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    border: solid #FF00F5;
+   
 }
 #instructions {
-    color: white;
+    color: #FFEBFE;
     font-weight: bolder;
     z-index: 2;
     filter: brightness(100%);
     text-align: center;
-    background-color: #FF699F;
+    background-color: #FF00F5;
     padding: 0.3em;
     margin: 0.25em;
     border-radius: 15px;
@@ -42,5 +43,5 @@
     height: 5vw;
     z-index: 1;
     transform: translate(-50%, -50%); /*center on mouse*/
-    border: solid black 150vw;
+    border: solid  black 150vw;
 }

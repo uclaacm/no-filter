@@ -1,55 +1,43 @@
 import '../App.css';
 import React, { Component } from "react";
+import stocks from '../img/stock.svg';
+import voice from '../img/voice.svg';
+import catdog from '../img/catdog.svg';
+
 
 export default class Page1 extends Component {
         render() {
             return (
                 <div class="page">
-                    <section className="banner">
-                        <h1>#FFFFFF in the chat</h1>
-                    </section>
-
-                    <section className="blue section">
-                        <div className="toc-panel">
-                            <div className="mini-card">
-                                <h1>
-                                    Let's learn about Convolutional Neural Networks!
-                                </h1>
-                                <ol>
-                                    <li> What are CNN <em>filters</em>?</li>
-                                    <li> What do filters <em>"see"</em>?</li>
-                                    <li> What do CNNs look like? </li>
-                                </ol>
-                            </div>
-                            <div className="clipart-container">
-                            </div>
-                        </div>
-                    </section>
                     <section className="grey section">
                         <div className="card">
-                            <h1>First, Neural Networks</h1>
-                            <div className="grid-60-40">
+                            <h1>first, neural networks</h1>
                                 <div className="words">
-                                    <p>Maybe you've heard about neural networks. If you haven't, <em>check out the linked slides.</em>
+                                    <p>Maybe you've heard about neural networks. If you haven't, <em>check out the slides below.</em>
                                     </p>
+                                    <div className="links">
+                                        <a className="dark-link" href="https://teachla.uclaacm.com/classes/ml/08-fc-neural-networks" target="_blank" rel="noopener noreferrer">fully-connected neural networks</a>
+                                        <a className="dark-link" href="https://teachla.uclaacm.com/classes/ml/10-cnn" target="_blank" rel="noopener noreferrer">convolutional neural networks</a>
+                                    </div>
                                     <p>Neural networks can:
-                <ul className="list">
-                                            <li>Predict stock market prices</li>
-                                            <li>Analyze your voice</li>
-                                            <li>Find differences between cats and dogs</li>
-                                        </ul>
+                                    <div className="example-list">
+                                            <div className="example">predict stock market prices
+                                            <img src={stocks} alt="stocks" id="example-img"></img>
+                                            </div>
+                                            <div className="example">analyze your voice
+                                            <img src={voice} alt="sound wave" id="example-img-soundwave"></img>
+                                            </div>
+                                            <div className="example">find differences <br /> between cats & dogs
+                                            <img src={catdog} alt="pawprint" id="example-img"></img>
+                                            </div>
+                                        </div>
                                     </p>
                                     <p>
                                         <em>Convolutional Neural Networks</em>, or CNNs, are a type of neural network.
               They find <em>features</em> by analyzing data (like images) <em>piece by piece</em>.
               </p>
-                                    <p> In this learning lab, we'll learn about how that works.</p>
+                                    <p> In this lab, we'll learn about how that works.</p>
                                 </div>
-                                <div className="links">
-                                    <a className="chubby-link" href="https://teachla.uclaacm.com/classes/ml/08-fc-neural-networks" target="_blank" rel="noopener noreferrer">Fully-connected neural networks</a>
-                                    <a className="chubby-link" href="https://teachla.uclaacm.com/classes/ml/10-cnn" target="_blank" rel="noopener noreferrer">Convolutional neural networks</a>
-                                </div>
-                            </div>
                         </div>
                     </section>
                 </div>

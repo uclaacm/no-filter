@@ -1,6 +1,5 @@
 import '../App.css';
 import React, { Component } from "react";
-import sentimentAnalysis from '../img/undraw_sentiment_analysis.svg';
 import Filters from '../components/Filters.js';
 import filterGIF from '../img/filter.gif';
 
@@ -21,10 +20,7 @@ export default class Page3 extends Component {
                                         <li>Editing/synthesizing music</li>
                                     </ul>
                                 </p>
-                                <h3>How do these filters actually work? </h3>
-                            </div>
-                            <div className="sentiment-holder">
-                                <img src={sentimentAnalysis} alt="Guy looking at selfie" id="sentiment-analysis" />
+                                <h2>How do these filters actually work? </h2>
                             </div>
                             <div>
 
