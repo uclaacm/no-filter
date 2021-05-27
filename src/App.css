@@ -465,3 +465,14 @@ em {
   max-height: 450px;
   align-self: center;
 }
+
+#cnn-frame {
+  width: 100%;
+}
+
+.main2{
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
