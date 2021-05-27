@@ -49,22 +49,22 @@ export default class Page5 extends Component {
                     <div className="main2">
                       <Slider ref={slider => (this.slider = slider)} {...settings}>
                         <div className = "frames gallery">
-                          <img src = {f1} className="frame" id="cnn-frame" alt="first example of feature pool calculation - shows how the first element of the feature map is cacluated by taking the dot product of the filter and a portion of our image"></img>
+                          <img src = {f1} className="frame" id="cnn-frame" alt="first step"></img>
                         </div>
                         <div className = "frames gallery">
-                          <img src = {f2} className="frame" id="cnn-frame" alt="second example of feature pool calculation"></img>
+                          <img src = {f2} className="frame" id="cnn-frame" alt="second step"></img>
                         </div>
                         <div className = "frames gallery">
-                          <img src = {f3} className="frame" id="cnn-frame" alt="third frame of feature pool calculation"></img>
+                          <img src = {f3} className="frame" id="cnn-frame" alt="third step"></img>
                         </div>
                         <div className = "frames gallery">
-                          <img src = {f4} className="frame" id="cnn-frame" alt="fourth frame of feature pool calculation"></img>
+                          <img src = {f4} className="frame" id="cnn-frame" alt="fourth step"></img>
                         </div>
                         <div className = "frames gallery">
-                          <img src = {f5} className="frame" id="cnn-frame" alt="fifth frame of feature pool calculation"></img>
+                          <img src = {f5} className="frame" id="cnn-frame" alt="fifth step"></img>
                         </div>
                         <div className = "frames gallery">
-                          <img src = {f6} className="frame" id="cnn-frame" alt="sixth frame of feature pool calculation"></img>
+                          <img src = {f6} className="frame" id="cnn-frame" alt="sixth step: complete!"></img>
                         </div>
                       </Slider>
 
