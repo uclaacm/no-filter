@@ -1,23 +1,19 @@
 import '../App.css';
 import React, { Component } from "react";
-import { FullScreen, useFullScreenHandle } from "react-full-screen";
-import visualizer from '../img/cnn-vis.png';
+import Carousel from 'react-gallery-carousel';
+import 'react-gallery-carousel/dist/index.css';
 
 function Visual() {
-    const handle = useFullScreenHandle();
+  const images = [1, 2, 3, 4, 5, 6].map((number) => ({
+  src: `https://github.com/uclaacm/no-filter/blob/master/src/img/panels/panel${number}.png`
+}));
     return (
-        <div className="card">
-            <button id="fullscreen" onClick={handle.enter}>
-                View full image
-                        </button>
-            <FullScreen handle={handle}>
-                <div className="cnnHolder">
-                    <img src={visualizer} id="cnn-vis" alt="two filters applied to one layer of a CNN" />
-                </div>
-            </FullScreen>
-        </div>
+      <div className="card">
+          <Carousel images={images} id="cnn-vis" />
 
-    )
+      </div>
+
+  )
 }
 
 export default class Page5 extends Component {
