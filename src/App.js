@@ -14,10 +14,10 @@ import CoverPage from './pages/cover-page.js';
 function App() {
   const path = window.location.pathname;
   var pageno = path.substring(1);
-  if (pageno === "") {
+  if (pageno === "" || pageno === "main") {
     pageno = "0";
   }
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
 
   function ScrollToTop() {
     const { pathname } = useLocation();
@@ -29,11 +29,29 @@ function App() {
     return null;
   }
 
+  function RenderStart(props){
+    const curPage = props.curPage;
+    if(curPage === 0)
+    {
+      return(<Link to="/1" id="startButton" onClick={() => setPage(curPage + 1)}>
+                   get started
+                  </Link>)
+    }
+    else
+    {
+      return(null);
+    }
+  }
+
   function RenderButtons(props) {
     const curPage = props.curPage;
     var rightStr = "/" + (parseInt(curPage, 10) + 1);
     var leftStr = "/" + (parseInt(curPage, 10) - 1);
-    if (curPage === 0 || curPage === 1) {
+    if(curPage === 0)
+    {
+      return(null);
+    }
+    if (curPage === 1) {
       return (
         <div className="navigation">
           <Link to={rightStr} id="rightB" className="navArrow" onClick={() => setPage(curPage + 1)}>
@@ -70,7 +88,7 @@ function App() {
     <div className="App">
       <Router>
         <ScrollToTop />
-        <div class="index">
+        {/* <div class="index">
           <Link to="/1" className="navButton" onClick={() => setPage(1)}>
             Page 1
           </Link>
@@ -86,9 +104,9 @@ function App() {
           <Link to="/5" className="navButton" onClick={() => setPage(5)}>
             Page 5
           </Link>
-        </div>
+        </div> */}
         <Route exact path="/"> {/* needs to be exact path otherwise it becomes default */}
-          <Page1 />
+          <CoverPage />
         </Route>
         <Route path="/main">
           <CoverPage />
@@ -111,7 +129,9 @@ function App() {
         <Route path="/rest">
           nothing
        </Route>
-        <RenderButtons curPage={parseInt(page)} />
+       
+        <RenderStart curPage={parseInt(pageno)} />
+        <RenderButtons curPage={parseInt(pageno)} />
       </Router>
     </div>
   );

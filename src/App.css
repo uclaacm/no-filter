@@ -240,28 +240,67 @@ em {
   background-color: #020D2A;
 }
 
+/* .bPage{
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+} */
+
+#coverImage{
+  vertical-align: middle;
+  width: auto;
+  max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#startButton{
+  background-color: #041850;
+  color: #FF00F5;
+  font-size: larger;
+  font-weight: 600;
+  border: 2px #FF00F5 solid;
+  padding: 10px;
+  float: left;
+  position: absolute;
+  left: 45%;
+  top: 60%;
+  z-index: 1000;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+#startButton:hover{
+  background-color: #FF00F5;
+  color: #041850;
+  border: 2px #041850 solid;
+}
+
 #leftB{
   background-color: #041850;
   color: #FF00F5;
 }
 
-#leftB2:hover{
+#leftB:hover{
   background-color: #FF00F5;
   color: #041850;
   border-right: 2px #041850 solid;
-
-
 }
+
 #rightB{
   background-color: #FF00F5;
   color: #041850;
-
 }
 
-#rightB2:hover{
+#rightB:hover{
   background-color: #041850;
   color: #FF00F5;
-  border-left: 2px #FF00F5 solid;
+  border: 2px #FF00F5 solid;
 
 }
 
@@ -275,6 +314,13 @@ em {
   border-bottom-left-radius: 30px;
 }
 
+#leftB2:hover{
+  background-color: #FF00F5;
+  color: #041850;
+  border-right: 2px #041850 solid;
+}
+
+
 #rightB2{
   background-color: #FF00F5;
   color: #041850;
@@ -283,6 +329,13 @@ em {
   border-top-right-radius: 30px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
+}
+
+#rightB2:hover{
+  background-color: #041850;
+  color: #FF00F5;
+  border-left: 2px #FF00F5 solid;
+
 }
 
 .navArrow{
