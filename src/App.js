@@ -8,6 +8,7 @@ import Page2 from './pages/page-2.js';
 import Page3 from './pages/page-3.js';
 import Page4 from './pages/page-4.js';
 import Page5 from './pages/page-5.js';
+import CoverPage from './pages/cover-page.js';
 
 
 function App() {
@@ -88,6 +89,9 @@ function App() {
         </div>
         <Route exact path="/"> {/* needs to be exact path otherwise it becomes default */}
           <Page1 />
+        </Route>
+        <Route path="/main">
+          <CoverPage />
         </Route>
         <Route path="/1">
           <Page1 />
