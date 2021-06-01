@@ -9,6 +9,7 @@ import Page3 from './pages/page-3.js';
 import Page4 from './pages/page-4.js';
 import Page5 from './pages/page-5.js';
 import CoverPage from './pages/cover-page.js';
+import { slide as Menu } from 'react-burger-menu';
 
 
 function App() {
@@ -83,28 +84,40 @@ function App() {
     }
 
   }
-
+  function RenderMenu(props)
+  {
+    const curPage = props.curPage;
+    if(curPage === 0)
+    {
+      return(null)
+    }
+    else
+    {
+      return(
+      <Menu>
+      <Link to="/1" className="navButton" onClick={() => setPage(1)}>
+        Neural Networks and CNNs recap
+      </Link>
+      <Link to="/2" className="navButton" onClick={() => setPage(2)}>
+        What are filters?
+      </Link>
+      <Link to="/3" className="navButton" onClick={() => setPage(3)}>
+        Experimenting with filters
+      </Link>
+      <Link to="/4" className="navButton" onClick={() => setPage(4)}>
+        Calculations with filters
+      </Link>
+      <Link to="/5" className="navButton" onClick={() => setPage(5)}>
+        Filters in CNNs
+      </Link>
+      </Menu>);
+    }
+  }
   return (
     <div className="App">
       <Router>
+      <RenderMenu curPage={parseInt(pageno)} />
         <ScrollToTop />
-        {/* <div class="index">
-          <Link to="/1" className="navButton" onClick={() => setPage(1)}>
-            Page 1
-          </Link>
-          <Link to="/2" className="navButton" onClick={() => setPage(2)}>
-            Page 2
-          </Link>
-          <Link to="/3" className="navButton" onClick={() => setPage(3)}>
-            Page 3
-          </Link>
-          <Link to="/4" className="navButton" onClick={() => setPage(4)}>
-            Page 4
-          </Link>
-          <Link to="/5" className="navButton" onClick={() => setPage(5)}>
-            Page 5
-          </Link>
-        </div> */}
         <Route exact path="/"> {/* needs to be exact path otherwise it becomes default */}
           <CoverPage />
         </Route>
@@ -129,7 +142,6 @@ function App() {
         <Route path="/rest">
           nothing
        </Route>
-       
         <RenderStart curPage={parseInt(pageno)} />
         <RenderButtons curPage={parseInt(pageno)} />
       </Router>
