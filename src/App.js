@@ -18,7 +18,7 @@ function App() {
   if (pageno === "" || pageno === "main") {
     pageno = "0";
   }
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(parseInt(pageno));
 
   function ScrollToTop() {
     const { pathname } = useLocation();
@@ -116,7 +116,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <RenderMenu curPage={parseInt(pageno)} />
+      <RenderMenu curPage={parseInt(page)} />
         <ScrollToTop />
         <Route exact path="/"> {/* needs to be exact path otherwise it becomes default */}
           <CoverPage />
@@ -142,8 +142,8 @@ function App() {
         <Route path="/rest">
           nothing
        </Route>
-        <RenderStart curPage={parseInt(pageno)} />
-        <RenderButtons curPage={parseInt(pageno)} />
+        <RenderStart curPage={parseInt(page)} />
+        <RenderButtons curPage={parseInt(page)} />
       </Router>
     </div>
   );
