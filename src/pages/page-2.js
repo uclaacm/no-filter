@@ -43,11 +43,11 @@ export default class Page2 extends Component {
                 </section>
                 <section className="blue section">
                     <div className="card">
-                        <h1>Fully-connected Neural Networks</h1>
-                        <h2>When you look at the picture below, what do you see?</h2>
                         <div className="grid-holder">
                             <img src={flamingo} className="grid-img" alt="flamingo"></img>
                             <div className="side-text">
+                                <h1>Fully-connected Neural Networks</h1>
+                                <h2>When you look at the picture below, what do you see?</h2>
                                 <p>You probably recognized this flamingo instantly.
                                 You didn't look at the legs, wings, and beak, but at the whole image.
             </p>
@@ -57,11 +57,10 @@ export default class Page2 extends Component {
                                 <p>
                                     While fully-connected neural networks look at data as a whole,
               CNNs look at data <em>one feature at a time</em>. </p>
-                                <p>Before we move on, check out <a className="link-to-slides" href="https://teachla.uclaacm.com/classes/ml/10-cnn" target="_blank" rel="noopener noreferrer">these slides</a> to learn about how filters work.</p>
-
                             </div>
                         </div>
                     </div>
+                    <p>Before we move on, check out <a className="link-to-slides" href="https://teachla.uclaacm.com/classes/ml/10-cnn" target="_blank" rel="noopener noreferrer">these slides</a> to learn about how filters work.</p>
                 </section>
             </div>
         )
