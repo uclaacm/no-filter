@@ -100,7 +100,7 @@ export default class Page5 extends Component {
                         </ol>
                         <p>Most of all, remember that all these big words aren't as scary as they seem. 
                           We hoped you enjoyed our learning lab as much as we enjoyed making it!</p>
-                        <h2>Goodbye for now!</h2>
+                        <h2>Goodbye for now (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧</h2>
                 </div>
             </section>
         </div>
