@@ -50,17 +50,20 @@ export default class Page2 extends Component {
                                 <h2>When you look at this picture, what do you see?</h2>
                                 <p>You probably recognized this flamingo instantly.
                                 You didn't look at the legs, wings, and beak, but at the whole image.
-            </p>
+                                </p>
                                 <p>
                                     This is what fully-connected neural networks do.
-            </p>
+                                </p>
                                 <p>
                                     While fully-connected neural networks look at data as a whole,
-              CNNs look at data <em>one feature at a time</em>. </p>
+                                    CNNs look at data <em>one feature at a time</em>. </p>
                             </div>
                         </div>
+                        <div className="center">
+                            <p>Before we move on, check out <a className="link-to-slides" href="https://teachla.uclaacm.com/classes/ml/10-cnn" target="_blank" rel="noopener noreferrer">these slides</a> to learn about how filters work.</p>
+                        </div>
                     </div>
-                    <p>Before we move on, check out <a className="link-to-slides" href="https://teachla.uclaacm.com/classes/ml/10-cnn" target="_blank" rel="noopener noreferrer">these slides</a> to learn about how filters work.</p>
+                    
                 </section>
             </div>
         )

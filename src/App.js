@@ -8,15 +8,17 @@ import Page2 from './pages/page-2.js';
 import Page3 from './pages/page-3.js';
 import Page4 from './pages/page-4.js';
 import Page5 from './pages/page-5.js';
+import CoverPage from './pages/cover-page.js';
+import { slide as Menu } from 'react-burger-menu';
 
 
 function App() {
   const path = window.location.pathname;
   var pageno = path.substring(1);
-  if (pageno === "") {
+  if (pageno === "" || pageno === "main") {
     pageno = "0";
   }
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(parseInt(pageno));
 
   function ScrollToTop() {
     const { pathname } = useLocation();
@@ -28,11 +30,29 @@ function App() {
     return null;
   }
 
+  function RenderStart(props){
+    const curPage = props.curPage;
+    if(curPage === 0)
+    {
+      return(<Link to="/1" id="startButton" onClick={() => setPage(curPage + 1)}>
+                   get started
+                  </Link>)
+    }
+    else
+    {
+      return(null);
+    }
+  }
+
   function RenderButtons(props) {
     const curPage = props.curPage;
     var rightStr = "/" + (parseInt(curPage, 10) + 1);
     var leftStr = "/" + (parseInt(curPage, 10) - 1);
-    if (curPage === 0 || curPage === 1) {
+    if(curPage === 0)
+    {
+      return(null);
+    }
+    if (curPage === 1) {
       return (
         <div className="navigation">
           <Link to={rightStr} id="rightB" className="navArrow" onClick={() => setPage(curPage + 1)}>
@@ -64,30 +84,45 @@ function App() {
     }
 
   }
-
+  function RenderMenu(props)
+  {
+    const curPage = props.curPage;
+    if(curPage === 0)
+    {
+      return(null)
+    }
+    else
+    {
+      return(
+      <Menu>
+      <Link to="/1" className="navButton" onClick={() => setPage(1)}>
+        Neural Networks and CNNs recap
+      </Link>
+      <Link to="/2" className="navButton" onClick={() => setPage(2)}>
+        What are filters?
+      </Link>
+      <Link to="/3" className="navButton" onClick={() => setPage(3)}>
+        Experimenting with filters
+      </Link>
+      <Link to="/4" className="navButton" onClick={() => setPage(4)}>
+        Calculations with filters
+      </Link>
+      <Link to="/5" className="navButton" onClick={() => setPage(5)}>
+        Filters in CNNs
+      </Link>
+      </Menu>);
+    }
+  }
   return (
     <div className="App">
       <Router>
+      <RenderMenu curPage={parseInt(page)} />
         <ScrollToTop />
-        <div class="index">
-          <Link to="/1" className="navButton" onClick={() => setPage(1)}>
-            Page 1
-          </Link>
-          <Link to="/2" className="navButton" onClick={() => setPage(2)}>
-            Page 2
-          </Link>
-          <Link to="/3" className="navButton" onClick={() => setPage(3)}>
-            Page 3
-          </Link>
-          <Link to="/4" className="navButton" onClick={() => setPage(4)}>
-            Page 4
-          </Link>
-          <Link to="/5" className="navButton" onClick={() => setPage(5)}>
-            Page 5
-          </Link>
-        </div>
         <Route exact path="/"> {/* needs to be exact path otherwise it becomes default */}
-          <Page1 />
+          <CoverPage />
+        </Route>
+        <Route path="/main">
+          <CoverPage />
         </Route>
         <Route path="/1">
           <Page1 />
@@ -107,6 +142,7 @@ function App() {
         <Route path="/rest">
           nothing
        </Route>
+        <RenderStart curPage={parseInt(page)} />
         <RenderButtons curPage={parseInt(page)} />
       </Router>
     </div>
