@@ -9,7 +9,7 @@ export default class Page3 extends Component {
             <div class="page">
                 <section className="grey section">
                     <div className="card">
-                        <h1>How do we use filters to analyze images?</h1>
+                        <h1 class="topheader">how do we use filters to analyze images?</h1>
                         <div className="row filters-intro">
                             <div>
                                 <p>So far, we've learned that filters are matrices that analyze images piece-by-piece.</p>

@@ -40,33 +40,35 @@ export default class Page5 extends Component {
         <div className = "page">
             <section className="section">
                   <div className="card">
-                      <h1>What do CNNs look like?</h1>
+                      <h1 class="topheader">what do CNNs look like?</h1>
                       <p>
                           Now that we know how to apply filters, let's take a look at how one layer of a CNN might use two feature-detecting filters to create feature maps.
                       </p>
                   </div>
                   <div className="card">
+
                     <div className="main2">
-                      <Slider ref={slider => (this.slider = slider)} {...settings}>
-                        <div className = "frames gallery">
-                          <img src = {f1} className="frame" id="cnn-frame" alt="first step"></img>
-                        </div>
-                        <div className = "frames gallery">
-                          <img src = {f2} className="frame" id="cnn-frame" alt="second step"></img>
-                        </div>
-                        <div className = "frames gallery">
-                          <img src = {f3} className="frame" id="cnn-frame" alt="third step"></img>
-                        </div>
-                        <div className = "frames gallery">
-                          <img src = {f4} className="frame" id="cnn-frame" alt="fourth step"></img>
-                        </div>
-                        <div className = "frames gallery">
-                          <img src = {f5} className="frame" id="cnn-frame" alt="fifth step"></img>
-                        </div>
-                        <div className = "frames gallery">
-                          <img src = {f6} className="frame" id="cnn-frame" alt="sixth step: complete!"></img>
-                        </div>
-                      </Slider>
+                        <Slider id="slider" ref={slider => (this.slider = slider)} {...settings}>
+                          <div className = "frames gallery">
+                            <img src = {f1} className="frame" id="cnn-frame" alt="first step"></img>
+                          </div>
+                          <div className = "frames gallery">
+                            <img src = {f2} className="frame" id="cnn-frame" alt="second step"></img>
+                          </div>
+                          <div className = "frames gallery">
+                            <img src = {f3} className="frame" id="cnn-frame" alt="third step"></img>
+                          </div>
+                          <div className = "frames gallery">
+                            <img src = {f4} className="frame" id="cnn-frame" alt="fourth step"></img>
+                          </div>
+                          <div className = "frames gallery">
+                            <img src = {f5} className="frame" id="cnn-frame" alt="fifth step"></img>
+                          </div>
+                          <div className = "frames gallery">
+                            <img src = {f6} className="frame" id="cnn-frame" alt="sixth step: complete!"></img>
+                          </div>
+
+                        </Slider>
 
                       <div style={{ textAlign: "center" }}>
                         <button className="cbutton" onClick={this.play}>
