@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Flashlight from '../components/Flashlight.js';
 import koala from '../img/koala2.jpg';
 import flamingo from '../img/flamingo.jpg';
+import { Link } from "react-router-dom";
 
 export default class Page2 extends Component {
     render() {
@@ -65,6 +66,14 @@ export default class Page2 extends Component {
                     </div>
 
                 </section>
+                <div className="navigation">
+          <Link to="/1" id="leftB2" className="navArrow">
+            back
+        </Link>
+          <Link to="/3" id="rightB2" className="navArrow">
+            next
+        </Link>
+        </div>
             </div>
         )
     }

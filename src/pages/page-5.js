@@ -12,6 +12,7 @@ import f6 from '../img/panels/panel6.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { faPause } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 
 export default class Page5 extends Component {
     constructor(props) {
@@ -103,6 +104,11 @@ export default class Page5 extends Component {
                         <h2>Goodbye for now (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧</h2>
                 </div>
             </section>
+            <div className="navigation">
+            <Link to="/4" id="leftB" className="navArrow">
+            back
+            </Link>
+            </div>
         </div>
       );
     }
