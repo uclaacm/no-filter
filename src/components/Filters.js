@@ -91,7 +91,7 @@ class Filters extends React.Component {
             this.changeImage(this.state.value);
         });
     }
-    
+
     render() {
     return (
         <section className="section blue">
@@ -135,6 +135,7 @@ class Filters extends React.Component {
                         </select>
                     </form>
                 </div>
+
                 <img id="filter-applied" src={this.state.src} alt="elephant with filter applied"></img>
             </div>
             <div className="card" id="img-description">

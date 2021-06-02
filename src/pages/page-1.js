@@ -11,7 +11,7 @@ export default class Page1 extends Component {
                 <div class="page">
                     <section className="grey section">
                         <div className="card">
-                            <h1>first, neural networks</h1>
+                            <h1 class="topheader">first, neural networks</h1>
                                 <div className="words">
                                     <p>Maybe you've heard about neural networks. If you haven't, <em>check out the slides below.</em>
                                     </p>
