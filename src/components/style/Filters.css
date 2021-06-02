@@ -3,12 +3,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 1em;
+    padding: 0em 5.5em;
+    background-color: white;
+    max-width: 80%;
 }
 
 .filters-holder img {
     margin: 1em;
-    width: 33vw;
+    max-width: 300px;
     height: auto;
 }
 
@@ -56,9 +58,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: white;
     }
     .filters-holder img {
-        width: 80%;
+        max-width: 300px;
         height: auto;
     }
     #form {
