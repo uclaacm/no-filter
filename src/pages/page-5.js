@@ -84,8 +84,23 @@ export default class Page5 extends Component {
 
             <section className="section">
                 <div className="card">
-                    <h1>in conclusion...</h1>
-                    <h2>idk put something here</h2>
+                <h1>in conclusion...</h1>
+                        <h2>Let's recap:</h2>
+                        <ol>
+                            <li><p>Remember the koala example? CNN filters act like flashlights.</p> 
+                            <p>They move around an image to recognize what it is.</p>
+                            <p>Go back to pages 1 and 2 if you want to learn more! </p></li>
+                            <br></br>
+                            <li><p>Filters look at <em>pixels</em> ane perform calculations.</p>
+                            <p>They "see" things like your face, and calculate values to put a Snapchat filter on your selfie.</p>
+                            <p>Check out page 3 for more!</p></li>
+                            <br></br>
+                            <p>CNNs look like a network of filters and images, with images as inputs, filters as 'functions' and images as outputs.</p>
+                            <p>Check out visual representations of CNNs in page 4 and 5 (this one)!</p>
+                        </ol>
+                        <p>Most of all, remember that all these big words aren't as scary as they seem. 
+                          We hoped you enjoyed our learning lab as much as we enjoyed making it!</p>
+                        <h2>Goodbye for now (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧</h2>
                 </div>
             </section>
         </div>
