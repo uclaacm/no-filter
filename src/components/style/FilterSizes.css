@@ -1,6 +1,4 @@
 
-
-
 .more-filters-container {
     position: relative;
     z-index: auto;
@@ -9,6 +7,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding: 1.5em;
+    background-color: white;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #size-img {
@@ -26,7 +29,8 @@
 }
 
 .selected {
-    text-shadow: 0px 0px 8px #1EBDF4;
+    text-shadow: 0px 0px 8px #FF00F5;
+    color: #FF00F5;
 }
 
 .lots-of-buttons {
@@ -39,19 +43,19 @@
 
 .more-filters-button {
     margin: 0.5em;
-    background-color: #EBF9FE;
-    border: #1EBDF4 2px solid;
-    color:#1c1a19;
+    background-color: #FF00F5;
+    border: #FF00F5 2px solid;
     border-radius: 10px;
     padding: 0.5em;
     margin-top: 0.75em;
     min-height: max-content;
     font-weight: bolder;
+    color: #041850;
 }
 
 .more-filters-button:hover {
     cursor: pointer;
-    background-color: #1EBDF4;
+    background-color: #FF00F5;
     color: white;
 }
 
@@ -68,8 +72,8 @@
 }
 
 .speech-bubble {
-    background-color: #EBF9FE;
-    border: #1EBDF4 2px solid;
+    background-color: #1EBDF4;
+    border: 2px solid;
     border-radius: 15px;
     padding: 1em;
     margin-top: 0.5em;
@@ -78,7 +82,7 @@
 
 .speech-bubble>p{
     margin: 0.25em;
-    
+
 }
 
 
