@@ -13,12 +13,6 @@ import { slide as Menu } from 'react-burger-menu';
 
 
 function App() {
-  const path = window.location.pathname;
-  var pageno = path.substring(1);
-  if (pageno === "" || pageno === "main") {
-    pageno = "0";
-  }
-  const [page, setPage] = useState(parseInt(pageno));
 
   function ScrollToTop() {
     const { pathname } = useLocation();
@@ -34,19 +28,19 @@ function App() {
   {
       return(
       <Menu>
-      <Link to="/1" className="navButton" onClick={() => setPage(1)}>
+      <Link to="/1" className="navButton">
         1: first, neural networks
       </Link>
-      <Link to="/2" className="navButton" onClick={() => setPage(2)}>
+      <Link to="/2" className="navButton">
         2: shining a flashlight on filters
       </Link>
-      <Link to="/3" className="navButton" onClick={() => setPage(3)}>
+      <Link to="/3" className="navButton">
         3: filters and images
       </Link>
-      <Link to="/4" className="navButton" onClick={() => setPage(4)}>
+      <Link to="/4" className="navButton">
         4: breaking it down
       </Link>
-      <Link to="/5" className="navButton" onClick={() => setPage(5)}>
+      <Link to="/5" className="navButton">
         5: what do CNNs look like?
       </Link>
       </Menu>);
