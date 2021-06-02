@@ -225,6 +225,88 @@ em {
   box-shadow: 0px 0px 8px 2px rgba(30, 30, 30, 0.2);
 }
 
+.navButton{
+  color: #041850;
+  text-decoration: none;
+  font-size: larger;
+  margin-bottom: 10px;
+}
+
+.navButton:hover{
+  font-weight: 600;
+}
+
+.hamMenu{
+  height: 10%;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #FF00F5;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: white;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #FFEBFE;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
 .chubby-link:hover {
   background-color: white;
   color:  #1EBDF4;
@@ -240,28 +322,67 @@ em {
   background-color: #020D2A;
 }
 
+/* .bPage{
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+} */
+
+#coverImage{
+  vertical-align: middle;
+  width: auto;
+  max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#startButton{
+  background-color: #041850;
+  color: #FF00F5;
+  font-size: larger;
+  font-weight: 600;
+  border: 2px #FF00F5 solid;
+  padding: 10px;
+  float: left;
+  position: absolute;
+  left: 45%;
+  top: 60%;
+  z-index: 1000;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+#startButton:hover{
+  background-color: #FF00F5;
+  color: #041850;
+  border: 2px #041850 solid;
+}
+
 #leftB{
   background-color: #041850;
   color: #FF00F5;
 }
 
-#leftB2:hover{
+#leftB:hover{
   background-color: #FF00F5;
   color: #041850;
   border-right: 2px #041850 solid;
-
-
 }
+
 #rightB{
   background-color: #FF00F5;
   color: #041850;
-
 }
 
-#rightB2:hover{
+#rightB:hover{
   background-color: #041850;
   color: #FF00F5;
-  border-left: 2px #FF00F5 solid;
+  border: 2px #FF00F5 solid;
 
 }
 
@@ -275,6 +396,13 @@ em {
   border-bottom-left-radius: 30px;
 }
 
+#leftB2:hover{
+  background-color: #FF00F5;
+  color: #041850;
+  border-right: 2px #041850 solid;
+}
+
+
 #rightB2{
   background-color: #FF00F5;
   color: #041850;
@@ -283,6 +411,13 @@ em {
   border-top-right-radius: 30px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
+}
+
+#rightB2:hover{
+  background-color: #041850;
+  color: #FF00F5;
+  border-left: 2px #FF00F5 solid;
+
 }
 
 .navArrow{
