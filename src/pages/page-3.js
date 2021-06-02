@@ -2,6 +2,7 @@ import '../App.css';
 import React, { Component } from "react";
 import Filters from '../components/Filters.js';
 import filterGIF from '../img/filter.gif';
+import { Link } from "react-router-dom";
 
 export default class Page3 extends Component {
     render() {
@@ -37,6 +38,14 @@ export default class Page3 extends Component {
                     </div>
                 </section>
                 <Filters />
+                <div className="navigation">
+          <Link to="/2" id="leftB2" className="navArrow">
+            back
+        </Link>
+          <Link to="/4" id="rightB2" className="navArrow">
+            next
+        </Link>
+        </div>
             </div>
         )
     }

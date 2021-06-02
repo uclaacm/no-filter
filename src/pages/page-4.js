@@ -4,6 +4,7 @@ import rgbGIF from '../img/rgb.gif';
 import Carousel from '../components/Carousel.js';
 import depth from '../img/depth.png';
 import FilterSizes from '../components/FilterSizes.js';
+import { Link } from "react-router-dom";
 
 export default class Page4 extends Component {
     render() {
@@ -46,6 +47,14 @@ export default class Page4 extends Component {
                     </div>
                 </section>
                 <FilterSizes />
+                <div className="navigation">
+          <Link to="/3" id="leftB2" className="navArrow">
+            back
+        </Link>
+          <Link to="/5" id="rightB2" className="navArrow">
+            next
+        </Link>
+        </div>
             </div>
         )
     }
