@@ -13,7 +13,7 @@ export default class Page4 extends Component {
                     <div className="card">
                         <h1 class="topheader">breaking it down</h1>
                         <h2>Look at the animation below to learn how a filter (shown as the red matrix) works on images to calculate each element of the feature map</h2>
-                        <p>(You can also explore our slides on filters (slide 28) from our <a target="_blank" class="bluelink" href="https://teachla.uclaacm.com/classes/ml/10-cnn" rel="noopener noreferrer">CNN high-school lesson)</a></p>
+                        <p>(You can also explore our slides on filters (slide 28) from our <a target="_blank" class="bluelink" style={{color: '#FF00F5'}} href="https://teachla.uclaacm.com/classes/ml/10-cnn" rel="noopener noreferrer">CNN high-school lesson)</a></p>
                         <p>Note that whenever the filter hovers over a portion of the image, the corresponding element on the
            feature map is calculated by <em>multiplying the filter value of each cell </em> (at the bottom right of each cell) with
            the <em> pixel value of the image's cell it is hovering over </em> and <em>adding them all together.</em></p>

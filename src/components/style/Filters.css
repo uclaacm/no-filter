@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     padding: 0em 5.5em;
-    background-color: white;
     max-width: 80%;
 }
 
@@ -19,6 +18,7 @@
     margin: 1em;
     width: 20vw;
     height: max-content;
+    color:#FFEBFE;
 }
 
 #form>* {
@@ -28,7 +28,7 @@
 .kernel-matrix{
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    border: 0.5px rgba(0, 0, 0, 0.5) solid;
+    border: 0.5px rgba(255, 235, 254, 0.5) solid;
 }
 
 .kernel-row {
@@ -37,7 +37,7 @@
 }
 
 .kernel-row>* {
-    border: 0.5px rgba(0, 0, 0, 0.5) solid;
+    border: 0.5px rgba(255, 235, 254, 0.5) solid;
     padding: 8px 0px;
     font-size: 16px;
     text-align: center;
@@ -58,7 +58,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: white;
     }
     .filters-holder img {
         max-width: 300px;
@@ -84,7 +83,7 @@
 }
 
 .small-stuff a {
-    color: #1EBDF4;
+    color: #FF00F5;
     font-weight: bolder;
     text-decoration: none;
 }
