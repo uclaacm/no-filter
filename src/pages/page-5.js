@@ -1,8 +1,6 @@
 import '../App.css';
 import React, { Component } from "react";
 import Slider from "react-slick";
-import { FullScreen, useFullScreenHandle } from "react-full-screen";
-
 import '../components/style/Carousel.scss';
 import f1 from '../img/panels/panel1.png';
 import f2 from '../img/panels/panel2.png';
@@ -16,7 +14,6 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { faPause } from '@fortawesome/free-solid-svg-icons';
 
 export default class Page5 extends Component {
-
     constructor(props) {
       super(props);
       this.play = this.play.bind(this);
@@ -29,7 +26,6 @@ export default class Page5 extends Component {
       this.slider.slickPause();
     }
     render() {
-
       const settings = {
         dots: true,
         fade: true,
