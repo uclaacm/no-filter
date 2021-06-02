@@ -72,16 +72,18 @@
 }
 
 .speech-bubble {
-    background-color: #1EBDF4;
-    border: 2px solid;
+    background-color: #020D2A;
+    border: 2px solid #FF00F5;
     border-radius: 15px;
     padding: 1em;
     margin-top: 0.5em;
     min-height: max-content;
+    
 }
 
 .speech-bubble>p{
     margin: 0.25em;
+    color: #FFEBFE;
 
 }
 
