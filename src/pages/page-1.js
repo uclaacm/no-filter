@@ -3,8 +3,7 @@ import React, { Component } from "react";
 import stocks from '../img/stock.svg';
 import voice from '../img/voice.svg';
 import catdog from '../img/catdog.svg';
-
-
+import { Link } from "react-router-dom";
 export default class Page1 extends Component {
         render() {
             return (
@@ -40,6 +39,11 @@ export default class Page1 extends Component {
                                 </div>
                         </div>
                     </section>
+                    <div className="navigation">
+          <Link to="/2" id="rightB" className="navArrow" >
+            next
+        </Link>
+        </div>
                 </div>
             )
         }

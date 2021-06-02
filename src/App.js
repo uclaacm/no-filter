@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 import { useEffect } from "react";
@@ -13,12 +13,6 @@ import { slide as Menu } from 'react-burger-menu';
 
 
 function App() {
-  const path = window.location.pathname;
-  var pageno = path.substring(1);
-  if (pageno === "" || pageno === "main") {
-    pageno = "0";
-  }
-  const [page, setPage] = useState(parseInt(pageno));
 
   function ScrollToTop() {
     const { pathname } = useLocation();
@@ -30,93 +24,32 @@ function App() {
     return null;
   }
 
-  function RenderStart(props){
-    const curPage = props.curPage;
-    if(curPage === 0)
-    {
-      return(<Link to="/1" id="startButton" onClick={() => setPage(curPage + 1)}>
-                   get started
-                  </Link>)
-    }
-    else
-    {
-      return(null);
-    }
-  }
-
-  function RenderButtons(props) {
-    const curPage = props.curPage;
-    var rightStr = "/" + (parseInt(curPage, 10) + 1);
-    var leftStr = "/" + (parseInt(curPage, 10) - 1);
-    if(curPage === 0)
-    {
-      return(null);
-    }
-    if (curPage === 1) {
-      return (
-        <div className="navigation">
-          <Link to={rightStr} id="rightB" className="navArrow" onClick={() => setPage(curPage + 1)}>
-            next
-        </Link>
-        </div>
-      )
-    }
-    else if (curPage === 5) {
-      return (
-        <div className="navigation">
-          <Link to={leftStr} id="leftB" className="navArrow" onClick={() => setPage(curPage - 1)}>
-            back
-        </Link>
-        </div>
-      )
-    }
-    else {
-      return (
-        <div className="navigation">
-          <Link to={leftStr} id="leftB2" className="navArrow" onClick={() => setPage(curPage - 1)}>
-            back
-        </Link>
-          <Link to={rightStr} id="rightB2" className="navArrow" onClick={() => setPage(curPage + 1)}>
-            next
-        </Link>
-        </div>
-      )
-    }
-
-  }
   function RenderMenu(props)
   {
-    const curPage = props.curPage;
-    if(curPage === 0)
-    {
-      return(null)
-    }
-    else
-    {
       return(
       <Menu>
-      <Link to="/1" className="navButton" onClick={() => setPage(1)}>
+      <Link to="/1" className="navButton">
         1: first, neural networks
       </Link>
-      <Link to="/2" className="navButton" onClick={() => setPage(2)}>
+      <Link to="/2" className="navButton">
         2: shining a flashlight on filters
       </Link>
-      <Link to="/3" className="navButton" onClick={() => setPage(3)}>
+      <Link to="/3" className="navButton">
         3: filters and images
       </Link>
-      <Link to="/4" className="navButton" onClick={() => setPage(4)}>
+      <Link to="/4" className="navButton">
         4: breaking it down
       </Link>
-      <Link to="/5" className="navButton" onClick={() => setPage(5)}>
+      <Link to="/5" className="navButton">
         5: what do CNNs look like?
       </Link>
       </Menu>);
     }
-  }
+  
   return (
     <div className="App">
       <Router>
-      <RenderMenu curPage={parseInt(page)} />
+      <RenderMenu/>
         <ScrollToTop />
         <Route exact path="/"> {/* needs to be exact path otherwise it becomes default */}
           <CoverPage />
@@ -142,8 +75,7 @@ function App() {
         <Route path="/rest">
           nothing
        </Route>
-        <RenderStart curPage={parseInt(page)} />
-        <RenderButtons curPage={parseInt(page)} />
+        
       </Router>
     </div>
   );
