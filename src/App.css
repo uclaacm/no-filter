@@ -204,6 +204,7 @@ em {
 
 .dark-link {
   background: #041850;
+  border: 2px solid #041850;
   border-radius: 39px;
   color: #FF00F5;
   font-style: normal;
@@ -216,6 +217,10 @@ em {
   text-decoration: none;
   padding: 0.5em 1em;
   margin: 0 1em;
+}
+
+.dark-link:hover{
+  border: 2px solid #FF00F5;
 }
 
 .chubby-link {
