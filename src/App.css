@@ -30,7 +30,7 @@ p {
 
 em {
   font-style: normal;
-  font-weight: bolder;
+  color: #ff00f5;
 }
 
 .section {
@@ -181,6 +181,9 @@ em {
   min-width: 60px;
   margin: 0 1em;
 }
+.bluelink {
+  color: #01A3FF;
+}
 .links {
   display: flex;
   flex-direction: row;
@@ -218,7 +221,7 @@ em {
   margin: 0.5em;
   padding: 0.5em;
   border-radius: 7px;
-  color: white;
+  color: #FFEBFE;
   text-decoration: none;
   font-size: 20px;
   font-weight: bolder;
@@ -315,7 +318,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .navigation{
   width: 30%;
-  border: solid 2px black;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -520,7 +522,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   /* background-color: #ff8800;
   border-radius: 7px; */
   font-size: 18px;
-  color: #FF00F5;
+  color: #01A3FF;
   /* padding: 0.25em;
   font-weight: bolder; */
   text-decoration: none;
@@ -595,7 +597,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 #cnn-vis {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: #FFEBFE;
   max-width: 650px;
   max-height: 450px;
   align-self: center;

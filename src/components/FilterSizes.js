@@ -72,11 +72,11 @@ class FilterSizes extends React.Component {
 
     render () {
         let params = [ //style.top, style.left
-            ["90%", "19%"],
-            ["54%", "34.75%"],
-            ["47%", "47%"],
-            ["47%", "61.5%"],
-            ["78%", "81%"]
+            ["80%", "22%"],
+            ["54%", "36%"],
+            ["45%", "45%"],
+            ["45%", "61.5%"],
+            ["70%", "79%"]
         ];
 
         const numbers = params.map((val, index) => {

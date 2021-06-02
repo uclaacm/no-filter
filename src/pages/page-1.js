@@ -34,7 +34,7 @@ export default class Page1 extends Component {
                                     </p>
                                     <p>
                                         <em>Convolutional Neural Networks</em>, or CNNs, are a type of neural network.
-              They find <em>features</em> by analyzing data (like images) <em>piece by piece</em>.
+              They find features by analyzing data (like images) piece by piece.
               </p>
                                     <p> In this lab, we'll learn about how that works.</p>
                                 </div>
