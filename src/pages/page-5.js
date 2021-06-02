@@ -44,7 +44,7 @@ export default class Page5 extends Component {
         <div className = "page">
             <section className="section">
                   <div className="card">
-                      <h1>What do CNNs look like?</h1>
+                      <h1>what do CNNs look like?</h1>
                       <p>
                           Now that we know how to apply filters, let's take a look at how one layer of a CNN might use two feature-detecting filters to create feature maps.
                       </p>
@@ -88,7 +88,7 @@ export default class Page5 extends Component {
 
             <section className="section">
                 <div className="card">
-                    <h1>In conclusion...</h1>
+                    <h1>in conclusion...</h1>
                     <h2>idk put something here</h2>
                 </div>
             </section>

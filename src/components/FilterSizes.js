@@ -19,7 +19,7 @@ const paragraphs = [
     </p>
     <p>If we use filters of bigger sizes, our output matrix will be smaller, and will capture less information.
         As a result, we should be careful when choosing our filter size.
-    </p></>, 
+    </p></>,
     <><p>
         Each filter produced an output of size 4 x 4 x 1. We then stack the result of each filter convolution, to produce an output of size 4 x 4 x 2.
     </p>
@@ -69,20 +69,20 @@ class FilterSizes extends React.Component {
         selected[this.state.index] = true;
         this.setState({text: paragraphs[this.state.index], selected: selected});
     }
-    
+
     render () {
         let params = [ //style.top, style.left
             ["90%", "19%"],
             ["54%", "34.75%"],
             ["47%", "47%"],
-            ["47%", "61.5%"], 
+            ["47%", "61.5%"],
             ["78%", "81%"]
         ];
-        
+
         const numbers = params.map((val, index) => {
             let className = this.state.selected[index] ? " selected" : "";
             return <div className={`number${className}`}
-                    style={{top: val[0], left: val[1]}} 
+                    style={{top: val[0], left: val[1]}}
                     key={index}>{index+1}</div>
         });
         let showBack = this.state.index > 0 ? "" : " transparent"; //if false, ONLY show next
@@ -90,14 +90,14 @@ class FilterSizes extends React.Component {
         return (
         <section className = "blue section">
             <div className="card">
-                <h1>CNN Sizes</h1>
+                <h1>CNN sizes</h1>
                 <h2>Use the buttons below to find out more about filter and CNN sizes.</h2>
                 <div className="more-filters-container">
                     <img src={size} alt="Filters and layers of a CNN" id="size-img"/>
                     {numbers}
                 </div>
                 <div className="lots-of-buttons">
-                    {this.state.index === null ? 
+                    {this.state.index === null ?
                         <button className="more-filters-button" onClick={() => this.clickStart()}>Start</button>
                         :
                         /*back button only shows if we're on buttons 2-5 (1-indexed),
@@ -118,4 +118,3 @@ class FilterSizes extends React.Component {
 }
 
 export default FilterSizes;
-

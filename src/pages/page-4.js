@@ -11,7 +11,7 @@ export default class Page4 extends Component {
             <div class="page">
                 <section className="grey section">
                     <div className="card">
-                        <h1>Breaking it down</h1>
+                        <h1>breaking it down</h1>
                         <h2>Look at the animation below to learn how a filter (shown as the red matrix) works on images to calculate each element of the feature map</h2>
                         <p>(You can also explore our slides on filters (slide 28) from our <a target="_blank" href="https://docs.google.com/presentation/d/1je-mnp1E6y-wj3q_5GNHG8jJm9ckLTyoFNjF3Qj_6LM/edit?usp=sharing" rel="noopener noreferrer">CNN high-school lesson)</a></p>
                         <p>Note that whenever the filter hovers over a portion of the image, the corresponding element on the

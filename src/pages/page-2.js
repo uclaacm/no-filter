@@ -10,7 +10,7 @@ export default class Page2 extends Component {
             <div class="page">
                 <section className="blue section">
                     <div className="card">
-                        <h1>Shining a Flashlight on Filters</h1>
+                        <h1>shining a flashlight on filters</h1>
                         <h2>Can you figure out what's in the image below using the flashlight?</h2>
                         <div id="flashlight-holder">
                             {/* <p style={{alignSelf: 'center', marginRight: '1em',}}>Hover your mouse/finger over the image.</p> */}
@@ -46,7 +46,7 @@ export default class Page2 extends Component {
                         <div className="grid-holder">
                             <img src={flamingo} className="grid-img" alt="flamingo"></img>
                             <div className="side-text">
-                                <h1>Fully-connected Neural Networks</h1>
+                                <h1>fully-connected neural networks</h1>
                                 <h2>When you look at the picture below, what do you see?</h2>
                                 <p>You probably recognized this flamingo instantly.
                                 You didn't look at the legs, wings, and beak, but at the whole image.
