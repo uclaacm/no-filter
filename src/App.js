@@ -96,19 +96,19 @@ function App() {
       return(
       <Menu>
       <Link to="/1" className="navButton" onClick={() => setPage(1)}>
-        Neural Networks and CNNs recap
+        1: first, neural networks
       </Link>
       <Link to="/2" className="navButton" onClick={() => setPage(2)}>
-        What are filters?
+        2: shining a flashlight on filters
       </Link>
       <Link to="/3" className="navButton" onClick={() => setPage(3)}>
-        Experimenting with filters
+        3: filters and images
       </Link>
       <Link to="/4" className="navButton" onClick={() => setPage(4)}>
-        Calculations with filters
+        4: breaking it down
       </Link>
       <Link to="/5" className="navButton" onClick={() => setPage(5)}>
-        Filters in CNNs
+        5: what do CNNs look like?
       </Link>
       </Menu>);
     }
