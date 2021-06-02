@@ -1,6 +1,8 @@
 import '../App.css';
 import React, { Component } from "react";
 import Slider from "react-slick";
+import { FullScreen, useFullScreenHandle } from "react-full-screen";
+
 import '../components/style/Carousel.scss';
 import f1 from '../img/panels/panel1.png';
 import f2 from '../img/panels/panel2.png';
@@ -14,6 +16,7 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { faPause } from '@fortawesome/free-solid-svg-icons';
 
 export default class Page5 extends Component {
+
     constructor(props) {
       super(props);
       this.play = this.play.bind(this);
@@ -26,6 +29,7 @@ export default class Page5 extends Component {
       this.slider.slickPause();
     }
     render() {
+
       const settings = {
         dots: true,
         fade: true,
@@ -46,27 +50,29 @@ export default class Page5 extends Component {
                       </p>
                   </div>
                   <div className="card">
+
                     <div className="main2">
-                      <Slider ref={slider => (this.slider = slider)} {...settings}>
-                        <div className = "frames gallery">
-                          <img src = {f1} className="frame" id="cnn-frame" alt="first step"></img>
-                        </div>
-                        <div className = "frames gallery">
-                          <img src = {f2} className="frame" id="cnn-frame" alt="second step"></img>
-                        </div>
-                        <div className = "frames gallery">
-                          <img src = {f3} className="frame" id="cnn-frame" alt="third step"></img>
-                        </div>
-                        <div className = "frames gallery">
-                          <img src = {f4} className="frame" id="cnn-frame" alt="fourth step"></img>
-                        </div>
-                        <div className = "frames gallery">
-                          <img src = {f5} className="frame" id="cnn-frame" alt="fifth step"></img>
-                        </div>
-                        <div className = "frames gallery">
-                          <img src = {f6} className="frame" id="cnn-frame" alt="sixth step: complete!"></img>
-                        </div>
-                      </Slider>
+                        <Slider id="slider" ref={slider => (this.slider = slider)} {...settings}>
+                          <div className = "frames gallery">
+                            <img src = {f1} className="frame" id="cnn-frame" alt="first step"></img>
+                          </div>
+                          <div className = "frames gallery">
+                            <img src = {f2} className="frame" id="cnn-frame" alt="second step"></img>
+                          </div>
+                          <div className = "frames gallery">
+                            <img src = {f3} className="frame" id="cnn-frame" alt="third step"></img>
+                          </div>
+                          <div className = "frames gallery">
+                            <img src = {f4} className="frame" id="cnn-frame" alt="fourth step"></img>
+                          </div>
+                          <div className = "frames gallery">
+                            <img src = {f5} className="frame" id="cnn-frame" alt="fifth step"></img>
+                          </div>
+                          <div className = "frames gallery">
+                            <img src = {f6} className="frame" id="cnn-frame" alt="sixth step: complete!"></img>
+                          </div>
+
+                        </Slider>
 
                       <div style={{ textAlign: "center" }}>
                         <button className="cbutton" onClick={this.play}>
