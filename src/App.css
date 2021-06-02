@@ -1,35 +1,41 @@
 /*TODO: Remove duplication in classes */
-
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  /* font-family: 'Source Sans Pro', sans-serif; */
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  background-color: #020D2A;
 }
 
 h1 {
   font-size: 30px;
   margin: 0;
-  color: #1c1a19;
-  font-family: 'poppinslight';
-  font-weight: 800;
-  border-bottom: solid #1EBDF4;
+  color: #FFEBFE;
+  font-family: 'Poppins', sans-serif;
+  /* font-weight: 800; */
+  /* border-bottom: solid #1EBDF4; */
 }
 
 h2 {
   font-size: 20px;
-  color: #1c1a19;
+  color: #FF00F5;
   line-height: 1.5;
+  font-weight: 600;
 }
 
 p {
   font-size: 18px;
   line-height: 1.5;
-  color: #1c1a19;
+  color: #FFEBFE;
   margin: 0.5em 0;
   text-align: justify;
 }
 
 em {
   font-style: normal;
-  font-weight: bolder;
+  font-weight: 800;
 }
 
 .section {
@@ -37,7 +43,8 @@ em {
   flex-flow: row wrap;
   justify-content: center;
   padding: 0.5em 1em;
-  background-color: #fbf7f5;
+  /* BACKGROUND COLOR: */
+  background-color: #020D2A;
 }
 
 /* .blue { /*blue divs
@@ -72,7 +79,6 @@ em {
 .card {
   display: flex;
   flex-direction: column;
-  /* background-color: white; */
   border-radius: 7px;
   width:90%;
   max-width: 750px;
@@ -134,14 +140,73 @@ em {
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
-
-.grid-60-40 {
+.example-list {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 30% 30% 35%;
+  column-gap: 2em;
+  margin: 0 1em;
+}
+
+@media screen and (max-width: 500px) {
+  .example-list {
+    display: grid;
+    grid-template-columns: 100%;
+    margin: 1em 1em;
+  }
+  .example {
+    font-style: normal;
+    font-weight: normal;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    color: #01A3FF;
+    padding: 0em 1em;
+    margin: 1em 1em;
+  }
+}
+
+.example {
+  font-style: normal;
+  font-weight: normal;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  color: #01A3FF;
+  padding: 0em 1em;
+}
+#example-img {
+  width: 90%;
+  max-width: 60px;
+  min-width: 40px;
+  margin: 0 1em;
+}
+#example-img-soundwave {
+  width: 100%;
+  max-width: 100px;
+  min-width: 60px;
+  margin: 0 1em;
 }
 .links {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin: 0 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-link {
+  background: #041850;
+  border-radius: 39px;
+  color: #FF00F5;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5em 1em;
   margin: 0 1em;
 }
 
@@ -152,6 +217,7 @@ em {
   justify-content: center;
   text-align: center;
   height: stretch;
+  max-height: 140px;
   background-color: #1EBDF4;
   width: 90%;
   margin: 0.5em;
@@ -162,6 +228,88 @@ em {
   font-size: 20px;
   font-weight: bolder;
   box-shadow: 0px 0px 8px 2px rgba(30, 30, 30, 0.2);
+}
+
+.navButton{
+  color: #041850;
+  text-decoration: none;
+  font-size: larger;
+  margin-bottom: 10px;
+}
+
+.navButton:hover{
+  font-weight: 600;
+}
+
+.hamMenu{
+  height: 10%;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #FF00F5;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: white;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #FFEBFE;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .chubby-link:hover {
@@ -175,11 +323,113 @@ em {
   border: solid 2px black;
   margin: auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  background-color: #020D2A;
+}
+
+/* .bPage{
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+} */
+
+#coverImage{
+  vertical-align: middle;
+  width: auto;
+  max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#startButton{
+  background-color: #041850;
+  color: #FF00F5;
+  font-size: larger;
+  font-weight: 600;
+  border: 2px #FF00F5 solid;
+  padding: 10px;
+  float: left;
+  position: absolute;
+  left: 45%;
+  top: 60%;
+  z-index: 1000;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+#startButton:hover{
+  background-color: #FF00F5;
+  color: #041850;
+  border: 2px #041850 solid;
+}
+
+#leftB{
+  background-color: #041850;
+  color: #FF00F5;
+}
+
+#leftB:hover{
+  background-color: #FF00F5;
+  color: #041850;
+  border-right: 2px #041850 solid;
+}
+
+#rightB{
+  background-color: #FF00F5;
+  color: #041850;
+}
+
+#rightB:hover{
+  background-color: #041850;
+  color: #FF00F5;
+  border: 2px #FF00F5 solid;
+
+}
+
+#leftB2{
+  background-color: #041850;
+  color: #FF00F5;
+  padding-right: 8px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+#leftB2:hover{
+  background-color: #FF00F5;
+  color: #041850;
+  border-right: 2px #041850 solid;
+}
+
+
+#rightB2{
+  background-color: #FF00F5;
+  color: #041850;
+  padding-left: 8px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+#rightB2:hover{
+  background-color: #041850;
+  color: #FF00F5;
+  border-left: 2px #FF00F5 solid;
+
 }
 
 .navArrow{
-  font-size: 50px;
+  font-size: 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 13px;
 }
 
 .navArrow:hover{
@@ -226,7 +476,6 @@ em {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
 @media screen and (max-width: 600px) {
@@ -273,44 +522,26 @@ em {
 
 .link-to-slides {
   /* border: 2px #ff8800 solid; */
-  background-color: #ff8800;
-  border-radius: 7px;
+  /* background-color: #ff8800;
+  border-radius: 7px; */
   font-size: 18px;
-  color: white;
-  padding: 0.25em;
-  font-weight: bolder;
-  /* text-decoration: none; */
-  max-width: max-content;
-  align-self: center;
-  
+  color: #FF00F5;
+  /* padding: 0.25em;
+  font-weight: bolder; */
+  text-decoration: none;
+  /* max-width: max-content;
+  align-self: center; */
+
   /* box-shadow: 0px 0px 8px 2px rgba(30, 30, 30, 0.1); */
 }
 .link-to-slides:hover {
-  background-color: #1EBDF4;
-  color: white;
+  text-decoration: underline;
 }
 
 .filters-intro {
   justify-content: space-between;
 }
-#fullscreen {
-  font-family: 'Source Sans Pro', sans-serif;
-  align-self: left;
-  border: 2px #1EBDF4 solid;
-  font-size: 16px;
-  color: black;
-  padding: 0.5em;
-  background-color: #EBF9FE;
-}
-#fullscreen:hover {
-  opacity: 0.7;
-}
-.cnnHolder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2%;
-}
+
 .filterGIF-container {
   width:100%;
   display: flex;
@@ -346,6 +577,7 @@ em {
     width: stretch;
   }
 }
+
 #fullscreen {
   font-family: 'Source Sans Pro', sans-serif;
   align-self: left;
@@ -362,16 +594,29 @@ em {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 2%;
 }
+
 #cnn-vis {
   display: flex;
   flex-direction: column;
   background-color: white;
-  min-width: 400px;
+  max-width: 650px;
+  max-height: 450px;
   align-self: center;
 }
 
 #conclusion {
   text-align: center;
   
+}
+#cnn-frame {
+  width: 100%;
+}
+
+.main2{
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
 }

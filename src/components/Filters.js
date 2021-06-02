@@ -1,24 +1,22 @@
 import React from 'react';
 import '../App.css';
 import './style/Filters.css'
-import amsterdamRegular from '../img/filter-picker/amsterdam-regular-compressed.jpg';
-import amsterdamBlur from '../img/filter-picker/amsterdam-blur-compressed.jpg';
-import amsterdamBottomSobel from '../img/filter-picker/amsterdam-bottom-sobel-compressed.jpg';
-import amsterdamEmboss from '../img/filter-picker/amsterdam-emboss-compressed.jpg';
-import amsterdamLeftSobel from '../img/filter-picker/amsterdam-left-sobel-compressed.jpg';
-import amsterdamOutline from '../img/filter-picker/amsterdam-outline-compressed.jpg';
-import amsterdamRightSobel from '../img/filter-picker/amsterdam-right-sobel-compressed.jpg';
-import amsterdamSharpen from '../img/filter-picker/amsterdam-sharpen-compressed.jpg';
-import amsterdamTopSobel from '../img/filter-picker/amsterdam-top-sobel-compressed.jpg';
-
-/*TODO: Change images to koala rather than amsterdam?*/
+import elephantRegular from '../img/filter-picker/elephant_regular-min.jpg';
+import elephantBlur from '../img/filter-picker/elephant_blur-min.jpg';
+import elephantBottomSobel from '../img/filter-picker/elephant_bottom_s-min.jpg';
+import elephantEmboss from '../img/filter-picker/elephant_emboss-min.jpg';
+import elephantLeftSobel from '../img/filter-picker/elephant_left_s-min.jpg';
+import elephantOutline from '../img/filter-picker/elephant_outline-min.jpg';
+import elephantRightSobel from '../img/filter-picker/elephant_right_sobel-min.jpg';
+import elephantSharpen from '../img/filter-picker/elephant_sharpen-min.jpg';
+import elephantTopSobel from '../img/filter-picker/elephant_top_sobel-min.jpg';
 
 class Filters extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             value: 'identity',
-            src: amsterdamRegular,
+            src: elephantRegular,
             paragraph: <>What do you think the identity filter does?</>,
             filter: [0, 0, 0, 0, 0, 0, 1, 0, 0],
         };
@@ -32,47 +30,47 @@ class Filters extends React.Component {
         let sobel = <>The <em>sobel</em> filter detects edges in an image by looking at light-to-dark or dark-to-light pixel differences. How does this sobel filter compare to the other sobel filters?</>;
         switch (val) {
             case 'identity':
-                src = amsterdamRegular;
+                src = elephantRegular;
                 paragraph = <>What do you think the identity filter does?</>;
                 filter = [0, 0, 0, 0, 0, 0, 1, 0, 0];
                 break;
             case 'blur':
-                src = amsterdamBlur;
+                src = elephantBlur;
                 paragraph = <>We can use filters to remove the differences between pixels to <em>blur</em> an image.</>;
                 filter = [0.0625, 0.125, 0.0625, 0.125, 0.25, 0.125, 0.0625, 0.125, 0.0625];
                 break;
             case 'bottom sobel':
-                src = amsterdamBottomSobel;
+                src = elephantBottomSobel;
                 paragraph = sobel;
                 filter = [-1, -2, -1, 0, 0, 0, 1, 2, 1];
                 break;
             case 'emboss':
-                src = amsterdamEmboss;
+                src = elephantEmboss;
                 paragraph = <>The <em>emboss</em> filter emphasizes the difference between pixels. If you look closely, it's actually a sobel filter on a diagonal!</>;
                 filter = [-2, -1, 0, -1, 1, 1, 0, 1, 2];
                 break;
             case 'left sobel':
-                src = amsterdamLeftSobel;
+                src = elephantLeftSobel;
                 paragraph=sobel;
                 filter = [1, 0, -1, 2, 0, -2, 1, 0, -1];
                 break;
             case 'outline':
-                src = amsterdamOutline;
+                src = elephantOutline;
                 paragraph = <>The <em>outline</em> filter emphasizes <em>large</em> differences between pixels to detect edges.</>;
                 filter = [-1, -1, -1, -1, 8, -1, -1, -1, -1];
                 break;
             case 'right sobel':
-                src = amsterdamRightSobel;
+                src = elephantRightSobel;
                 paragraph = sobel;
                 filter = [-1, 0, 1, -2, 0, 2, -1, 0, 1];
                 break;
             case 'sharpen':
-                src = amsterdamSharpen;
+                src = elephantSharpen;
                 paragraph = <>The <em>sharpen</em> filter emphasizes small differences between adjacent pixels.</>;
                 filter = [0, -1, 0, -1, 5, -1, 0, -1, 0];
                 break;
             case 'top sobel':
-                src = amsterdamTopSobel;
+                src = elephantTopSobel;
                 paragraph = sobel;
                 filter = [1, 2, 1, 0, 0, 0, -1, -2, -1];
                 break;
@@ -100,9 +98,10 @@ class Filters extends React.Component {
             <div className="card">
                 <h2>Let's see how this works in practice.</h2>
                 <p>Select the different filters in this example to apply them to the image. What patterns do you see in the filter values? How do filters make features easier to see?</p>
+                <p className="small-stuff">FYI: image loading might be slow the first time around!</p>
             </div>
             <div className="filters-holder">
-                <img src={amsterdamRegular} alt="black and white amsterdam"></img>
+                <img src={elephantRegular} alt="black and white elephant"></img>
                 <div className="card"  id="form">
                     <div className="kernel-matrix">
                         <div className="kernel-row">
@@ -136,7 +135,7 @@ class Filters extends React.Component {
                         </select>
                     </form>
                 </div>
-                <img id="filter-applied" src={this.state.src} alt="amsterdam with filter applied"></img>
+                <img id="filter-applied" src={this.state.src} alt="elephant with filter applied"></img>
             </div>
             <div className="card" id="img-description">
                 <p>{this.state.paragraph}</p>
