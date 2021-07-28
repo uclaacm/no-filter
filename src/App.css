@@ -34,7 +34,7 @@ p {
   line-height: 1.5;
   color: #FFEBFE;
   margin: 0.5em 0;
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 em {
@@ -149,7 +149,8 @@ em {
   display: grid;
   grid-template-columns: 30% 30% 35%;
   column-gap: 2em;
-  margin: 0 1em;
+  /* margin: 0 1em; */
+  padding: 1vw;
 }
 
 @media screen and (max-width: 500px) {
@@ -197,9 +198,9 @@ em {
 .links {
   display: flex;
   flex-direction: row;
-  margin: 0 1em;
   align-items: center;
   justify-content: center;
+  padding: 1vw;
 }
 
 .dark-link {
@@ -285,7 +286,7 @@ em {
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #bdc3c7;
+  background: #373a47;
 }
 
 /*
@@ -294,7 +295,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
 */
 .bm-menu-wrap {
   position: fixed;
-  height: 100%;
 }
 
 /* General sidebar styles */
@@ -302,6 +302,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: #FFEBFE;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
+}
+
+.bm-item-list[style]{
+  height: auto !important;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -337,6 +341,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: flex;
   justify-content: center;
   background-color: #020D2A;
+  margin-bottom: 50px;
 }
 
 /* .bPage{
@@ -411,12 +416,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
   border-top-right-radius: 0px;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+  border-right: 2px #041850 solid;
 }
 
 #leftB2:hover{
   background-color: #FF00F5;
   color: #041850;
-  border-right: 2px #041850 solid;
 }
 
 
@@ -428,17 +433,16 @@ Note: Beware of modifying this element as it can break the animations - you shou
   border-top-right-radius: 30px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
+  border-left: 2px #FF00F5 solid;
 }
 
 #rightB2:hover{
   background-color: #041850;
   color: #FF00F5;
-  border-left: 2px #FF00F5 solid;
-
 }
 
 .navArrow{
-  font-size: 30px;
+  font-size: 20px;
   text-decoration: none;
   border-radius: 30px;
   padding: 13px;
