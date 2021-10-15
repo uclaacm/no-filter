@@ -3,9 +3,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/90ef0274-5cd0-47e0-b52f-921699d7d136/deploy-status)](https://app.netlify.com/sites/sleepy-bell-5e5323/deploys)
 ![Node.js Build](https://github.com/uclaacm/no-filter/workflows/Node.js%20Build/badge.svg)
 
-an *amazing* learning lab built by aman, maya, and nisha
-
-more info coming soon :)
+an *amazing* learning lab about **convolutional neural networks** built by aman, maya, and nisha!
 
 ## Development Setup
 
