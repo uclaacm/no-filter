@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+
 import '../App.css';
 import React, { Component } from "react";
 import Slider from "react-slick";

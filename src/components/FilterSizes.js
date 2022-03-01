@@ -1,9 +1,9 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+
 import React from 'react';
 import size from '../img/size.png';
 import './style/FilterSizes.css';
 
-
-/*TODO: Make paragraphs less verbose*/
 const paragraphs = [
     <p>Notice how our input, a 6 x 6 RGB image, is split into three 6 x 6 layers.</p>,
     <p>This is the symbol for convolution. The filters <em>convolve</em> over the image.</p>,

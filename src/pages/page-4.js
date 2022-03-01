@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+
 import '../App.css';
 import React, { Component } from "react";
 import rgbGIF from '../img/rgb.gif';
