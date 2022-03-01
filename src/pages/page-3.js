@@ -29,7 +29,9 @@ export default class Page3 extends Component {
                                 <p> Filters look at one small clump of pixels at a time, slowly revolving around the entire image (remember, this process is called <em>convolution</em>).
               The output of a convolution is called a <em>feature map</em>.</p>
                                 <div className="filterGIF-holder">
-                                    <img src={filterGIF} alt="Filter animation" id="filterGIF" />
+                                    <img src={filterGIF} alt="An animation showing how a filter convovles over an image moving to the right till it encounters the right 
+                                    edge. Then it moves down a step and starts again on the left edge of the image." 
+                                    id="filterGIF" />
                                 </div>
                             </div>
 

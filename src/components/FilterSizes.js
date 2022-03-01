@@ -93,7 +93,7 @@ class FilterSizes extends React.Component {
                 <h1>CNN sizes</h1>
                 <h2>Use the buttons below to find out more about filter and CNN sizes.</h2>
                 <div className="more-filters-container">
-                    <img src={size} alt="Filters and layers of a CNN" id="size-img"/>
+                    <img src={size} alt="A feature map is calculated by convolving a filter over an image. You can create multiple feature maps by using multiple features." id="size-img"/>
                     {numbers}
                 </div>
                 <div className="lots-of-buttons">

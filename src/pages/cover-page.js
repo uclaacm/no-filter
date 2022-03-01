@@ -7,7 +7,7 @@ export default class CoverPage extends Component {
         render() {
             return (
                 <div class="bPage">
-                  <img src={cover} id="coverImage" alt="no filter learning lab landing page"/>
+                  <img src={cover} id="coverImage" alt="Welcome to our learning lab on filters in CNNs!"/>
                   <Link to="/1" id="startButton">
                    get started
                   </Link>

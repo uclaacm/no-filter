@@ -47,10 +47,10 @@ export default class Carousel extends Component {
             <img src = {f1} className="frame" alt="first example of feature pool calculation - shows how the first element of the feature map is cacluated by taking the dot product of the filter and a portion of our image"></img>
           </div>
           <div className = "frames">
-            <img src = {f2} className="frame" alt="second example of feature pool calculation"></img>
+            <img src = {f2} className="frame" alt="second example of feature pool calculation - shows how the second element of the feature map is cacluated by taking the dot product of the filter and a new portion of our image"></img>
           </div>
           <div className = "frames">
-            <img src = {f3} className="frame" alt="third frame of feature pool calculation"></img>
+            <img src = {f3} className="frame" alt="third frame of feature pool calculation - the subsequent elements of the feature map are calculated by dotting the filter with a new section of the image"></img>
           </div>
           <div className = "frames">
             <img src = {f4} className="frame" alt="fourth frame of feature pool calculation"></img>

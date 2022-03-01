@@ -32,12 +32,12 @@ export default class Page4 extends Component {
           </p>
                         <p> With three layers instead of one, convolution with an RGB image looks like this: </p>
                         <br></br>
-                        <img src={rgbGIF} alt="RGB filter animation" id="filterGIF" style={{ width: '400px' }} />
+                        <img src={rgbGIF} alt="RGB filter animation that shows convolution over the multiple channels of an image." id="filterGIF" style={{ width: '400px' }} />
                     </div>
                 </section>
                 <section className="grey section">
                     <div className="card grid-holder">
-                        <img src={depth} alt="Pixel matrices with depth of 3" className="grid-img" />
+                        <img src={depth} alt="A diagram depicting the 3 channels of an image: red, green and blue" className="grid-img" />
                         <div className="side-text">
                             <p>In order to apply our filter to each layer of an RGB image,
             we need our filter to be 3-dimensional too.

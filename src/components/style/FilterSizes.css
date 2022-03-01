@@ -21,7 +21,7 @@
 
 .number {
     font-size: 20px;
-    color: #1EBDF4;
+    color: #020D2A;
     font-weight: bolder;
     position: absolute;
     z-index: 1;
@@ -30,7 +30,7 @@
 
 .selected {
     text-shadow: 0px 0px 8px #FF00F5;
-    color: #FF00F5;
+    color: #af29aa;
 }
 
 .lots-of-buttons {
