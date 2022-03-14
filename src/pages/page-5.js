@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+
 import '../App.css';
 import React, { Component } from "react";
 import Slider from "react-slick";
@@ -51,22 +53,22 @@ export default class Page5 extends Component {
                     <div className="main2">
                         <Slider id="slider" ref={slider => (this.slider = slider)} {...settings}>
                           <div className = "frames gallery">
-                            <img src = {f1} className="frame" id="cnn-frame" alt="first step"></img>
+                            <img src = {f1} className="frame" id="cnn-frame" alt="first step: we input an image"></img>
                           </div>
                           <div className = "frames gallery">
-                            <img src = {f2} className="frame" id="cnn-frame" alt="second step"></img>
+                            <img src = {f2} className="frame" id="cnn-frame" alt="second step: a convenient depiction of the three channels of an image."></img>
                           </div>
                           <div className = "frames gallery">
-                            <img src = {f3} className="frame" id="cnn-frame" alt="third step"></img>
+                            <img src = {f3} className="frame" id="cnn-frame" alt="third step: applying filters to image"></img>
                           </div>
                           <div className = "frames gallery">
-                            <img src = {f4} className="frame" id="cnn-frame" alt="fourth step"></img>
+                            <img src = {f4} className="frame" id="cnn-frame" alt="fourth step: feature maps are created as a result of convolving the filters over the input image."></img>
                           </div>
                           <div className = "frames gallery">
-                            <img src = {f5} className="frame" id="cnn-frame" alt="fifth step"></img>
+                            <img src = {f5} className="frame" id="cnn-frame" alt="fifth step: some filters might pick up on more distinct features from the image."></img>
                           </div>
                           <div className = "frames gallery">
-                            <img src = {f6} className="frame" id="cnn-frame" alt="sixth step: complete!"></img>
+                            <img src = {f6} className="frame" id="cnn-frame" alt="sixth step: shows how different feature maps together can detect distinct aspects of the input image."></img>
                           </div>
 
                         </Slider>

@@ -37,7 +37,7 @@ export default class Page2 extends Component {
                                   This process is called <em>convolution</em>.</p>
                             </div>
                             <div className="center">
-                                <img src={koala} alt="koala in a forest" id="koala-reveal-img"></img>
+                                <img src={koala} alt="A koala on a tree" id="koala-reveal-img"></img>
                             </div>
                         </div>
                     </div>
@@ -45,7 +45,7 @@ export default class Page2 extends Component {
                 <section className="blue section">
                     <div className="card">
                         <div className="grid-holder">
-                            <img src={flamingo} className="grid-img" alt="flamingo"></img>
+                            <img src={flamingo} className="grid-img" alt="A flamingo"></img>
                             <div className="side-text">
                                 <h1>fully-connected neural networks</h1>
                                 <h2>When you look at this picture, what do you see?</h2>

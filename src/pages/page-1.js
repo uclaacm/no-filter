@@ -21,13 +21,13 @@ export default class Page1 extends Component {
                                     <p>Neural networks can:
                                     <div className="example-list">
                                             <div className="example">predict stock market prices
-                                            <img src={stocks} alt="stocks" id="example-img"></img>
+                                            <img src={stocks} alt="stocks symbol" id="example-img"></img>
                                             </div>
                                             <div className="example">analyze your voice
-                                            <img src={voice} alt="sound wave" id="example-img-soundwave"></img>
+                                            <img src={voice} alt="sound wave symbol" id="example-img-soundwave"></img>
                                             </div>
                                             <div className="example">find differences <br /> between cats & dogs
-                                            <img src={catdog} alt="pawprint" id="example-img"></img>
+                                            <img src={catdog} alt="pawprint symbol" id="example-img"></img>
                                             </div>
                                         </div>
                                     </p>

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+
 import React from 'react';
 import '../App.css';
 import './style/Filters.css'
@@ -101,7 +103,7 @@ class Filters extends React.Component {
                 <p className="small-stuff">FYI: image loading might be slow the first time around!</p>
             </div>
             <div className="filters-holder">
-                <img src={elephantRegular} alt="black and white elephant"></img>
+                <img src={elephantRegular} alt="black and white elephant with no filter"></img>
                 <div className="card"  id="form">
                     <div className="kernel-matrix">
                         <div className="kernel-row">
@@ -136,7 +138,7 @@ class Filters extends React.Component {
                     </form>
                 </div>
 
-                <img id="filter-applied" src={this.state.src} alt="elephant with filter applied"></img>
+                <img id="filter-applied" src={this.state.src} alt="black and white image of elephant with filter applied"></img>
             </div>
             <div className="card" id="img-description">
                 <p>{this.state.paragraph}</p>

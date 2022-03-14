@@ -1,9 +1,9 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+
 import React from 'react';
 import size from '../img/size.png';
 import './style/FilterSizes.css';
 
-
-/*TODO: Make paragraphs less verbose*/
 const paragraphs = [
     <p>Notice how our input, a 6 x 6 RGB image, is split into three 6 x 6 layers.</p>,
     <p>This is the symbol for convolution. The filters <em>convolve</em> over the image.</p>,
@@ -93,7 +93,7 @@ class FilterSizes extends React.Component {
                 <h1>CNN sizes</h1>
                 <h2>Use the buttons below to find out more about filter and CNN sizes.</h2>
                 <div className="more-filters-container">
-                    <img src={size} alt="Filters and layers of a CNN" id="size-img"/>
+                    <img src={size} alt="A feature map is calculated by convolving a filter over an image. You can create multiple feature maps by using multiple features." id="size-img"/>
                     {numbers}
                 </div>
                 <div className="lots-of-buttons">

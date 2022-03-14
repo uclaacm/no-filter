@@ -165,7 +165,7 @@ em {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    color: #01A3FF;
+    color: #7ac8f5;
     padding: 0em 1em;
     margin: 1em 1em;
   }
@@ -177,7 +177,7 @@ em {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  color: #01A3FF;
+  color: #7ac8f5;
   padding: 0em 1em;
 }
 #example-img {
@@ -193,7 +193,7 @@ em {
   margin: 0 1em;
 }
 .bluelink {
-  color: #01A3FF;
+  color: #7AC8F5;
 }
 .links {
   display: flex;
@@ -541,7 +541,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   /* background-color: #ff8800;
   border-radius: 7px; */
   font-size: 18px;
-  color: #01A3FF;
+  color: #7ac8f5;
   /* padding: 0.25em;
   font-weight: bolder; */
   text-decoration: none;
